@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import CTASection from "@/components/shared/CTASection";
 import ScrollReveal from "@/components/shared/ScrollReveal";
