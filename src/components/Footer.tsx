@@ -1,131 +1,152 @@
 import { Link } from "react-router-dom";
 
+const footerLinks = [
+  { label: "Home", path: "/" },
+  { label: "Programs", path: "/programs" },
+  { label: "Method", path: "/method" },
+  { label: "INK", path: "/ink" },
+  { label: "Resources", path: "/resources" },
+  { label: "Contact", path: "/contact" },
+];
+
+const programLinks = [
+  { label: "Funding intelligence and opportunity readiness", path: "/programs/funding-intelligence" },
+  { label: "AI adoption for teams", path: "/programs/ai-adoption" },
+  { label: "Execution readiness review", path: "/programs/execution-readiness" },
+  { label: "Proposal support", path: "/programs/proposal-support" },
+  { label: "Academy design and activation", path: "/programs/academy-design" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", path: "/privacy-policy" },
+  { label: "Cookie Policy", path: "/cookie-policy" },
+  { label: "Terms and Conditions", path: "/terms-and-conditions" },
+];
+
 export function Footer() {
-  const aiTools = [
-    'Runway Gen-4',
-    'Kling 2', 
-    'Veo 3',
-    'Higgsfield AI',
-    'Hailuo Minimax 2',
-    'Midjourney',
-    'Leonardo AI',
-    'Krea AI',
-    'Runway',
-    'Suno AI',
-    'ElevenLabs'
-  ]
-
   return (
-    <footer className="relative py-20 bg-foreground text-background">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-12 gap-12">
-          {/* Logo and Description */}
-          <div className="col-span-12 md:col-span-4">
-            <div>
-              <div className="font-bagel text-background text-3xl tracking-wider mb-4">
-                MOJJU
-              </div>
-              <p className="text-background/70 leading-relaxed mb-6">
-                Revolutionizing video production with intelligent AI that understands 
-                creativity, storytelling, and human emotion.
-              </p>
-              {/* Social Media Icons */}
-              <div className="flex items-center space-x-6">
-                {/* X (Twitter) */}
-                <a
-                  href="https://x.com/Mojjuai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 gentle-animation cursor-pointer"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#E5E7EB">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-
-                {/* TikTok */}
-                <a
-                  href="https://www.tiktok.com/@mojju.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 gentle-animation cursor-pointer"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF0050">
-                    <path d="M19.321 5.562a5.122 5.122 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.936-1.315-2.117-1.315-3.338h-3.357v14.826c0 1.543-1.252 2.795-2.795 2.795s-2.795-1.252-2.795-2.795 1.252-2.795 2.795-2.795c.293 0 .576.045.843.13V9.804a6.67 6.67 0 0 0-.843-.054c-3.683 0-6.674 2.99-6.674 6.674s2.99 6.674 6.674 6.674 6.674-2.99 6.674-6.674V9.696a9.577 9.577 0 0 0 5.588 1.786V7.627c-1.319 0-2.54-.529-3.42-1.394a4.902 4.902 0 0 1-1.294-2.671z"/>
-                  </svg>
-                </a>
-
-                {/* Instagram */}
-                <a
-                  href="https://www.instagram.com/mojju.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 gentle-animation cursor-pointer"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="url(#instagram-gradient)">
-                    <defs>
-                      <linearGradient id="instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#833AB4"/>
-                        <stop offset="50%" stopColor="#E1306C"/>
-                        <stop offset="100%" stopColor="#F56040"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-
-                {/* LinkedIn */}
-                <a
-                  href="https://linkedin.com/company/mojju"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 gentle-animation cursor-pointer"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077B5">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Tools We Use Section */}
-          <div className="col-span-12 md:col-span-8">
-            <div>
-              <h4 className="font-black text-2xl text-background mb-4">TOOLS WE USE</h4>
-              
-              {/* AI Tools Description */}
-              <p className="text-background/70 text-base mb-8 leading-relaxed">
-                We leverage the latest AI technology to deliver cutting-edge video production. 
-                Our toolkit combines the best generative AI models for video, audio, and visual content creation.
-              </p>
-              
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {aiTools.map((tool, index) => (
-                  <div
-                    key={tool}
-                    className="text-background/80 hover:text-background gentle-animation text-sm font-medium"
-                  >
-                    {tool}
-                  </div>
-                ))}
-              </div>
-            </div>
+    <footer className="bg-foreground text-background">
+      <div className="max-w-7xl mx-auto px-6 py-20 md:py-28">
+        {/* Newsletter band */}
+        <div className="mb-16 rounded-2xl border border-background/10 bg-background/5 p-8 md:p-12">
+          <div className="max-w-2xl">
+            <h3 className="text-2xl font-black mb-2 text-background">The Unlearning Pill</h3>
+            <p className="text-background/70 mb-2">
+              Selected updates on funding intelligence, AI at work, execution friction,
+              academy building and the future of work.
+            </p>
+            <p className="text-sm italic text-background/50 mb-6">What is learned can be unlearned.</p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 gentle-animation"
+            >
+              Join the newsletter
+            </Link>
           </div>
         </div>
 
-        {/* Bottom Bar - Simplified */}
-        <div className="border-t border-background/20 pt-8 mt-16">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-background/70 mb-4 md:mb-0">
-              © 2025 MOJJU. All rights reserved.
+        <div className="grid gap-12 md:grid-cols-4">
+          {/* Brand + description */}
+          <div className="md:col-span-2">
+            <p className="text-background/70 max-w-md leading-relaxed">
+              The Unlearning School builds programs, systems and useful ways of
+              working for teams dealing with funding pressure, AI adoption,
+              execution drag and the future of work.
+            </p>
+            <div className="mt-6 space-y-1 text-sm text-background/60">
+              <p>hello@dezvatare.ro</p>
+              <p>+40 722 598 346</p>
+              <p>1, Aleea Pasărea în Văzduh, București, RO</p>
             </div>
-            <div className="text-sm text-background/70">
-              2847 HIGHLAND AVE. SUITE 310 BIRMINGHAM 35205, AL, USA
+            {/* Social icons */}
+            <div className="mt-4 flex gap-4">
+              <a href="https://www.linkedin.com/company/the-unlearning-school" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-background/50 hover:text-red-500 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/theunlearningschool" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-background/50 hover:text-red-500 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/the.unlearning.school" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-background/50 hover:text-red-500 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg>
+              </a>
+              <a href="https://api.whatsapp.com/message/SZZCJNB5GSGJP1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-background/50 hover:text-red-500 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
             </div>
           </div>
+
+          {/* Navigation */}
+          <div>
+            <h5 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
+              Navigation
+            </h5>
+            <nav className="flex flex-col gap-2" aria-label="Footer navigation links">
+              {footerLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="block text-sm text-background/75 transition-colors hover:text-red-500 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Programs */}
+          <div>
+            <h5 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
+              Programs
+            </h5>
+            <nav className="flex flex-col gap-2" aria-label="Footer program links">
+              {programLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="block text-sm text-background/75 transition-colors hover:text-red-500 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            {/* Legal */}
+            <h5 className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wider text-background/40">
+              Legal
+            </h5>
+            <nav className="flex flex-col gap-2">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="block text-sm text-background/75 transition-colors hover:text-red-500 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Massive brand text - centered */}
+        <div className="mt-20 overflow-hidden text-center">
+          <h2
+            className="text-[4rem] md:text-[7rem] lg:text-[10rem] font-black leading-none text-background/[0.06] select-none"
+            aria-hidden="true"
+          >
+            The Unlearning School
+          </h2>
+          <p className="mt-4 font-bagel text-lg md:text-2xl font-bold tracking-wide text-red-500">
+            What is learned can be unlearned.
+          </p>
+        </div>
+
+        {/* Copyright - centered */}
+        <div className="mt-8 border-t border-background/10 pt-8 text-center">
+          <p className="text-xs text-background/30">
+            © 2026 The Unlearning School. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

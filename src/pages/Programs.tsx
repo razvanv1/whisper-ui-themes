@@ -103,19 +103,19 @@ const Programs = () => {
       </section>
 
       {/* Problem block */}
-      <section className="py-20 md:py-28 bg-foreground">
+      <section className="py-20 md:py-28 bg-white dark:bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black mb-8 text-background">The patterns that keep showing up</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-8 text-black">The patterns that keep showing up</h2>
           </ScrollReveal>
           <div className="space-y-4">
             {problemBullets.map((b, i) => (
               <ScrollReveal key={b.text} delay={i * 0.08}>
-                <div className="flex items-start gap-4 rounded-xl border border-background/10 bg-background/5 p-5">
+                <div className="flex items-start gap-4 rounded-xl border border-black/10 bg-black/5 p-5">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-500/15">
                     <b.icon className="h-5 w-5 text-red-500" />
                   </div>
-                  <span className="pt-2 text-background/80">{b.text}</span>
+                  <span className="pt-2 text-black/80">{b.text}</span>
                 </div>
               </ScrollReveal>
             ))}
