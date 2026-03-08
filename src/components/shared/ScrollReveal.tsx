@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, Children } from "react";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -34,6 +34,60 @@ const ScrollReveal = ({
       transition={{ duration, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {children}
+    </motion.div>
+  );
+};
+
+interface StaggerRevealProps {
+  children: ReactNode;
+  className?: string;
+  staggerDelay?: number;
+  direction?: "up" | "down" | "left" | "right";
+  duration?: number;
+}
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const StaggerReveal = ({
+  children,
+  className = "",
+  staggerDelay = 0.1,
+  direction = "up",
+  duration = 0.5,
+}: StaggerRevealProps) => {
+  const offset = directionOffsets[direction];
+
+  const itemVariants = {
+    hidden: { opacity: 0, ...offset },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration, ease: [0.25, 0.46, 0.45, 0.94] },
+    },
+  };
+
+  return (
+    <motion.div
+      className={className}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-60px" }}
+      variants={{
+        hidden: {},
+        visible: { transition: { staggerChildren: staggerDelay } },
+      }}
+    >
+      {Children.map(children, (child) => (
+        <motion.div variants={itemVariants}>{child}</motion.div>
+      ))}
     </motion.div>
   );
 };
