@@ -30,7 +30,7 @@ const Home = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <div>
@@ -90,7 +90,7 @@ const Home = () => {
       </section>
 
       {/* Too much motion — visual treatment */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
@@ -126,7 +126,7 @@ const Home = () => {
       </section>
 
       {/* Where most work starts */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3">Where most work starts</h2>
@@ -164,7 +164,7 @@ const Home = () => {
       </section>
 
       {/* Not every team — centered accent block */}
-      <section className="py-16 md:py-20 bg-card">
+      <section className="py-20 md:py-28 bg-card">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
@@ -182,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* What this work prevents — icon grid */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">
@@ -209,7 +209,7 @@ const Home = () => {
       </section>
 
       {/* Why clients come — cards grid */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">Why clients come to TUS</h2>
@@ -275,7 +275,7 @@ const Home = () => {
       />
 
       {/* Method teaser */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-28 md:py-36 bg-background">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
@@ -297,7 +297,7 @@ const Home = () => {
       </section>
 
       {/* INK teaser — visual */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
@@ -335,7 +335,7 @@ const Home = () => {
 
 
       {/* Resources teaser */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2 items-center">
