@@ -185,7 +185,7 @@ const Home = () => {
       <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10 text-gradient-subtle">
               What this work is designed to prevent
             </h2>
           </ScrollReveal>
