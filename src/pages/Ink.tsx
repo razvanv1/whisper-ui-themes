@@ -1,189 +1,273 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
+import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
+import {
+  Search, Filter, Bell, FileText, RefreshCw, GraduationCap,
+  Clock, AlertTriangle, TrendingDown, Zap, ArrowRight,
+  CheckCircle, XCircle, Minus, Bot, Workflow, Layers
+} from "lucide-react";
 
 const supports = [
-  { area: "Opportunity scanning", desc: "Monitoring funding sources, vendor credits, partnerships and relevant calls across multiple channels." },
-  { area: "Filtering and prioritization", desc: "Scoring and ranking opportunities based on fit, effort and strategic alignment." },
-  { area: "Follow-up support", desc: "Tracking open threads, pending actions and follow-up cadences without relying on memory." },
-  { area: "Material preparation", desc: "Drafting, structuring and refining documents, proposals, briefs and internal communications." },
-  { area: "Content repurposing", desc: "Turning working notes, call summaries and internal material into publishable or shareable formats." },
-  { area: "Academy and workflow support", desc: "Supporting curriculum structuring, session planning and repeatable delivery tasks." },
+  { icon: Search, area: "Opportunity scanning", desc: "Monitoring funding sources, vendor credits, partnerships and relevant calls across multiple channels." },
+  { icon: Filter, area: "Filtering and prioritization", desc: "Scoring and ranking opportunities based on fit, effort and strategic alignment." },
+  { icon: Bell, area: "Follow-up support", desc: "Tracking open threads, pending actions and follow-up cadences without relying on memory." },
+  { icon: FileText, area: "Material preparation", desc: "Drafting, structuring and refining documents, proposals, briefs and internal communications." },
+  { icon: RefreshCw, area: "Content repurposing", desc: "Turning working notes, call summaries and internal material into publishable or shareable formats." },
+  { icon: GraduationCap, area: "Academy and workflow support", desc: "Supporting curriculum structuring, session planning and repeatable delivery tasks." },
+];
+
+const costs = [
+  { icon: AlertTriangle, text: "Opportunities get missed because nobody tracked them closely enough" },
+  { icon: Clock, text: "Follow-ups slip because they depend on someone remembering" },
+  { icon: FileText, text: "Materials stay in draft longer than they should" },
+  { icon: TrendingDown, text: "Knowledge that could be repurposed never leaves the original context" },
+];
+
+const inkIsNot = [
+  { icon: XCircle, text: "A product you can buy off the shelf" },
+  { icon: XCircle, text: "A chatbot or replacement for thinking" },
+  { icon: XCircle, text: "A standalone tool disconnected from strategy" },
+];
+
+const inkIs = [
+  { icon: CheckCircle, text: "An operating layer for repeatable work" },
+  { icon: CheckCircle, text: "Connected to every TUS program" },
+  { icon: CheckCircle, text: "Built to free capacity for judgment work" },
 ];
 
 const Ink = () => {
   return (
     <PageLayout>
-      <section className="py-20 md:py-28 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">INK</p>
-            <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-6">
-              When repeated work starts slowing everything down, INK is where the system begins
-            </h1>
-            <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
-              INK is the AI-supported operating layer used inside The Unlearning
-              School to reduce manual drag across opportunity scanning,
-              prioritization, follow-up, content workflows, academy support and
-              repeatable execution tasks.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href="https://meet.brevo.com/razvan-valceanu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                Talk to us about pilots and use cases
-              </a>
-              <a
-                href="https://meet.brevo.com/razvan-valceanu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
-              >
-                Book a call
-              </a>
+      {/* Hero */}
+      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="grid gap-12 items-center md:grid-cols-2">
+            <div>
+              <ScrollReveal>
+                <span className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-destructive mb-6">
+                  <Bot className="h-3.5 w-3.5" /> INK
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-6">
+                  When repeated work starts slowing everything down
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
+                  INK is the AI-supported operating layer used inside The Unlearning
+                  School to reduce manual drag across opportunity scanning,
+                  prioritization, follow-up, content workflows, academy support and
+                  repeatable execution tasks.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
+                <div className="flex flex-col gap-4 sm:flex-row">
+                  <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
+                    Talk to us about pilots
+                  </a>
+                  <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+                    Book a call
+                  </a>
+                </div>
+              </ScrollReveal>
             </div>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { num: "6", label: "Workflow areas", color: "bg-destructive/10 text-destructive" },
+                  { num: "∞", label: "Manual hours saved", color: "bg-accent-blue/10 text-accent-blue" },
+                  { num: "24/7", label: "Background scanning", color: "bg-accent-emerald/10 text-accent-emerald" },
+                  { num: "0", label: "Judgment replaced", color: "bg-accent-purple/10 text-accent-purple" },
+                ].map((stat) => (
+                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                    <p className={`text-3xl font-black mb-1 ${stat.color.split(' ')[1]}`}>{stat.num}</p>
+                    <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
+                  </GlowCard>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">This is probably your situation</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            The team is doing too much manually. Scanning, filtering, following up,
-            preparing materials, repurposing content, tracking opportunities. Each
-            of these tasks is small on its own, but together they create a drag
-            layer that slows everything else down. Important work waits because
-            repeatable work keeps taking up capacity.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What this is already costing</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            Opportunities get missed because nobody tracked them closely enough.
-            Follow-ups slip because they depend on someone remembering. Materials
-            stay in draft. Knowledge that could be repurposed never leaves the
-            original context. The cost is not dramatic, it is cumulative and it
-            compounds every week.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What INK is built to do</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            INK takes the repeatable, structured and semi-automated parts of the
-            work and turns them into consistent workflows. It does not replace
-            judgment. It removes the manual drag that sits between decisions and
-            execution.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What changes when INK is applied well</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            Follow-up starts happening on time, without someone chasing it
-            manually. Scanning runs in the background instead of eating up
-            calendar slots. Materials move from draft to done faster. The
-            team spends less time on tasks that should be systematic, freeing
-            up capacity for the work that actually requires judgment and presence.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
+      {/* The situation — visual cards */}
+      <section className="py-20 md:py-28 bg-background">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">What INK supports today</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {supports.map((s) => (
-              <div key={s.area} className="rounded-lg border border-border bg-card p-6">
-                <h3 className="text-xl font-semibold mb-3">{s.area}</h3>
-                <p className="text-muted-foreground">{s.desc}</p>
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">This is probably your situation</h2>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-12 max-w-3xl">
+              The team is doing too much manually. Each task is small on its own, but together they create a drag layer that slows everything else down.
+            </p>
+          </ScrollReveal>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {costs.map((item, i) => (
+              <ScrollReveal key={item.text} delay={i * 0.1}>
+                <div className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-lg group">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                    <item.icon className="h-6 w-6 text-destructive" />
+                  </div>
+                  <p className="text-foreground/90 pt-1">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={0.5}>
+            <p className="mt-8 text-center text-muted-foreground italic">
+              The cost is not dramatic — it is cumulative and it compounds every week.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* What INK does — before/after */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is built to do</h2>
+          </ScrollReveal>
+          <div className="grid gap-8 md:grid-cols-2">
+            <ScrollReveal direction="left">
+              <div className="rounded-2xl border-2 border-destructive/20 bg-destructive/5 p-8">
+                <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-destructive">
+                  <Minus className="h-5 w-5" /> Without INK
+                </h3>
+                <ul className="space-y-4">
+                  {["Manual scanning eats calendar slots", "Follow-ups depend on memory", "Materials stuck in draft", "Knowledge stays in one context", "Repeatable tasks slow everything"].map(t => (
+                    <li key={t} className="flex items-start gap-3 text-muted-foreground">
+                      <XCircle className="h-4 w-4 shrink-0 mt-1 text-destructive/60" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+              <div className="rounded-2xl border-2 border-accent-emerald/20 bg-accent-emerald/5 p-8">
+                <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-accent-emerald">
+                  <Zap className="h-5 w-5" /> With INK
+                </h3>
+                <ul className="space-y-4">
+                  {["Scanning runs in the background", "Follow-up happens on time, automatically", "Materials move from draft to done faster", "Content gets repurposed systematically", "Team focuses on judgment work"].map(t => (
+                    <li key={t} className="flex items-start gap-3 text-muted-foreground">
+                      <CheckCircle className="h-4 w-4 shrink-0 mt-1 text-accent-emerald" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* What INK supports — icon grid */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">What INK supports today</h2>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {supports.map((s, i) => (
+              <ScrollReveal key={s.area} delay={i * 0.08}>
+                <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full group">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10 mb-5 group-hover:bg-destructive/20 transition-colors">
+                    <s.icon className="h-7 w-7 text-destructive" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-destructive transition-colors">{s.area}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                </GlowCard>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What can come out of the work</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
-            A structured workflow layer that reduces manual drag, improves
-            follow-through and creates capacity for the work that actually
-            requires human attention. For some teams, INK becomes the foundation
-            of a broader operating system.
-          </p>
+      {/* What INK is / is not — dual columns */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is and what it is not</h2>
+          </ScrollReveal>
+          <div className="grid gap-8 md:grid-cols-2">
+            <ScrollReveal direction="left">
+              <div className="space-y-4">
+                {inkIs.map((item) => (
+                  <div key={item.text} className="flex items-center gap-4 rounded-xl bg-card p-5 border border-border">
+                    <item.icon className="h-5 w-5 shrink-0 text-accent-emerald" />
+                    <span className="font-medium">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+              <div className="space-y-4">
+                {inkIsNot.map((item) => (
+                  <div key={item.text} className="flex items-center gap-4 rounded-xl bg-card p-5 border border-border">
+                    <item.icon className="h-5 w-5 shrink-0 text-destructive/60" />
+                    <span className="font-medium text-muted-foreground">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Where INK fits best</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            Teams with high operational load, repeatable tasks across multiple
-            channels and limited bandwidth for the manual work that keeps the
-            rest of the system moving. INK is most useful when the bottleneck is
-            not strategy but execution capacity.
-          </p>
+      {/* Where INK fits + How it connects — combined visual */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid gap-12 md:grid-cols-2">
+            <ScrollReveal>
+              <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 mb-5">
+                  <Layers className="h-6 w-6 text-accent-blue" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Where INK fits best</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Teams with high operational load, repeatable tasks across multiple
+                  channels and limited bandwidth for the manual work that keeps the
+                  rest of the system moving. INK is most useful when the bottleneck is
+                  not strategy but execution capacity.
+                </p>
+              </GlowCard>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-purple/10 mb-5">
+                  <Workflow className="h-6 w-6 text-accent-purple" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">How INK connects to the work</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  INK is not a standalone product. When a team starts with a program
+                  (funding, AI, execution, proposals or academy design) INK supports
+                  the parts of that work that benefit from structure, consistency and
+                  automation.
+                </p>
+              </GlowCard>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">How INK connects to the rest of the work</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            INK is not a standalone product. It is part of how The Unlearning
-            School operates. When a team starts with a program (funding, AI,
-            execution, proposals or academy design) INK supports the parts of
-            that work that benefit from structure, consistency and automation.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What INK is not</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            INK is not a product you can buy off the shelf and it is not a chatbot
-            or a replacement for thinking. It is an operating layer designed to
-            handle the repeatable parts of the work so the team can focus on
-            the parts that genuinely require judgment and creativity.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Why this approach works</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            Because the biggest productivity loss in most teams is not in the
-            strategic layer. It is in the execution layer: the scanning,
-            filtering, following up, preparing and tracking that nobody owns
-            systematically. INK makes that layer work.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Pilots and use cases</h2>
-          <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-            If INK fits your situation, the best next step is a focused
-            conversation about the specific workflows creating drag. From there,
-            the work can start with a pilot scoped around the area with the
-            highest cost-to-fix ratio.
-          </p>
+      {/* Why this works — accent quote */}
+      <section className="py-16 md:py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <ScrollReveal>
+            <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10">
+              <p className="text-lg leading-relaxed md:text-xl italic text-foreground/80">
+                "The biggest productivity loss in most teams is not in the strategic layer.
+                It is in the execution layer: the scanning, filtering, following up,
+                preparing and tracking that nobody owns systematically."
+              </p>
+              <p className="mt-4 text-sm font-bold text-destructive">INK makes that layer work.</p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
