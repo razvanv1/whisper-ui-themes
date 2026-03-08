@@ -7,6 +7,7 @@ import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import GlowCard from "@/components/shared/GlowCard";
 import ProgramCard from "@/components/shared/ProgramCard";
+import AnimatedCounter from "@/components/shared/AnimatedCounter";
 import {
   Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain,
   Layers, Workflow, ArrowRight, Bot, Sparkles
@@ -91,7 +92,7 @@ const Home = () => {
                 ].map(stat => (
                   <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center">
                     <stat.icon className="h-5 w-5 mx-auto mb-2 text-destructive" />
-                    <p className="text-2xl font-black text-foreground">{stat.num}</p>
+                    <p className="text-2xl font-black text-foreground"><AnimatedCounter value={stat.num} /></p>
                     <p className="text-xs text-muted-foreground font-medium mt-1">{stat.label}</p>
                   </GlowCard>
                 ))}
