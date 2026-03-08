@@ -90,7 +90,7 @@ const Home = () => {
       </section>
 
       {/* Too much motion — visual treatment */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
