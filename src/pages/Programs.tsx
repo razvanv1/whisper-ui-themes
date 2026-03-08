@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Search, Brain, TrendingDown, FileX, PackageOpen, ArrowRight, Sparkles } from "lucide-react";
+import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
@@ -65,6 +66,7 @@ const problemBullets = [
 const Programs = () => {
   return (
     <PageLayout>
+      <SEO title="Programs" description="Five structured programs for funding intelligence, AI adoption, execution readiness, proposal support and academy design." path="/programs" />
       {/* Hero */}
       <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
