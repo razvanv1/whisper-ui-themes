@@ -7,6 +7,7 @@ import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import GlowCard from "@/components/shared/GlowCard";
 import ProgramCard from "@/components/shared/ProgramCard";
+import AnimatedCounter from "@/components/shared/AnimatedCounter";
 import {
   Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain,
   Layers, Workflow, ArrowRight, Bot, Sparkles
