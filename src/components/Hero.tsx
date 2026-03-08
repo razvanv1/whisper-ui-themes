@@ -24,34 +24,32 @@ export function Hero() {
   // Ensure video is muted immediately on load to prevent any audio
   useEffect(() => {
     if (videoRef.current) {
-      console.log('Video element found, setting up...')
-      videoRef.current.volume = 0
-      videoRef.current.muted = true
-      videoRef.current.defaultMuted = true
-      
-      // Add event listeners for debugging
-      videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
-      videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
-      videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
-      videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
-      videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
-      
-      // Force mute on play
-      videoRef.current.addEventListener('play', () => {
-        if (videoRef.current) {
-          console.log('Video play event fired')
-          videoRef.current.muted = isMuted
-          videoRef.current.volume = isMuted ? 0 : 0.7
+      const video = videoRef.current
+      video.volume = 0
+      video.muted = true
+      video.defaultMuted = true
+
+      // Loop manually, cutting last 2 seconds to hide logo
+      const handleTimeUpdate = () => {
+        if (video.duration && video.currentTime >= video.duration - 2) {
+          video.currentTime = 0
+          video.play().catch(() => {})
         }
+      }
+
+      video.addEventListener('timeupdate', handleTimeUpdate)
+
+      // Force mute on play
+      video.addEventListener('play', () => {
+        video.muted = isMuted
+        video.volume = isMuted ? 0 : 0.7
       })
-      
-      // Try to play the video
-      const playPromise = videoRef.current.play()
+
+      // Try to play
+      const playPromise = video.play()
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            console.log('Video autoplay successful')
-            // Fade out loading overlay once video is playing
             const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
             if (overlay) {
               overlay.style.transition = 'opacity 0.5s ease-out'
@@ -60,6 +58,10 @@ export function Hero() {
             }
           })
           .catch(error => console.error('Video autoplay failed:', error))
+      }
+
+      return () => {
+        video.removeEventListener('timeupdate', handleTimeUpdate)
       }
     }
   }, [])
@@ -113,7 +115,6 @@ export function Hero() {
         className="absolute inset-0 w-full h-full object-cover scale-110"
         autoPlay
         muted
-        loop
         playsInline
         preload="auto"
         poster=""
