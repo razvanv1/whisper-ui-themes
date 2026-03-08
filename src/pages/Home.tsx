@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
@@ -66,15 +65,6 @@ const Home = () => {
     };
   }, []);
 
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 0.7]);
-
-  // Reduce forced reflow: use will-change on animated elements
-  const videoStyle = { y: videoY, willChange: "transform" as const };
-  const textStyle = { y: textY, willChange: "transform" as const };
-  const overlayStyle = { opacity: overlayOpacity, willChange: "opacity" as const };
 
   return (
     <PageLayout>
@@ -85,24 +75,23 @@ const Home = () => {
       />
       {/* Hero — video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
-        <motion.video
+        <video
           ref={heroVideoRef}
-          style={videoStyle}
           className="absolute inset-0 w-full h-full object-cover"
           muted
           playsInline
           preload="none"
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
-        </motion.video>
-        <motion.div style={overlayStyle} className="absolute inset-0 bg-black" />
-        <motion.div style={textStyle} className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
+        </video>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
           <ScrollReveal>
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white">
               What is learned<br />can be unlearned.
             </h1>
           </ScrollReveal>
-        </motion.div>
+        </div>
       </section>
 
       {/* Intro */}
