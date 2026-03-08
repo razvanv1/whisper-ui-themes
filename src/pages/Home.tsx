@@ -95,7 +95,7 @@ const Home = () => {
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
               <div>
-                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
+                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-gradient-subtle">
                   Too much motion can look like progress
                 </h2>
                 <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
