@@ -138,7 +138,7 @@ const Home = () => {
       </section>
 
       {/* Where most work starts */}
-      <section className="py-28 md:py-36 bg-background">
+      <section className="py-28 md:py-36 bg-background section-divider-dot">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3 text-gradient">Where most work starts</h2>
