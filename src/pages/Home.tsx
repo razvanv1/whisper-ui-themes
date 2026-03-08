@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
-import ScrollReveal from "@/components/shared/ScrollReveal";
+import ScrollReveal, { StaggerReveal } from "@/components/shared/ScrollReveal";
 import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import GlowCard from "@/components/shared/GlowCard";
@@ -134,7 +134,7 @@ const Home = () => {
               Most teams do not need everything at once. They need the right starting point.
             </p>
           </ScrollReveal>
-          <div className="grid gap-8 md:grid-cols-3">
+          <StaggerReveal className="grid gap-8 md:grid-cols-3" staggerDelay={0.15}>
             {[
               {
                 title: "Funding intelligence and opportunity readiness",
@@ -154,14 +154,12 @@ const Home = () => {
                 bestFit: "Delivery teams and growing teams under pressure.",
                 link: "/programs/execution-readiness",
               },
-            ].map((p, i) => (
-              <ScrollReveal key={p.link} delay={i * 0.15}>
-                <GlowCard className="h-full rounded-2xl border border-border bg-card p-8">
-                  <ProgramCard {...p} />
-                </GlowCard>
-              </ScrollReveal>
+            ].map((p) => (
+              <GlowCard key={p.link} className="h-full rounded-2xl border border-border bg-card p-8">
+                <ProgramCard {...p} />
+              </GlowCard>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
@@ -191,24 +189,22 @@ const Home = () => {
               What this work is designed to prevent
             </h2>
           </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggerReveal className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
             {[
               { icon: Search, text: "Chasing too many opportunities without enough filtering" },
               { icon: Brain, text: "Bringing AI into the team without better habits or judgment" },
               { icon: Layers, text: "Letting parallel initiatives compete until traction drops" },
               { icon: FileX, text: "Spending months on proposals that were never strong enough" },
               { icon: PackageOpen, text: "Leaving valuable expertise unpackaged" },
-            ].map((item, i) => (
-              <ScrollReveal key={item.text} delay={i * 0.1}>
-                <div className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
-                    <item.icon className="h-5 w-5 text-destructive" />
-                  </div>
-                  <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
+            ].map((item) => (
+              <div key={item.text} className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                  <item.icon className="h-5 w-5 text-destructive" />
                 </div>
-              </ScrollReveal>
+                <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
+              </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
@@ -222,24 +218,22 @@ const Home = () => {
               without enough movement.
             </p>
           </ScrollReveal>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <StaggerReveal className="grid gap-6 sm:grid-cols-2" staggerDelay={0.1}>
             {[
               { icon: Target, title: "Connected problems", text: "Funding, AI and execution are treated as connected problems, not separate silos." },
               { icon: Zap, title: "Real constraints", text: "The work is shaped around real constraints, not ideal conditions." },
               { icon: Workflow, title: "Structured expertise", text: "Expertise can be turned into stronger programs, academies and partner-facing assets." },
               { icon: Brain, title: "INK support", text: "INK supports part of the work behind the scenes through research, prioritization and workflow support." },
-            ].map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.1}>
-                <GlowCard className="rounded-2xl border border-border bg-background p-6 h-full group">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary mb-4 group-hover:bg-destructive/10 transition-colors">
-                    <item.icon className="h-5 w-5 text-foreground group-hover:text-destructive transition-colors" />
-                  </div>
-                  <h3 className="font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.text}</p>
-                </GlowCard>
-              </ScrollReveal>
+            ].map((item) => (
+              <GlowCard key={item.title} className="rounded-2xl border border-border bg-background p-6 h-full group">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary mb-4 group-hover:bg-destructive/10 transition-colors">
+                  <item.icon className="h-5 w-5 text-foreground group-hover:text-destructive transition-colors" />
+                </div>
+                <h3 className="font-bold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm">{item.text}</p>
+              </GlowCard>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
