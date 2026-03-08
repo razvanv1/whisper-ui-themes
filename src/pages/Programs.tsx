@@ -165,6 +165,12 @@ const Programs = () => {
                     >
                       Book a working call
                     </a>
+                    <Link
+                      to={`/programs/${p.slug}`}
+                      className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 font-semibold hover:bg-accent gentle-animation"
+                    >
+                      See full program →
+                    </Link>
                   </div>
                 </GlowCard>
               </ScrollReveal>
