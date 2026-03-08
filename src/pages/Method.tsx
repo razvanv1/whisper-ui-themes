@@ -210,7 +210,7 @@ const Method = () => {
       </section>
 
       {/* Where it comes from */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
