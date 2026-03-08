@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.unlearning.ro/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/method</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/ink</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/resources</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/contact</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs/funding-intelligence</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs/ai-adoption</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs/execution-readiness</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs/proposal-support</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/programs/academy-design</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/send-issue</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/privacy-policy</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/cookie-policy</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.unlearning.ro/terms-and-conditions</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>
