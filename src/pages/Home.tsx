@@ -71,6 +71,11 @@ const Home = () => {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 0.7]);
 
+  // Reduce forced reflow: use will-change on animated elements
+  const videoStyle = { y: videoY, willChange: "transform" as const };
+  const textStyle = { y: textY, willChange: "transform" as const };
+  const overlayStyle = { opacity: overlayOpacity, willChange: "opacity" as const };
+
   return (
     <PageLayout>
       <SEO
@@ -82,7 +87,7 @@ const Home = () => {
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <motion.video
           ref={heroVideoRef}
-          style={{ y: videoY }}
+          style={videoStyle}
           className="absolute inset-0 w-full h-full object-cover"
           muted
           playsInline
@@ -90,8 +95,8 @@ const Home = () => {
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </motion.video>
-        <motion.div style={{ opacity: overlayOpacity }} className="absolute inset-0 bg-black" />
-        <motion.div style={{ y: textY }} className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
+        <motion.div style={overlayStyle} className="absolute inset-0 bg-black" />
+        <motion.div style={textStyle} className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
           <ScrollReveal>
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white">
               What is learned<br />can be unlearned.
