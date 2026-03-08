@@ -283,7 +283,7 @@ const Home = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-card border border-border flex items-end p-8">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-secondary via-muted to-accent flex items-end p-8">
                 <p className="text-2xl font-bold text-foreground md:text-3xl">
                   What is learned<br />
                   <span className="text-primary">can be unlearned.</span>
@@ -299,7 +299,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-background border border-border" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-muted via-secondary to-accent/50 shadow-lg" />
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div>
