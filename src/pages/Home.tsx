@@ -226,8 +226,8 @@ const Home = () => {
               { icon: Brain, title: "INK support", text: "INK supports part of the work behind the scenes through research, prioritization and workflow support." },
             ].map((item) => (
               <GlowCard key={item.title} className="rounded-2xl border border-border bg-background p-6 h-full group">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary mb-4 group-hover:bg-destructive/10 transition-colors">
-                  <item.icon className="h-5 w-5 text-foreground group-hover:text-destructive transition-colors" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary mb-4 group-hover:bg-destructive/10 group-hover:scale-110 transition-all duration-300">
+                  <item.icon className="h-5 w-5 text-foreground group-hover:text-destructive group-hover:-rotate-6 transition-all duration-300" />
                 </div>
                 <h3 className="font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.text}</p>
