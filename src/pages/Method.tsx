@@ -5,6 +5,7 @@ import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import { TrendingDown, Brain, Search, Layers, FileX, PackageOpen } from "lucide-react";
+import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const Method = () => {
   return (
@@ -217,8 +218,9 @@ const Method = () => {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
                   <img
-                    src="/razvan-valceanu.jpg"
+                    src={razvanPhoto}
                     alt="Răzvan Vâlceanu, fondator The Unlearning School"
+                    loading="eager"
                     className="w-full aspect-[3/4] object-cover object-top"
                   />
                 </div>
