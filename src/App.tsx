@@ -11,6 +11,11 @@ import Ink from "./pages/Ink";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FundingIntelligence from "./pages/programs/FundingIntelligence";
+import AIAdoption from "./pages/programs/AIAdoption";
+import ExecutionReadiness from "./pages/programs/ExecutionReadiness";
+import ProposalSupport from "./pages/programs/ProposalSupport";
+import AcademyDesign from "./pages/programs/AcademyDesign";
 
 const queryClient = new QueryClient();
 
