@@ -299,7 +299,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-background border border-border" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-muted via-secondary to-accent/50 shadow-lg" />
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div>
