@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
+// Preload logo for faster LCP
+const logoPreload = new Image();
+logoPreload.src = logo;
+
 const navItems = [
   { label: "Programs", path: "/programs" },
   { label: "Method", path: "/method" },
@@ -32,7 +36,7 @@ const Navbar = () => {
         scrolled ? "h-14 md:h-14" : "h-16 md:h-20"
       }`}>
         <Link to="/" className="flex items-center gap-2 group">
-          <img src={logo} alt="The Unlearning School" className={`transition-all duration-500 ease-out group-hover:scale-105 ${scrolled ? "h-8 md:h-9" : "h-10 md:h-12"}`} />
+          <img src={logo} alt="The Unlearning School" width="199" height="70" className={`transition-all duration-500 ease-out group-hover:scale-105 ${scrolled ? "h-8 md:h-9" : "h-10 md:h-12"}`} />
         </Link>
 
         {/* Desktop Nav */}
