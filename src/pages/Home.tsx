@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
