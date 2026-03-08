@@ -139,7 +139,7 @@ const Resources = () => {
       </section>
 
       {/* Newsletter block — visual */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10 md:p-14">
