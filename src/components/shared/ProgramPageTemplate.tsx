@@ -37,7 +37,7 @@ const Section = ({
   warm?: boolean;
 }) => (
   <section
-    className={`py-20 md:py-28 ${warm ? "bg-card" : "bg-background"}`}
+    className={`py-14 md:py-20 ${warm ? "bg-card" : "bg-background"}`}
   >
     <div className="max-w-3xl mx-auto px-6">{children}</div>
   </section>
