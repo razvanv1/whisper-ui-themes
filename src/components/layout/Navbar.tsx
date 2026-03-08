@@ -28,10 +28,10 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-primary after:origin-left after:transition-transform after:duration-300 ${
                 location.pathname === item.path
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "text-primary after:scale-x-100"
+                  : "text-muted-foreground after:scale-x-0 hover:after:scale-x-100"
               }`}
             >
               {item.label}
