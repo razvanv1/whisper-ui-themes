@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import { Footer } from "../Footer";
 
@@ -7,10 +9,20 @@ interface PageLayoutProps {
 }
 
 const PageLayout = ({ children }: PageLayoutProps) => {
+  const location = useLocation();
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <main className="flex-1 pt-16 md:pt-20">{children}</main>
+      <motion.main
+        key={location.pathname}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="flex-1 pt-16 md:pt-20"
+      >
+        {children}
+      </motion.main>
       <Footer />
     </div>
   );
