@@ -197,9 +197,9 @@ const Home = () => {
               { icon: FileX, text: "Spending months on proposals that were never strong enough" },
               { icon: PackageOpen, text: "Leaving valuable expertise unpackaged" },
             ].map((item) => (
-              <div key={item.text} className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
-                  <item.icon className="h-5 w-5 text-destructive" />
+              <div key={item.text} className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full interactive">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 group-hover:scale-110 transition-all duration-300">
+                  <item.icon className="h-5 w-5 text-destructive group-hover:rotate-6 transition-transform duration-300" />
                 </div>
                 <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
               </div>
