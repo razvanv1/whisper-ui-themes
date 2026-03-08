@@ -222,7 +222,7 @@ const Ink = () => {
       </section>
 
       {/* Where INK fits + How it connects — combined visual */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <ScrollReveal>
