@@ -62,6 +62,7 @@ const ProgramPageTemplate = ({
 
   return (
     <PageLayout>
+      <SEO title={eyebrow} description={subtitle} path={location.pathname} />
       {/* Program selector */}
       <section className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto overflow-x-auto py-3 px-6">
