@@ -100,9 +100,9 @@ export function Footer() {
                 </Link>
               ))}
             </nav>
-            <h5 className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wider text-background/40">
+            <p className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wider text-background/40">
               Legal
-            </h5>
+            </p>
             <nav className="flex flex-col gap-2">
               {legalLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="block cursor-pointer text-sm text-background/75 transition-colors hover:text-red-400 hover:underline">
