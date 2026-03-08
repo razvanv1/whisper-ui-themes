@@ -36,32 +36,14 @@
   --accent-emerald: #059669;
   --accent-purple: #7c3aed;
   
+  /* Alternate section background (light grey, NO brown) */
+  --surface-elevated: #f8f8f8;
+  --accent-section: #f4f4f5;
+  
   --radius: 0.75rem;
 }
 
-.dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --card: #141414;
-  --card-foreground: #fafafa;
-  --surface-elevated: #1c1c1c;
-  --accent-section: #18100a;
-  --popover: #1a1a1a;
-  --popover-foreground: #fafafa;
-  --primary: #fafafa;
-  --primary-foreground: #0a0a0a;
-  --secondary: #1a1a1a;
-  --secondary-foreground: #fafafa;
-  --muted: #1a1a1a;
-  --muted-foreground: #a1a1aa;
-  --accent: #1a1a1a;
-  --accent-foreground: #fafafa;
-  --destructive: #ef4444;
-  --destructive-foreground: #fafafa;
-  --border: #27272a;
-  --input: #1a1a1a;
-  --ring: #71717a;
-}
+/* Dark theme removed — site is light only */
 
 
 @theme inline {

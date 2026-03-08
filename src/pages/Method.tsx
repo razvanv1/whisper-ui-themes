@@ -10,7 +10,7 @@ const Method = () => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <ScrollReveal>
@@ -70,7 +70,7 @@ const Method = () => {
               { icon: PackageOpen, text: "Expertise that could be a program, academy or asset but never gets structured" },
             ].map((item, i) => (
               <ScrollReveal key={item.text} delay={i * 0.08}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-5 transition-all hover:border-red-600/30 hover:shadow-md" style={{ background: 'var(--surface-elevated, var(--card))' }}>
+                <div className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 transition-all hover:border-red-600/30 hover:shadow-md">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-600/10">
                     <item.icon className="h-5 w-5 text-red-500" />
                   </div>
@@ -109,7 +109,7 @@ const Method = () => {
       </section>
 
       {/* Kurt Lewin — fixed contrast */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
@@ -210,7 +210,7 @@ const Method = () => {
       </section>
 
       {/* Where it comes from */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
