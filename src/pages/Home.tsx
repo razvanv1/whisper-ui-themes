@@ -280,37 +280,25 @@ const Home = () => {
         note="Selected startup, builder and technology ecosystem connections relevant to our work."
       />
 
-      {/* Method teaser — visual */}
+      {/* Method teaser */}
       <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-12 items-center md:grid-cols-2">
-            <ScrollReveal direction="left">
-              <div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
-                  The Method
-                </span>
-                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
-                  The work starts by removing what no longer fits
-                </h2>
-                <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
-                  Before adding more tools, more initiatives or more activity, the first
-                  move is to look at what no longer serves the work.
-                </p>
-                <Link to="/method"
-                  className="inline-flex items-center gap-2 justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
-                  See the method <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right">
-              <div className="relative rounded-2xl overflow-hidden border border-destructive/20 bg-destructive/5 p-10 flex items-end aspect-[4/3]">
-                <p className="text-2xl font-black text-foreground md:text-3xl">
-                  What is learned<br />
-                  <span className="text-destructive">can be unlearned.</span>
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
+        <div className="max-w-4xl mx-auto px-6">
+          <ScrollReveal>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+              The Method
+            </span>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
+              The work starts by removing what no longer fits
+            </h2>
+            <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
+              Before adding more tools, more initiatives or more activity, the first
+              move is to look at what no longer serves the work.
+            </p>
+            <Link to="/method"
+              className="inline-flex items-center gap-2 justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+              See the method <ArrowRight className="h-4 w-4" />
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 
