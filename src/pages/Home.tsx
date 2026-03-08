@@ -10,25 +10,38 @@ import { Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain, Layers, W
 const Home = () => {
   return (
     <PageLayout>
-      {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center border-b border-border overflow-hidden bg-background">
+      {/* Hero with video background */}
+      <section className="relative min-h-[90vh] flex items-center border-b border-border overflow-hidden">
+        {/* Video background */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
+        </video>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+
         <div className="max-w-6xl mx-auto px-6 relative z-10 py-20 md:py-28">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">The Unlearning School</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-4">The Unlearning School</p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-4 text-foreground">
+              <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-4 text-white">
                 What is learned can be unlearned
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-lg leading-relaxed md:text-xl mb-2 text-foreground/80 font-medium">
+              <p className="text-lg leading-relaxed md:text-xl mb-2 text-white/90 font-medium">
                 When everything feels important, choosing well matters more than doing more.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
-              <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
+              <p className="text-lg leading-relaxed md:text-xl mb-10 text-white/70">
                 The Unlearning School works with teams that are juggling too many ideas,
                 opportunities and demands at once. Instead of adding another layer of
                 activity, the work focuses on better choices, stronger programs and a
@@ -42,18 +55,18 @@ const Home = () => {
                   href="https://meet.brevo.com/razvan-valceanu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
                 >
                   Book a free 30-minute working call
                 </a>
                 <Link
                   to="/programs"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
+                  className="inline-flex items-center justify-center rounded-md border border-white/30 px-8 py-3 font-semibold text-white hover:bg-white/10 transition-colors"
                 >
                   Explore programs
                 </Link>
               </div>
-              <p className="text-sm mt-6 text-muted-foreground/70">
+              <p className="text-sm mt-6 text-white/50">
                 Use the first call to pressure-test the live issue, choose the best
                 starting point and avoid burning more time on the wrong next move.
               </p>
