@@ -46,7 +46,7 @@ const Method = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
                 >
-                  Book a free 30-minute working call
+                  Book a call
                 </a>
               </div>
             </ScrollReveal>
