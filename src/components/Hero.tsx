@@ -23,43 +23,61 @@ export function Hero() {
 
   // Ensure video is muted immediately on load to prevent any audio
   useEffect(() => {
-    if (videoRef.current) {
-      const video = videoRef.current
-      video.volume = 0
-      video.muted = true
-      video.defaultMuted = true
+    if (!videoRef.current) return
 
-      // Poll every 100ms to cut last 6 seconds (logo removal)
-      const intervalId = setInterval(() => {
-        if (video.duration && video.currentTime >= video.duration - 6) {
-          video.currentTime = 0
-        }
-      }, 100)
+    const video = videoRef.current
+    video.volume = 0
+    video.muted = true
+    video.defaultMuted = true
 
-      // Force mute on play
-      video.addEventListener('play', () => {
-        video.muted = isMuted
-        video.volume = isMuted ? 0 : 0.7
-      })
+    const FALLBACK_CUT_SECONDS = 47
 
-      // Try to play
-      const playPromise = video.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
-            if (overlay) {
-              overlay.style.transition = 'opacity 0.5s ease-out'
-              overlay.style.opacity = '0'
-              setTimeout(() => { overlay.style.display = 'none' }, 500)
-            }
-          })
-          .catch(error => console.error('Video autoplay failed:', error))
+    const getCutPoint = () => {
+      const duration = video.duration
+      if (Number.isFinite(duration) && duration > 8) return duration - 7
+
+      if (video.seekable.length > 0) {
+        const seekableEnd = video.seekable.end(video.seekable.length - 1)
+        if (Number.isFinite(seekableEnd) && seekableEnd > 8) return seekableEnd - 7
       }
 
-      return () => {
-        clearInterval(intervalId)
+      return FALLBACK_CUT_SECONDS
+    }
+
+    const handlePlay = () => {
+      video.muted = isMuted
+      video.volume = isMuted ? 0 : 0.7
+    }
+
+    // rAF is more reliable than timeupdate for aggressive cut-offs
+    let rafId = 0
+    const tick = () => {
+      if (video.currentTime >= getCutPoint()) {
+        video.currentTime = 0.05
       }
+      rafId = requestAnimationFrame(tick)
+    }
+
+    video.addEventListener('play', handlePlay)
+    rafId = requestAnimationFrame(tick)
+
+    const playPromise = video.play()
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
+          if (overlay) {
+            overlay.style.transition = 'opacity 0.5s ease-out'
+            overlay.style.opacity = '0'
+            setTimeout(() => { overlay.style.display = 'none' }, 500)
+          }
+        })
+        .catch(error => console.error('Video autoplay failed:', error))
+    }
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      video.removeEventListener('play', handlePlay)
     }
   }, [])
 
