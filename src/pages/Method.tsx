@@ -215,7 +215,7 @@ const Method = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
-              <div className="relative">
+              <div className="relative max-w-[260px]">
                 <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
                   <img
                     src={razvanPhoto}
