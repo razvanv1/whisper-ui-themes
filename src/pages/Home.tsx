@@ -212,7 +212,7 @@ const Home = () => {
       <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">Why clients come to TUS</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-gradient">Why clients come to TUS</h2>
             <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
               The work usually starts when teams feel the cost of doing too much
               without enough movement.
