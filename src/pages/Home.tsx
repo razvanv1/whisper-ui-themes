@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal, { StaggerReveal } from "@/components/shared/ScrollReveal";
 import CTASection from "@/components/shared/CTASection";
@@ -16,6 +16,48 @@ import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const Home = () => {
   const heroRef = useRef(null);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const CUT_SECONDS_FROM_END = 10;
+    let cutPoint = 45;
+
+    const updateCutPoint = () => {
+      const duration = video.duration;
+      if (Number.isFinite(duration) && duration > CUT_SECONDS_FROM_END + 1) {
+        cutPoint = duration - CUT_SECONDS_FROM_END;
+      }
+    };
+
+    const jumpBeforeLogo = () => {
+      if (video.currentTime >= cutPoint) {
+        video.currentTime = 0.05;
+        video.play().catch(() => {});
+      }
+    };
+
+    let rafId = 0;
+    const tick = () => {
+      jumpBeforeLogo();
+      rafId = requestAnimationFrame(tick);
+    };
+
+    video.addEventListener("loadedmetadata", updateCutPoint);
+    video.addEventListener("durationchange", updateCutPoint);
+
+    updateCutPoint();
+    rafId = requestAnimationFrame(tick);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      video.removeEventListener("loadedmetadata", updateCutPoint);
+      video.removeEventListener("durationchange", updateCutPoint);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -26,9 +68,13 @@ const Home = () => {
       {/* Hero — video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <motion.video
+          ref={heroVideoRef}
           style={{ y: videoY }}
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay muted loop playsInline
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </motion.video>
