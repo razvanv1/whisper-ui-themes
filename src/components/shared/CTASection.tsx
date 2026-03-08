@@ -51,7 +51,7 @@ const CTASection = ({
           ) : (
             <Link
               to={primaryLink || "/"}
-              className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 gentle-animation"
+              className="ripple-btn inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors"
             >
               {primaryLabel}
             </Link>
