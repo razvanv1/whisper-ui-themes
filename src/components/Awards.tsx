@@ -92,6 +92,7 @@ export function Awards() {
                     <img 
                       src={award.image}
                       alt="Film Festival Award Laurel"
+                      loading="lazy"
                       className="w-full h-auto max-w-48 mx-auto"
                       style={{
                         filter: 'contrast(1.02) saturate(1.1)',
