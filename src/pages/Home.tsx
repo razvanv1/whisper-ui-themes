@@ -95,7 +95,7 @@ const Home = () => {
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
               <div>
-                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
+                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-gradient-subtle">
                   Too much motion can look like progress
                 </h2>
                 <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
@@ -129,7 +129,7 @@ const Home = () => {
       <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3">Where most work starts</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3 text-gradient">Where most work starts</h2>
             <p className="text-lg leading-relaxed md:text-xl mb-12 text-muted-foreground">
               Most teams do not need everything at once. They need the right starting point.
             </p>
@@ -185,7 +185,7 @@ const Home = () => {
       <section className="py-28 md:py-36 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10 text-gradient-subtle">
               What this work is designed to prevent
             </h2>
           </ScrollReveal>
@@ -212,7 +212,7 @@ const Home = () => {
       <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">Why clients come to TUS</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-gradient">Why clients come to TUS</h2>
             <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
               The work usually starts when teams feel the cost of doing too much
               without enough movement.
