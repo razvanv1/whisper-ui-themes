@@ -70,7 +70,7 @@ const Method = () => {
               { icon: PackageOpen, text: "Expertise that could be a program, academy or asset but never gets structured" },
             ].map((item, i) => (
               <ScrollReveal key={item.text} delay={i * 0.08}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-5 transition-all hover:border-red-600/30 hover:shadow-md" style={{ background: 'var(--surface-elevated, var(--card))' }}>
+                <div className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 transition-all hover:border-red-600/30 hover:shadow-md">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-600/10">
                     <item.icon className="h-5 w-5 text-red-500" />
                   </div>
