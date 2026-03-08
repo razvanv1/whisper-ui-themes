@@ -654,3 +654,45 @@ html {
   opacity: 0.4;
   transition: 0s;
 }
+
+/* Section divider - soft gradient fade */
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
+}
+
+/* Section divider with accent dot */
+.section-divider-dot {
+  position: relative;
+}
+
+.section-divider-dot::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--destructive);
+}
+
+.section-divider-dot::after {
+  content: '';
+  position: absolute;
+  top: 2.5px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
+}
