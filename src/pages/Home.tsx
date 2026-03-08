@@ -439,8 +439,8 @@ const Home = () => {
 
       {/* Final CTA */}
       <CTASection
-        title="Bring the current bottleneck"
-        copy="Funding direction, AI inside the team, execution drag, opportunity overload, proposal shaping or academy design. Start with the live issue."
+        title="Let's remove the friction"
+        copy="Tell us about the challenge slowing down your team—whether it's execution drag, AI adoption, or funding strategy. We'll start with the live issue and map out the strongest next move."
       />
     </PageLayout>
   );
