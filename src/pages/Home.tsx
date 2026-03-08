@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal, { StaggerReveal } from "@/components/shared/ScrollReveal";
@@ -14,11 +14,17 @@ import {
 } from "lucide-react";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
+const isMobile = () => typeof window !== "undefined" && window.innerWidth < 768;
+
 const Home = () => {
   const heroRef = useRef(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
+  const [showVideo, setShowVideo] = useState(!isMobile());
 
   useEffect(() => {
+    // On mobile, skip the 12MB video entirely for faster LCP
+    if (!showVideo) return;
+
     const video = heroVideoRef.current;
     if (!video) return;
 
@@ -50,7 +56,6 @@ const Home = () => {
     updateCutPoint();
     rafId = requestAnimationFrame(tick);
 
-    // Lazy: start video only after page is fully loaded
     if (document.readyState === "complete") {
       startVideo();
     } else {
@@ -63,7 +68,7 @@ const Home = () => {
       video.removeEventListener("durationchange", updateCutPoint);
       window.removeEventListener("load", startVideo);
     };
-  }, []);
+  }, [showVideo]);
 
 
   return (
