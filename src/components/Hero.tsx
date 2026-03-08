@@ -30,18 +30,20 @@ export function Hero() {
     video.muted = true
     video.defaultMuted = true
 
-    const FALLBACK_CUT_SECONDS = 47
+    const CUT_SECONDS_FROM_END = 10
+    let cutPoint = 45
 
-    const getCutPoint = () => {
-      const duration = video.duration
-      if (Number.isFinite(duration) && duration > 8) return duration - 7
-
-      if (video.seekable.length > 0) {
-        const seekableEnd = video.seekable.end(video.seekable.length - 1)
-        if (Number.isFinite(seekableEnd) && seekableEnd > 8) return seekableEnd - 7
+    const updateCutPoint = () => {
+      if (Number.isFinite(video.duration) && video.duration > CUT_SECONDS_FROM_END + 1) {
+        cutPoint = video.duration - CUT_SECONDS_FROM_END
       }
+    }
 
-      return FALLBACK_CUT_SECONDS
+    const jumpToStartBeforeLogo = () => {
+      if (video.currentTime >= cutPoint) {
+        video.currentTime = 0.05
+        video.play().catch(() => {})
+      }
     }
 
     const handlePlay = () => {
@@ -49,16 +51,19 @@ export function Hero() {
       video.volume = isMuted ? 0 : 0.7
     }
 
-    // rAF is more reliable than timeupdate for aggressive cut-offs
+    // frame-accurate checks + fallback interval
     let rafId = 0
     const tick = () => {
-      if (video.currentTime >= getCutPoint()) {
-        video.currentTime = 0.05
-      }
+      jumpToStartBeforeLogo()
       rafId = requestAnimationFrame(tick)
     }
 
+    video.addEventListener('loadedmetadata', updateCutPoint)
+    video.addEventListener('durationchange', updateCutPoint)
+    video.addEventListener('timeupdate', jumpToStartBeforeLogo)
     video.addEventListener('play', handlePlay)
+
+    updateCutPoint()
     rafId = requestAnimationFrame(tick)
 
     const playPromise = video.play()
@@ -77,6 +82,9 @@ export function Hero() {
 
     return () => {
       cancelAnimationFrame(rafId)
+      video.removeEventListener('loadedmetadata', updateCutPoint)
+      video.removeEventListener('durationchange', updateCutPoint)
+      video.removeEventListener('timeupdate', jumpToStartBeforeLogo)
       video.removeEventListener('play', handlePlay)
     }
   }, [])
