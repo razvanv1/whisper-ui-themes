@@ -13,6 +13,7 @@ interface AuthorityBandProps {
   copy: string;
   items: PartnerItem[];
   note: string;
+  variant?: "european" | "startup";
 }
 
 const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
