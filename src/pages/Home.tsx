@@ -349,7 +349,7 @@ const Home = () => {
       />
 
       {/* Method teaser */}
-      <section className="py-28 md:py-36 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
