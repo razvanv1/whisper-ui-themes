@@ -64,7 +64,7 @@ const Contact = () => {
       {/* Working call */}
       <section className="py-20 md:py-28 bg-card">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Start with a free 30-minute working call</h2>
+          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Start with a working call</h2>
           <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
             A focused first conversation to understand what is actually going on,
             the pressure around it and the best place to begin. Think of it as
