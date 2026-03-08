@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal, { StaggerReveal } from "@/components/shared/ScrollReveal";
@@ -14,17 +14,11 @@ import {
 } from "lucide-react";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
-const isMobile = () => typeof window !== "undefined" && window.innerWidth < 768;
-
 const Home = () => {
   const heroRef = useRef(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [showVideo, setShowVideo] = useState(!isMobile());
 
   useEffect(() => {
-    // On mobile, skip the 12MB video entirely for faster LCP
-    if (!showVideo) return;
-
     const video = heroVideoRef.current;
     if (!video) return;
 
@@ -68,7 +62,7 @@ const Home = () => {
       video.removeEventListener("durationchange", updateCutPoint);
       window.removeEventListener("load", startVideo);
     };
-  }, [showVideo]);
+  }, []);
 
 
   return (
@@ -80,24 +74,15 @@ const Home = () => {
       />
       {/* Hero — video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
-        {showVideo ? (
-          <video
-            ref={heroVideoRef}
-            className="absolute inset-0 w-full h-full object-cover"
-            muted
-            playsInline
-            preload="none"
-          >
-            <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
-          </video>
-        ) : (
-          <img
-            src="/hero-poster.jpg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-            fetchPriority="high"
-          />
-        )}
+        <video
+          ref={heroVideoRef}
+          className="absolute inset-0 w-full h-full object-cover"
+          muted
+          playsInline
+          preload="none"
+        >
+          <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
+        </video>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
           <ScrollReveal>
