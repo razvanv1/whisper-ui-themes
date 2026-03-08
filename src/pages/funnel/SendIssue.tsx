@@ -4,6 +4,7 @@ import ContactForm from "@/components/shared/ContactForm";
 
 const SendIssue = () => (
   <PageLayout>
+    <SEO title="Send an Issue" description="Describe what is slowing the work down. The response will be shaped around the issue and the strongest next move." path="/send-issue" />
     <section className="py-20 md:py-28 border-b border-border">
       <div className="max-w-4xl mx-auto px-6">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">Send a message</p>
