@@ -43,7 +43,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center cursor-pointer">
-            <span className="font-bagel text-white text-xl tracking-wider">MOJJU</span>
+            <span className="font-bagel text-white text-xl tracking-wider">The Unlearning School</span>
           </Link>
 
           {/* Desktop Nav */}
