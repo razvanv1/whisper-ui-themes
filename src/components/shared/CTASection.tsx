@@ -66,7 +66,7 @@ const CTASection = ({
           )}
         </div>
         {supportLine && (
-          <p className="mt-6 text-sm text-background/50">{supportLine}</p>
+          <p className="mt-6 text-sm text-muted-foreground">{supportLine}</p>
         )}
       </div>
     </section>
