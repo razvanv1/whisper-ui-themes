@@ -218,8 +218,9 @@ const Method = () => {
               <div className="relative">
                 <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
                   <img
-                    src="/razvan-valceanu.jpg"
+                    src={razvanPhoto}
                     alt="Răzvan Vâlceanu, fondator The Unlearning School"
+                    loading="eager"
                     className="w-full aspect-[3/4] object-cover object-top"
                   />
                 </div>
