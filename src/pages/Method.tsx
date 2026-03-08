@@ -10,7 +10,7 @@ const Method = () => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <ScrollReveal>
