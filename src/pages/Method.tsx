@@ -5,6 +5,7 @@ import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import { TrendingDown, Brain, Search, Layers, FileX, PackageOpen } from "lucide-react";
+import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const Method = () => {
   return (
