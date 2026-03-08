@@ -96,7 +96,7 @@ const Resources = () => {
       </section>
 
       {/* Browse by topic — visual chips */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Browse by topic</h2>
