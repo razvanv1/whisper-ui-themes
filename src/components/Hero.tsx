@@ -49,7 +49,16 @@ export function Hero() {
       const playPromise = videoRef.current.play()
       if (playPromise !== undefined) {
         playPromise
-          .then(() => console.log('Video autoplay successful'))
+          .then(() => {
+            console.log('Video autoplay successful')
+            // Fade out loading overlay once video is playing
+            const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
+            if (overlay) {
+              overlay.style.transition = 'opacity 0.5s ease-out'
+              overlay.style.opacity = '0'
+              setTimeout(() => { overlay.style.display = 'none' }, 500)
+            }
+          })
           .catch(error => console.error('Video autoplay failed:', error))
       }
     }
