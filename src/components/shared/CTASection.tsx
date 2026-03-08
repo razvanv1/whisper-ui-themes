@@ -31,7 +31,7 @@ const CTASection = ({
         {bullets && (
           <ul className="mx-auto mb-8 max-w-lg space-y-3 text-left">
             {bullets.map((b, i) => (
-              <li key={i} className="flex items-start gap-3 text-background/80">
+              <li key={i} className="flex items-start gap-3 text-foreground/80">
                 <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-red-500" />
                 {b}
               </li>
