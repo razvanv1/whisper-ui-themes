@@ -55,7 +55,7 @@ const Home = () => {
               <ScrollReveal delay={0.3}>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
+                    className="ripple-btn inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
                     Book a call
                   </a>
                   <Link to="/programs"
