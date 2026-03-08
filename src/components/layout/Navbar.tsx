@@ -23,27 +23,27 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
       scrolled
-        ? "bg-background/98 backdrop-blur-xl shadow-sm"
-        : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+        ? "bg-background/95 backdrop-blur-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.03)] border-b border-border/60"
+        : "bg-background/80 backdrop-blur-xl border-b border-transparent"
     }`}>
-      <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${
+      <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-500 ease-out ${
         scrolled ? "h-14 md:h-14" : "h-16 md:h-20"
       }`}>
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="The Unlearning School" className={`transition-all duration-300 ${scrolled ? "h-8 md:h-9" : "h-10 md:h-12"}`} />
+        <Link to="/" className="flex items-center gap-2 group">
+          <img src={logo} alt="The Unlearning School" className={`transition-all duration-500 ease-out group-hover:scale-105 ${scrolled ? "h-8 md:h-9" : "h-10 md:h-12"}`} />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-0.5 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`relative rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-primary after:origin-left after:transition-transform after:duration-300 ${
+              className={`relative rounded-lg px-3.5 py-2 text-[0.8125rem] font-medium tracking-wide transition-all duration-200 hover:text-foreground hover:bg-muted/60 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-[1.5px] after:rounded-full after:bg-destructive after:origin-left after:transition-transform after:duration-300 ${
                 location.pathname === item.path
-                  ? "text-primary after:scale-x-100"
+                  ? "text-foreground after:scale-x-100"
                   : "text-muted-foreground after:scale-x-0 hover:after:scale-x-100"
               }`}
             >
@@ -54,7 +54,7 @@ const Navbar = () => {
             href="https://meet.brevo.com/razvan-valceanu"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="ml-3 inline-flex items-center justify-center rounded-lg bg-foreground px-5 py-2 text-[0.8125rem] font-semibold tracking-wide text-background hover:bg-foreground/90 transition-all duration-200 hover:shadow-lg hover:shadow-foreground/10 hover:-translate-y-px active:translate-y-0"
           >
             Book a call
           </a>
