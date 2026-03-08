@@ -440,7 +440,7 @@ const Home = () => {
       {/* Final CTA */}
       <CTASection
         title="Let's remove the friction"
-        copy="Tell us about the challenge slowing down your team—whether it's execution drag, AI adoption, or funding strategy. We'll start with the live issue and map out the strongest next move."
+        copy="We are here to help. Tell us about the challenge slowing down your team, whether it's execution drag, AI adoption, or funding strategy. We'll start with the live issue and map out the strongest next move."
       />
     </PageLayout>
   );
