@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";

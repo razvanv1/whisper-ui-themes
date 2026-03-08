@@ -73,6 +73,11 @@ const Home = () => {
 
   return (
     <PageLayout>
+      <SEO
+        title="The Unlearning School — Programs for funding, AI adoption & execution"
+        description="The Unlearning School builds programs, systems and useful ways of working for teams dealing with funding pressure, AI adoption, execution drag and the future of work."
+        path="/"
+      />
       {/* Hero — video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <motion.video

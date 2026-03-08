@@ -1,3 +1,4 @@
+import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ContactForm from "@/components/shared/ContactForm";
 

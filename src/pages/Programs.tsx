@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CheckCircle, Search, Brain, TrendingDown, FileX, PackageOpen, ArrowRight, Sparkles } from "lucide-react";
+import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
