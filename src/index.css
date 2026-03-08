@@ -41,6 +41,8 @@
   --accent-section: #f4f4f5;
   
   --radius: 0.75rem;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Roboto', sans-serif;
 }
 
 /* Dark theme removed — site is light only */
