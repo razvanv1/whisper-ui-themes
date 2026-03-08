@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <PageLayout>
       {/* Hero — video + slogan only */}
-      <section className="relative h-screen flex items-end overflow-hidden">
+      <section className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
