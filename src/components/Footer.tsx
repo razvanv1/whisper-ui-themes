@@ -90,9 +90,9 @@ export function Footer() {
 
           {/* Programs */}
           <div>
-            <h5 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
               Programs
-            </h5>
+            </p>
             <nav className="flex flex-col gap-2" aria-label="Footer program links">
               {programLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="block cursor-pointer text-sm text-background/75 transition-colors hover:text-red-400 hover:underline">
