@@ -11,6 +11,11 @@ import Ink from "./pages/Ink";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FundingIntelligence from "./pages/programs/FundingIntelligence";
+import AIAdoption from "./pages/programs/AIAdoption";
+import ExecutionReadiness from "./pages/programs/ExecutionReadiness";
+import ProposalSupport from "./pages/programs/ProposalSupport";
+import AcademyDesign from "./pages/programs/AcademyDesign";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +30,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/programs/funding-intelligence" element={<FundingIntelligence />} />
+            <Route path="/programs/ai-adoption" element={<AIAdoption />} />
+            <Route path="/programs/execution-readiness" element={<ExecutionReadiness />} />
+            <Route path="/programs/proposal-support" element={<ProposalSupport />} />
+            <Route path="/programs/academy-design" element={<AcademyDesign />} />
             <Route path="/method" element={<Method />} />
             <Route path="/ink" element={<Ink />} />
             <Route path="/resources" element={<Resources />} />
