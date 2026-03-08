@@ -24,7 +24,7 @@ const CTASection = ({
   bullets,
 }: CTASectionProps) => {
   return (
-    <section className="py-20 md:py-28 bg-foreground">
+    <section className="py-20 md:py-28 bg-card border-t border-border">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-black mb-6 text-background">{title}</h2>
         {copy && <p className="text-lg mb-8 text-background/70">{copy}</p>}
