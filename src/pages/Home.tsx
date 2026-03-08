@@ -371,7 +371,7 @@ const Home = () => {
       </section>
 
       {/* INK teaser — visual */}
-      <section className="py-28 md:py-36 bg-card">
+      <section className="py-16 md:py-24 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
