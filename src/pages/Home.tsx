@@ -71,10 +71,9 @@ const Home = () => {
           ref={heroVideoRef}
           style={{ y: videoY }}
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
           muted
           playsInline
-          preload="auto"
+          preload="none"
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </motion.video>
