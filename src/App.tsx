@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieConsent from "./components/CookieConsent";
 import Home from "./pages/Home";
 import Programs from "./pages/Programs";
 import Method from "./pages/Method";
@@ -17,6 +18,9 @@ import AIAdoption from "./pages/programs/AIAdoption";
 import ExecutionReadiness from "./pages/programs/ExecutionReadiness";
 import ProposalSupport from "./pages/programs/ProposalSupport";
 import AcademyDesign from "./pages/programs/AcademyDesign";
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import TermsAndConditions from "./pages/legal/TermsAndConditions";
 
 const queryClient = new QueryClient();
 
@@ -41,8 +45,12 @@ export default function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/send-issue" element={<SendIssue />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieConsent />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
