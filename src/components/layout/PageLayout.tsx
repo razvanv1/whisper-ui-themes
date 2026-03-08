@@ -14,6 +14,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <ScrollProgress />
       <Navbar />
       <motion.main
         key={location.pathname}
