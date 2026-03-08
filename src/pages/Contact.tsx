@@ -192,7 +192,7 @@ const Contact = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
