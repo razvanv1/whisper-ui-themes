@@ -109,7 +109,7 @@ const TermsAndConditions = () => {
                 <h2 className="text-2xl font-bold mb-4">10. Contact</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   If you have any questions about these Terms and Conditions, please contact us
-                  at hello@dezvatare.ro.
+                  at hello@unlearning.ro.
                 </p>
               </div>
             </div>

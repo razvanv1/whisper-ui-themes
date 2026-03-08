@@ -149,7 +149,7 @@ const Contact = () => {
           </ScrollReveal>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Mail, label: "Email", value: "hello@dezvatare.ro", href: "mailto:hello@dezvatare.ro" },
+              { icon: Mail, label: "Email", value: "hello@unlearning.ro", href: "mailto:hello@unlearning.ro" },
               { icon: Phone, label: "Phone", value: "+40 722 598 346", href: "tel:+40722598346" },
               { icon: MapPin, label: "Address", value: "1, Aleea Pasărea în Văzduh, București", href: null },
               { icon: MessageCircle, label: "WhatsApp", value: "Send a message", href: "https://api.whatsapp.com/message/SZZCJNB5GSGJP1?autoload=1&app_absent=0" },

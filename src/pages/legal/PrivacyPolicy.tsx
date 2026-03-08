@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   If you have any questions about this Privacy Policy or wish to exercise your
                   rights, please contact us at:<br />
-                  Email: hello@dezvatare.ro<br />
+                  Email: hello@unlearning.ro<br />
                   Phone: +40 722 598 346<br />
                   You also have the right to lodge a complaint with the Romanian National
                   Supervisory Authority for Personal Data Processing (ANSPDCP).

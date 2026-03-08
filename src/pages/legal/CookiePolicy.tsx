@@ -88,7 +88,7 @@ const CookiePolicy = () => {
                 <h2 className="text-2xl font-bold mb-4">6. Contact</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   If you have questions about our use of cookies, please contact us at
-                  hello@dezvatare.ro.
+                  hello@unlearning.ro.
                 </p>
               </div>
             </div>
