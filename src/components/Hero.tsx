@@ -113,7 +113,6 @@ export function Hero() {
         className="absolute inset-0 w-full h-full object-cover scale-110"
         autoPlay
         muted
-        loop
         playsInline
         preload="auto"
         poster=""
