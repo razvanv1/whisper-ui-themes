@@ -409,7 +409,7 @@ const Home = () => {
 
 
       {/* Resources teaser */}
-      <section className="py-28 md:py-36 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2 items-center">
