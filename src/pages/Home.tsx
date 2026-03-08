@@ -339,39 +339,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Founder — compact with photo */}
-      <section className="py-20 md:py-28 bg-secondary">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-12 items-center md:grid-cols-5">
-            <ScrollReveal direction="left" className="md:col-span-2">
-              <div className="relative max-w-[240px]">
-                <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
-                  <img src={razvanPhoto} alt="Răzvan Vâlceanu" loading="lazy"
-                    className="w-full aspect-[3/4] object-cover object-top" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 rounded-xl bg-destructive px-5 py-3 shadow-lg">
-                  <p className="text-sm font-bold text-white">Founder</p>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.15} className="md:col-span-3">
-              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
-                Built across digital, education and business execution
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The Unlearning School is founded by Răzvan Vâlceanu, whose work brings
-                together entrepreneurship, digital business, education and
-                organizational programs. Active in selected AI and startup
-                ecosystems, including as a Lovable Ambassador.
-              </p>
-              <a href="https://www.linkedin.com/in/razvanvalceanu/" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-destructive/10 px-5 py-3 text-destructive font-semibold transition-all hover:bg-destructive/20">
-                Răzvan Vâlceanu on LinkedIn <ArrowRight className="h-4 w-4" />
-              </a>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
 
       {/* Resources teaser */}
       <section className="py-20 md:py-28 bg-background">
