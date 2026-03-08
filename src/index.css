@@ -8,37 +8,42 @@
 :root {
   --font-size: 16px;
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #0f0f0f;
   --card: #fafafa;
-  --card-foreground: #0a0a0a;
+  --card-foreground: #0f0f0f;
   --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #0a0a0a;
+  --popover-foreground: #0f0f0f;
+  --primary: #0f0f0f;
   --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #0a0a0a;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #f4f4f5;
-  --accent-foreground: #0a0a0a;
-  --destructive: #ef4444;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #0f0f0f;
+  --muted: #f5f5f5;
+  --muted-foreground: #636369;
+  --accent: #f5f5f5;
+  --accent-foreground: #0f0f0f;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e4e4e7;
-  --input: #f4f4f5;
+  --border: #e5e5e5;
+  --input: #f5f5f5;
   --input-background: #ffffff;
-  --switch-background: #e4e4e7;
+  --switch-background: #e5e5e5;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: #a1a1aa;
   
-  /* Simplified accent colors */
+  /* Accent colors — tech-forward palette */
   --accent-blue: #2563eb;
   --accent-emerald: #059669;
   --accent-purple: #7c3aed;
   
-  /* Alternate section background (light grey, NO brown) */
-  --surface-elevated: #f8f8f8;
-  --accent-section: #f4f4f5;
+  /* Surface tokens */
+  --surface-elevated: #f8f8f9;
+  --accent-section: #f5f5f5;
+  
+  /* Glow / gradient tokens */
+  --glow-primary: rgba(220, 38, 38, 0.12);
+  --glow-subtle: rgba(15, 15, 15, 0.04);
+  --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(245,245,245,0.4) 100%);
   
   --radius: 0.75rem;
   --font-heading: 'Space Grotesk', sans-serif;
