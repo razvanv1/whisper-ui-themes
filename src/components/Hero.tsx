@@ -49,7 +49,16 @@ export function Hero() {
       const playPromise = videoRef.current.play()
       if (playPromise !== undefined) {
         playPromise
-          .then(() => console.log('Video autoplay successful'))
+          .then(() => {
+            console.log('Video autoplay successful')
+            // Fade out loading overlay once video is playing
+            const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
+            if (overlay) {
+              overlay.style.transition = 'opacity 0.5s ease-out'
+              overlay.style.opacity = '0'
+              setTimeout(() => { overlay.style.display = 'none' }, 500)
+            }
+          })
           .catch(error => console.error('Video autoplay failed:', error))
       }
     }
@@ -106,10 +115,15 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
+        poster=""
       >
         <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
+
+      {/* Loading overlay - hides black flash while video buffers */}
+      <div className="absolute inset-0 bg-black z-[1] pointer-events-none video-loading-overlay" />
 
       {/* Full-Width Navbar */}
       <motion.nav
