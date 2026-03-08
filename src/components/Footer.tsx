@@ -26,7 +26,7 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
         {/* Newsletter band */}
         <div className="mb-16 rounded-2xl border border-background/10 bg-background/5 p-8 md:p-12">
           <div className="max-w-2xl">
