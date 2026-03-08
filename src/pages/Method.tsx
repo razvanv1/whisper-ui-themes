@@ -179,7 +179,7 @@ const Method = () => {
       </section>
 
       {/* What changes + Where it shows up — visual cards */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <ScrollReveal>
