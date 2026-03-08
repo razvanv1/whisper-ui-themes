@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
@@ -13,13 +13,26 @@ const navItems = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="max-w-6xl mx-auto px-6 flex h-16 items-center justify-between md:h-20">
+    <header className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
+      scrolled
+        ? "bg-background/98 backdrop-blur-xl shadow-sm"
+        : "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+    }`}>
+      <div className={`max-w-6xl mx-auto px-6 flex items-center justify-between transition-all duration-300 ${
+        scrolled ? "h-14 md:h-14" : "h-16 md:h-20"
+      }`}>
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="The Unlearning School" className="h-10 md:h-12" />
+          <img src={logo} alt="The Unlearning School" className={`transition-all duration-300 ${scrolled ? "h-8 md:h-9" : "h-10 md:h-12"}`} />
         </Link>
 
         {/* Desktop Nav */}
