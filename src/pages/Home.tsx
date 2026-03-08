@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <PageLayout>
       {/* Hero — video + slogan only */}
-      <section className="relative h-screen flex items-end overflow-hidden">
+      <section className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -60,7 +60,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
                 >
-                  Book a free 30-minute working call
+                  Book a call
                 </a>
                 <Link
                   to="/programs"
@@ -99,7 +99,7 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                Book a free 30-minute working call
+                Book a call
               </a>
             </div>
           </ScrollReveal>

@@ -88,13 +88,13 @@ const Programs = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
-                  Book a free 30-minute working call
+                  Book a call
                 </a>
                 <Link
                   to="/send-issue"
                   className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
                 >
-                  Describe your bottleneck
+                  Send a message
                 </Link>
               </div>
             </ScrollReveal>

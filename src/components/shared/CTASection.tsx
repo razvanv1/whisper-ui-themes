@@ -16,9 +16,9 @@ interface CTASectionProps {
 const CTASection = ({
   title,
   copy,
-  primaryLabel = "Book a free 30-minute working call",
+  primaryLabel = "Book a call",
   primaryLink = "https://meet.brevo.com/razvan-valceanu",
-  secondaryLabel = "Describe your bottleneck",
+  secondaryLabel = "Send a message",
   secondaryLink = "/send-issue",
   supportLine,
   bullets,

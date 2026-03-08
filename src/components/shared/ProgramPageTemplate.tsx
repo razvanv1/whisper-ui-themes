@@ -107,13 +107,13 @@ const ProgramPageTemplate = ({
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 gentle-animation"
                 >
-                  Book a free 30-minute working call
+                  Book a call
                 </a>
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-accent gentle-animation"
                 >
-                  Describe your bottleneck
+                  Send a message
                 </Link>
               </div>
             </div>

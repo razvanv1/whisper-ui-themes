@@ -26,13 +26,13 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
               >
-                Book a free 30-minute working call
+                Book a call
               </a>
               <Link
                 to="/send-issue"
                 className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
               >
-                Describe your bottleneck
+                Send a message
               </Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Contact = () => {
       {/* Working call */}
       <section className="py-20 md:py-28 bg-card">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Start with a free 30-minute working call</h2>
+          <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Start with a working call</h2>
           <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
             A focused first conversation to understand what is actually going on,
             the pressure around it and the best place to begin. Think of it as
@@ -76,7 +76,7 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
           >
-            Book a free 30-minute working call
+            Book a call
           </a>
         </div>
       </section>
@@ -85,7 +85,7 @@ const Contact = () => {
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">
-            If a call feels too early, describe your bottleneck
+            If a call feels too early, send a message
           </h2>
           <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-10">
             Describe what is slowing the work down and the response will be
