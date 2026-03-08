@@ -107,7 +107,7 @@ const PrivacyPolicy = () => {
                   <li className="flex items-start gap-2">• <span>Withdraw consent at any time</span></li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise any of these rights, please contact us at hello@dezvatare.ro.
+                  To exercise any of these rights, please contact us at hello@unlearning.ro.
                 </p>
               </div>
 
