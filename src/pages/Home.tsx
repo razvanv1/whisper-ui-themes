@@ -209,7 +209,7 @@ const Home = () => {
       </section>
 
       {/* Why clients come — cards grid */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-28 md:py-36 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">Why clients come to TUS</h2>
