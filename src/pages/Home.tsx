@@ -189,24 +189,22 @@ const Home = () => {
               What this work is designed to prevent
             </h2>
           </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <StaggerReveal className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.08}>
             {[
               { icon: Search, text: "Chasing too many opportunities without enough filtering" },
               { icon: Brain, text: "Bringing AI into the team without better habits or judgment" },
               { icon: Layers, text: "Letting parallel initiatives compete until traction drops" },
               { icon: FileX, text: "Spending months on proposals that were never strong enough" },
               { icon: PackageOpen, text: "Leaving valuable expertise unpackaged" },
-            ].map((item, i) => (
-              <ScrollReveal key={item.text} delay={i * 0.1}>
-                <div className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
-                    <item.icon className="h-5 w-5 text-destructive" />
-                  </div>
-                  <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
+            ].map((item) => (
+              <div key={item.text} className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                  <item.icon className="h-5 w-5 text-destructive" />
                 </div>
-              </ScrollReveal>
+                <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
+              </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
