@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
+// Preload logo for faster LCP
+const logoPreload = new Image();
+logoPreload.src = logo;
+
 const navItems = [
   { label: "Programs", path: "/programs" },
   { label: "Method", path: "/method" },
