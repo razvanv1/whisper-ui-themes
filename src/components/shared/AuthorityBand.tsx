@@ -36,7 +36,7 @@ const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08, duration: 0.4 }}
-                className="group relative flex items-center gap-4 rounded-xl bg-card border border-border/50 border-l-4 border-l-red-600 p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-border"
+                className="group relative flex items-center gap-4 rounded-xl bg-card border border-border/50 border-l-4 border-l-destructive p-5 interactive hover:shadow-lg hover:border-border focus-ring"
               >
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-bold leading-tight mb-1">{item.name}</p>
@@ -44,7 +44,7 @@ const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
                     <p className="text-xs text-muted-foreground leading-tight">{item.subtitle}</p>
                   )}
                 </div>
-                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-colors group-hover:text-red-500" />
+                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-colors group-hover:text-destructive" />
               </motion.a>
             ))}
           </div>

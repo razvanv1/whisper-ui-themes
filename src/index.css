@@ -579,3 +579,50 @@ html {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Interactive element base */
+.interactive {
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.interactive:hover {
+  transform: translateY(-2px);
+}
+
+.interactive:active {
+  transform: translateY(0px);
+}
+
+/* Focus ring consistency */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--destructive);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Link hover with accent underline */
+.link-accent {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.link-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--destructive);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-accent:hover::after {
+  transform: scaleX(1);
+}
+
+.link-accent:hover {
+  color: var(--destructive);
+}
