@@ -42,8 +42,10 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #fafafa;
-  --card: #1a1a1a;
+  --card: #141414;
   --card-foreground: #fafafa;
+  --surface-elevated: #1c1c1c;
+  --accent-section: #18100a;
   --popover: #1a1a1a;
   --popover-foreground: #fafafa;
   --primary: #fafafa;

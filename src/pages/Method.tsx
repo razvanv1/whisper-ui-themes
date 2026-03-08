@@ -10,11 +10,11 @@ const Method = () => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">The Unlearning School · Method</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-500 mb-4">The Unlearning School · Method</p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-4 text-foreground">
@@ -36,7 +36,7 @@ const Method = () => {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   to="/programs"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
                 >
                   Explore programs
                 </Link>
@@ -70,11 +70,11 @@ const Method = () => {
               { icon: PackageOpen, text: "Expertise that could be a program, academy or asset but never gets structured" },
             ].map((item, i) => (
               <ScrollReveal key={item.text} delay={i * 0.08}>
-                <div className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 transition-all hover:border-primary/30 hover:shadow-md">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                    <item.icon className="h-5 w-5 text-primary" />
+                <div className="flex items-start gap-4 rounded-xl border border-border/50 p-5 transition-all hover:border-red-600/30 hover:shadow-md" style={{ background: 'var(--surface-elevated, var(--card))' }}>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-600/10">
+                    <item.icon className="h-5 w-5 text-red-500" />
                   </div>
-                  <span className="pt-2">{item.text}</span>
+                  <span className="pt-2 text-foreground/90">{item.text}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -82,12 +82,12 @@ const Method = () => {
         </div>
       </section>
 
-      {/* Real issue */}
-      <section className="py-20 md:py-28 bg-card text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* Real issue + First move — merged to reduce sections */}
+      <section className="py-20 md:py-28 bg-card">
+        <div className="max-w-4xl mx-auto px-6 space-y-16">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-foreground">The real issue is rarely effort</h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
               Most teams do not need more effort. They need less drag. Less legacy
               work pulling resources sideways. Fewer initiatives running in parallel
               without clear traction. Better filters for what deserves time and what
@@ -95,13 +95,7 @@ const Method = () => {
               activity on top of it.
             </p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* First move */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
-          <ScrollReveal>
+          <ScrollReveal delay={0.1}>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">The first move is not to add more</h2>
             <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
               Before introducing new tools, new programs or new processes, the first
@@ -114,12 +108,12 @@ const Method = () => {
         </div>
       </section>
 
-      {/* Kurt Lewin */}
-      <section className="py-20 md:py-28 bg-foreground">
+      {/* Kurt Lewin — fixed contrast */}
+      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-background">How unlearning works</h2>
-            <p className="text-background/70 mb-10">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
+            <p className="text-muted-foreground mb-10">
               The method draws from Kurt Lewin's change logic, adapted for the kind
               of work teams face now.
             </p>
@@ -140,9 +134,9 @@ const Method = () => {
               },
             ].map((p, i) => (
               <ScrollReveal key={p.phase} delay={i * 0.15}>
-                <GlowCard className="rounded-2xl border border-background/10 bg-background/5 p-8 h-full">
-                  <h3 className="text-xl font-semibold mb-3 text-primary">{p.phase}</h3>
-                  <p className="text-background/80">{p.desc}</p>
+                <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full">
+                  <h3 className="text-xl font-semibold mb-3 text-red-500">{p.phase}</h3>
+                  <p className="text-muted-foreground">{p.desc}</p>
                 </GlowCard>
               </ScrollReveal>
             ))}
@@ -166,7 +160,7 @@ const Method = () => {
             ].map((t, i) => (
               <ScrollReveal key={t.tool} delay={i * 0.08}>
                 <div className="border-b border-border pb-6 last:border-0 group">
-                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{t.tool}</h3>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-red-500 transition-colors">{t.tool}</h3>
                   <p className="text-muted-foreground">{t.desc}</p>
                 </div>
               </ScrollReveal>
@@ -175,12 +169,12 @@ const Method = () => {
         </div>
       </section>
 
-      {/* What changes */}
+      {/* What changes + Where it shows up — merged */}
       <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6 space-y-16">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What changes when this method is applied well</h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
               Teams start making faster decisions because fewer initiatives are
               competing for attention. AI becomes a shared practice instead of a
               scattered experiment. Funding paths get narrowed to the ones that
@@ -189,15 +183,9 @@ const Method = () => {
               drag drops and momentum becomes something the team can feel again.
             </p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Where it shows up */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
-          <ScrollReveal>
+          <ScrollReveal delay={0.1}>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Where the method shows up in practice</h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
               Every program at The Unlearning School uses this method as the
               foundation. Whether the team starts with funding intelligence, AI
               adoption, execution readiness, proposal support or academy design,
@@ -209,24 +197,20 @@ const Method = () => {
       </section>
 
       {/* Why this matters */}
-      <section className="py-20 md:py-28 bg-card text-center">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-16 md:py-20 bg-background text-center">
+        <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-foreground">
-              Why this matters when the work gets complex
-            </h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Complexity does not respond well to more effort. It responds to clearer
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground italic">
+              "Complexity does not respond well to more effort. It responds to clearer
               judgment, sharper filtering and more deliberate selection. That
-              starts with removing what should no longer be there. That is what this
-              method is built for.
+              starts with removing what should no longer be there."
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Where it comes from */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
@@ -238,8 +222,8 @@ const Method = () => {
                     className="w-full aspect-[3/4] object-cover object-top"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 rounded-xl bg-primary px-5 py-3 shadow-lg">
-                  <p className="text-sm font-bold text-primary-foreground">Founder</p>
+                <div className="absolute -bottom-4 -right-4 rounded-xl bg-red-600 px-5 py-3 shadow-lg">
+                  <p className="text-sm font-bold text-white">Founder</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -264,7 +248,7 @@ const Method = () => {
                 href="https://www.linkedin.com/in/razvanvalceanu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary/10 px-5 py-3 text-primary font-semibold transition-all hover:bg-primary/20"
+                className="inline-flex items-center gap-2 rounded-lg bg-red-600/10 px-5 py-3 text-red-500 font-semibold transition-all hover:bg-red-600/20"
               >
                 Răzvan Vâlceanu on LinkedIn →
               </a>
@@ -308,7 +292,7 @@ const Method = () => {
               method that starts where most approaches do not: by removing what no
               longer fits.
             </p>
-            <p className="mt-8 text-xl font-bold text-primary md:text-2xl">
+            <p className="mt-8 text-xl font-bold text-red-500 md:text-2xl">
               What is learned can be unlearned.
             </p>
           </ScrollReveal>
