@@ -29,9 +29,9 @@ export function Hero() {
       video.muted = true
       video.defaultMuted = true
 
-      // Loop manually, cutting last 2 seconds to hide logo
+      // Loop manually, cutting last 6 seconds to hide logo
       const handleTimeUpdate = () => {
-        if (video.duration && video.currentTime >= video.duration - 2) {
+        if (video.duration && video.currentTime >= video.duration - 6) {
           video.currentTime = 0
           video.play().catch(() => {})
         }
