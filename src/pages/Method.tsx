@@ -13,7 +13,7 @@ const Method = () => {
     <PageLayout>
       <SEO title="The Method" description="The Unlearning School method starts by removing what no longer fits — clearing friction before adding new tools, initiatives or activity." path="/method" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
