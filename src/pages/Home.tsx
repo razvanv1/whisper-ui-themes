@@ -5,20 +5,18 @@ import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
 import GlowCard from "@/components/shared/GlowCard";
 import ProgramCard from "@/components/shared/ProgramCard";
-import { Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain, Layers, Workflow } from "lucide-react";
+import {
+  Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain,
+  Layers, Workflow, ArrowRight, Bot, Sparkles
+} from "lucide-react";
+import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const Home = () => {
   return (
     <PageLayout>
       {/* Hero — video + slogan only */}
       <section className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
+        <video className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline>
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </video>
         <div className="absolute inset-0 bg-black/40" />
@@ -31,78 +29,99 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Intro — text moved from hero */}
+      {/* Intro */}
       <section className="py-20 md:py-28 bg-background">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <ScrollReveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">The Unlearning School</p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <p className="text-lg leading-relaxed md:text-xl mb-2 text-foreground font-medium">
-                When everything feels important, choosing well matters more than doing more.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
-                The Unlearning School works with teams that are juggling too many ideas,
-                opportunities and demands at once. Instead of adding another layer of
-                activity, the work focuses on better choices, stronger programs and a
-                more useful way to bring AI into everyday work, while building the
-                adaptability and resilience teams need as work keeps changing.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.3}>
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://meet.brevo.com/razvan-valceanu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
-                >
-                  Book a call
-                </a>
-                <Link
-                  to="/programs"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-card transition-colors"
-                >
-                  Explore programs
-                </Link>
+          <div className="grid gap-12 items-center md:grid-cols-2">
+            <div>
+              <ScrollReveal>
+                <span className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-destructive mb-6">
+                  <Sparkles className="h-3.5 w-3.5" /> The Unlearning School
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <p className="text-lg leading-relaxed md:text-xl mb-2 text-foreground font-medium">
+                  When everything feels important, choosing well matters more than doing more.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
+                  The Unlearning School works with teams that are juggling too many ideas,
+                  opportunities and demands at once. Instead of adding another layer of
+                  activity, the work focuses on better choices, stronger programs and a
+                  more useful way to bring AI into everyday work.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={0.3}>
+                <div className="flex flex-col gap-4 sm:flex-row">
+                  <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
+                    Book a call
+                  </a>
+                  <Link to="/programs"
+                    className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-card transition-colors">
+                    Explore programs
+                  </Link>
+                </div>
+                <p className="text-sm mt-6 text-muted-foreground/70">
+                  Use the first call to pressure-test the live issue, choose the best
+                  starting point and avoid burning more time on the wrong next move.
+                </p>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { num: "5", label: "Programs", icon: Layers },
+                  { num: "AI", label: "Powered by INK", icon: Bot },
+                  { num: "EU", label: "Connected networks", icon: Target },
+                  { num: "1:1", label: "Working calls", icon: Zap },
+                ].map(stat => (
+                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                    <stat.icon className="h-5 w-5 mx-auto mb-2 text-destructive" />
+                    <p className="text-2xl font-black text-foreground">{stat.num}</p>
+                    <p className="text-xs text-muted-foreground font-medium mt-1">{stat.label}</p>
+                  </GlowCard>
+                ))}
               </div>
-              <p className="text-sm mt-6 text-muted-foreground/70">
-                Use the first call to pressure-test the live issue, choose the best
-                starting point and avoid burning more time on the wrong next move.
-              </p>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Too much motion */}
+      {/* Too much motion — visual treatment */}
       <section className="py-20 md:py-28 bg-card">
         <div className="max-w-6xl mx-auto px-6">
-          <ScrollReveal direction="left">
-            <div className="max-w-2xl text-foreground">
-              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
-                Too much motion can look like progress
-              </h2>
-              <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
-                Most teams are not short on effort. They are overloaded with moving
-                priorities, weak-fit initiatives, repeated work and decisions that stay
-                unresolved for too long. That is where time gets burned. Momentum
-                drops, good opportunities get missed and AI turns into noise instead
-                of support.
-              </p>
-              <a
-                href="https://meet.brevo.com/razvan-valceanu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                Book a call
-              </a>
-            </div>
-          </ScrollReveal>
+          <div className="grid gap-12 items-center md:grid-cols-2">
+            <ScrollReveal direction="left">
+              <div>
+                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
+                  Too much motion can look like progress
+                </h2>
+                <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
+                  Most teams are not short on effort. They are overloaded with moving
+                  priorities, weak-fit initiatives, repeated work and decisions that stay
+                  unresolved for too long.
+                </p>
+                <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md bg-foreground px-8 py-3 font-semibold text-background hover:bg-foreground/90 transition-colors">
+                  Book a call
+                </a>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right">
+              <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-8">
+                <ul className="space-y-4">
+                  {["Moving priorities", "Weak-fit initiatives", "Repeated work", "Unresolved decisions", "Momentum drops"].map(t => (
+                    <li key={t} className="flex items-center gap-3 text-foreground/80">
+                      <TrendingDown className="h-4 w-4 text-destructive shrink-0" />
+                      <span className="font-medium">{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
@@ -120,19 +139,19 @@ const Home = () => {
               {
                 title: "Funding intelligence and opportunity readiness",
                 description: "For teams that need better funding routes, stronger prioritization and less wasted time across grants, vendor credits, partnerships and new opportunity paths.",
-                bestFit: "NGOs, universities, startups, accelerators and teams exploring new growth or funding routes.",
+                bestFit: "NGOs, universities, startups, accelerators.",
                 link: "/programs/funding-intelligence",
               },
               {
                 title: "AI adoption for teams",
-                description: "For organizations that want AI to become useful inside real workflows, not just another layer of confusion, experimentation or uneven habits across the team.",
-                bestFit: "Companies, NGOs, educators and teams already experimenting with AI but lacking consistency.",
+                description: "For organizations that want AI to become useful inside real workflows, not just another layer of confusion.",
+                bestFit: "Companies, NGOs, educators and teams already experimenting with AI.",
                 link: "/programs/ai-adoption",
               },
               {
                 title: "Execution readiness",
-                description: "For teams dealing with slow decisions, delivery friction, weak traction or too many initiatives moving at once without enough progress.",
-                bestFit: "Delivery teams, implementation-heavy organizations and growing teams under pressure.",
+                description: "For teams dealing with slow decisions, delivery friction, weak traction or too many initiatives moving at once.",
+                bestFit: "Delivery teams and growing teams under pressure.",
                 link: "/programs/execution-readiness",
               },
             ].map((p, i) => (
@@ -146,74 +165,78 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Not every team */}
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      {/* Not every team — centered accent block */}
+      <section className="py-16 md:py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-foreground">
-              Not every team starts in the same place
-            </h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              For some, the starting point is funding and opportunity selection. For
-              others, it is AI inside the team, delivery friction or the need to turn
-              expertise into a stronger program, academy or partner-facing offer. The
-              starting point changes. The logic behind the work stays consistent.
-            </p>
+            <div className="rounded-2xl border border-border bg-secondary p-10">
+              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl mb-4 text-foreground">
+                Not every team starts in the same place
+              </h2>
+              <p className="text-muted-foreground">
+                For some, the starting point is funding and opportunity selection. For
+                others, it is AI inside the team, delivery friction or the need to turn
+                expertise into a stronger program. The starting point changes. The logic stays consistent.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* What this work prevents */}
+      {/* What this work prevents — icon grid */}
       <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-8">
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">
               What this work is designed to prevent
             </h2>
           </ScrollReveal>
-          <ul className="space-y-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: Search, text: "Chasing too many opportunities without enough filtering" },
               { icon: Brain, text: "Bringing AI into the team without better habits or judgment" },
               { icon: Layers, text: "Letting parallel initiatives compete until traction drops" },
-              { icon: FileX, text: "Spending months on proposals, programs or directions that were never strong enough" },
-              { icon: PackageOpen, text: "Leaving valuable expertise unpackaged when it could become an academy, asset or new income channel" },
+              { icon: FileX, text: "Spending months on proposals that were never strong enough" },
+              { icon: PackageOpen, text: "Leaving valuable expertise unpackaged" },
             ].map((item, i) => (
               <ScrollReveal key={item.text} delay={i * 0.1}>
-                <li className="flex items-start gap-4 rounded-xl border border-border/50 bg-card p-5 transition-all hover:border-primary/30 hover:shadow-md">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                    <item.icon className="h-5 w-5 text-primary" />
+                <div className="flex items-start gap-4 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-md group h-full">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                    <item.icon className="h-5 w-5 text-destructive" />
                   </div>
-                  <span className="pt-2">{item.text}</span>
-                </li>
+                  <span className="text-foreground/90 text-sm pt-1">{item.text}</span>
+                </div>
               </ScrollReveal>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      {/* Why clients come */}
+      {/* Why clients come — cards grid */}
       <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">Why clients come to TUS</h2>
-            <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
+            <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
               The work usually starts when teams feel the cost of doing too much
               without enough movement.
             </p>
           </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { icon: Target, text: "Funding, AI and execution are treated as connected problems, not separate silos." },
-              { icon: Zap, text: "The work is shaped around real constraints, not ideal conditions." },
-              { icon: Workflow, text: "Expertise can be turned into stronger programs, academies and partner-facing assets." },
-              { icon: Brain, text: "INK supports part of the work behind the scenes through research, prioritization, follow-up and workflow support." },
+              { icon: Target, title: "Connected problems", text: "Funding, AI and execution are treated as connected problems, not separate silos." },
+              { icon: Zap, title: "Real constraints", text: "The work is shaped around real constraints, not ideal conditions." },
+              { icon: Workflow, title: "Structured expertise", text: "Expertise can be turned into stronger programs, academies and partner-facing assets." },
+              { icon: Brain, title: "INK support", text: "INK supports part of the work behind the scenes through research, prioritization and workflow support." },
             ].map((item, i) => (
-              <ScrollReveal key={item.text} delay={i * 0.1}>
-                <div className="rounded-xl border border-border bg-background/60 p-6 backdrop-blur-sm transition-all hover:bg-background/80 hover:shadow-md">
-                  <item.icon className="mb-3 h-6 w-6 text-primary" />
-                  <p className="text-foreground">{item.text}</p>
-                </div>
+              <ScrollReveal key={item.title} delay={i * 0.1}>
+                <GlowCard className="rounded-2xl border border-border bg-background p-6 h-full group">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary mb-4 group-hover:bg-destructive/10 transition-colors">
+                    <item.icon className="h-5 w-5 text-foreground group-hover:text-destructive transition-colors" />
+                  </div>
+                  <h3 className="font-bold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.text}</p>
+                </GlowCard>
               </ScrollReveal>
             ))}
           </div>
@@ -229,7 +252,7 @@ const Home = () => {
           "Identifying the most relevant starting point",
           "Deciding whether the next step is a program, a pilot, a narrower follow-up or a direct move into the work",
         ]}
-        supportLine="If a call feels too early, send a short description of what is slowing the work down and the response will be shaped around the issue and the strongest next move."
+        supportLine="If a call feels too early, send a short description of what is slowing the work down."
       />
 
       {/* Authority bands */}
@@ -245,10 +268,9 @@ const Home = () => {
         ]}
         note="Selected memberships, networks and initiatives relevant to our work."
       />
-
       <AuthorityBand
         title="Connected to startup and technology ecosystems"
-        copy="The work is also shaped through selected startup and builder ecosystems that keep the company close to practical AI workflows, current product thinking and fast-moving technology communities."
+        copy="The work is also shaped through selected startup and builder ecosystems."
         variant="startup"
         items={[
           { name: "Microsoft for Startups", url: "https://startups.microsoft.com/" },
@@ -258,35 +280,33 @@ const Home = () => {
         note="Selected startup, builder and technology ecosystem connections relevant to our work."
       />
 
-      {/* Method teaser */}
+      {/* Method teaser — visual */}
       <section className="py-20 md:py-28 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">The Method</p>
+                <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+                  The Method
+                </span>
                 <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
                   The work starts by removing what no longer fits
                 </h2>
                 <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
                   Before adding more tools, more initiatives or more activity, the first
-                  move is to look at what no longer serves the work. That is the principle
-                  behind the method. It helps teams reduce drag, improve judgment and
-                  make better use of effort under pressure.
+                  move is to look at what no longer serves the work.
                 </p>
-                <Link
-                  to="/method"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
-                >
-                  See the method
+                <Link to="/method"
+                  className="inline-flex items-center gap-2 justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+                  See the method <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-secondary via-muted to-accent flex items-end p-8">
-                <p className="text-2xl font-bold text-foreground md:text-3xl">
+              <div className="relative rounded-2xl overflow-hidden border border-destructive/20 bg-destructive/5 p-10 flex items-end aspect-[4/3]">
+                <p className="text-2xl font-black text-foreground md:text-3xl">
                   What is learned<br />
-                  <span className="text-primary">can be unlearned.</span>
+                  <span className="text-destructive">can be unlearned.</span>
                 </p>
               </div>
             </ScrollReveal>
@@ -294,31 +314,36 @@ const Home = () => {
         </div>
       </section>
 
-      {/* INK teaser */}
+      {/* INK teaser — visual */}
       <section className="py-20 md:py-28 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-muted via-secondary to-accent/50 shadow-lg" />
+              <div className="grid grid-cols-2 gap-4">
+                {["Scanning", "Filtering", "Follow-up", "Materials"].map((t, i) => (
+                  <div key={t} className="rounded-2xl border border-border bg-background p-6 text-center">
+                    <Bot className="h-5 w-5 mx-auto mb-2 text-destructive" />
+                    <p className="text-sm font-semibold">{t}</p>
+                  </div>
+                ))}
+              </div>
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">INK</p>
+                <span className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-destructive mb-6">
+                  <Bot className="h-3.5 w-3.5" /> INK
+                </span>
                 <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
                   INK is the operating layer behind part of the work
                 </h2>
-                <p className="text-lg leading-relaxed md:text-xl mb-8 opacity-80">
+                <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
                   INK is the AI-supported system used inside The Unlearning School for
-                  opportunity scanning, follow-up support, material preparation, content
-                  repurposing and repeatable workflow tasks. It connects thinking with
-                  execution and supports the parts of the work that are easiest to slow
-                  down when everything depends on manual effort.
+                  opportunity scanning, follow-up support, material preparation and
+                  repeatable workflow tasks.
                 </p>
-                <Link
-                  to="/ink"
-                  className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-                >
-                  See INK
+                <Link to="/ink"
+                  className="inline-flex items-center gap-2 justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
+                  See INK <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </ScrollReveal>
@@ -326,67 +351,71 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="max-w-4xl mx-auto px-6">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
-              Built across digital, education and business execution
-            </h2>
-            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
-              The Unlearning School is founded by Răzvan Vâlceanu, whose work brings
-              together entrepreneurship, digital business, education and
-              organizational programs. The approach draws from leadership in tech,
-              hands-on training, ecosystem building and years spent translating
-              change into something people can actually use in real teams. His work
-              also extends into selected AI and startup ecosystems, including his
-              role as a Lovable Ambassador, which keeps the company close to current
-              builder communities, practical AI workflows and emerging product
-              thinking.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/razvanvalceanu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
-            >
-              Răzvan Vâlceanu on LinkedIn →
-            </a>
-          </ScrollReveal>
+      {/* Founder — compact with photo */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid gap-12 items-center md:grid-cols-5">
+            <ScrollReveal direction="left" className="md:col-span-2">
+              <div className="relative max-w-[240px]">
+                <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
+                  <img src={razvanPhoto} alt="Răzvan Vâlceanu" loading="lazy"
+                    className="w-full aspect-[3/4] object-cover object-top" />
+                </div>
+                <div className="absolute -bottom-4 -right-4 rounded-xl bg-destructive px-5 py-3 shadow-lg">
+                  <p className="text-sm font-bold text-white">Founder</p>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15} className="md:col-span-3">
+              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
+                Built across digital, education and business execution
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                The Unlearning School is founded by Răzvan Vâlceanu, whose work brings
+                together entrepreneurship, digital business, education and
+                organizational programs. Active in selected AI and startup
+                ecosystems, including as a Lovable Ambassador.
+              </p>
+              <a href="https://www.linkedin.com/in/razvanvalceanu/" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-destructive/10 px-5 py-3 text-destructive font-semibold transition-all hover:bg-destructive/20">
+                Răzvan Vâlceanu on LinkedIn <ArrowRight className="h-4 w-4" />
+              </a>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* Resources teaser */}
-      <section className="py-20 md:py-28 bg-card">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-foreground">
-              Resources, articles, podcast and practical tools
-            </h2>
-            <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
-              The resource library brings together articles, podcast episodes, studies,
-              working notes, guides, frameworks and practical tools connected to
-              funding intelligence, AI at work, execution friction, academy building
-              and the future of work.
-            </p>
-            <div className="mb-8 flex flex-wrap gap-3">
-              {["Funding intelligence", "AI at work", "Execution friction", "Podcast, tools and working notes"].map((t) => (
-                <span key={t} className="rounded-full border border-border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80">{t}</span>
-              ))}
-            </div>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link
-                to="/resources"
-                className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                Visit the resource library
-              </Link>
-              <Link
-                to="/newsletter"
-                className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors"
-              >
-                Join The Unlearning Pill
-              </Link>
+            <div className="grid gap-8 md:grid-cols-2 items-center">
+              <div>
+                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6 text-foreground">
+                  Resources, articles, podcast and practical tools
+                </h2>
+                <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
+                  The resource library brings together articles, podcast episodes, studies,
+                  working notes, guides, frameworks and practical tools.
+                </p>
+                <div className="flex flex-col gap-4 sm:flex-row">
+                  <Link to="/resources"
+                    className="inline-flex items-center gap-2 justify-center rounded-md bg-foreground px-8 py-3 font-semibold text-background hover:bg-foreground/90 transition-colors">
+                    Visit the resource library <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link to="/newsletter"
+                    className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+                    Join The Unlearning Pill
+                  </Link>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {["Funding intelligence", "AI at work", "Execution friction", "Podcast & tools"].map(t => (
+                  <div key={t} className="rounded-xl border border-border bg-card p-5 text-center text-sm font-medium hover:border-destructive hover:shadow-sm transition-all">
+                    {t}
+                  </div>
+                ))}
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -395,7 +424,7 @@ const Home = () => {
       {/* Final CTA */}
       <CTASection
         title="Bring the current bottleneck"
-        copy="Funding direction, AI inside the team, execution drag, opportunity overload, proposal shaping or academy design. Start with the live issue, not with a generic intro call."
+        copy="Funding direction, AI inside the team, execution drag, opportunity overload, proposal shaping or academy design. Start with the live issue."
       />
     </PageLayout>
   );
