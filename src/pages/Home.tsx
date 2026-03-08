@@ -75,24 +75,23 @@ const Home = () => {
       />
       {/* Hero — video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
-        <motion.video
+        <video
           ref={heroVideoRef}
-          style={videoStyle}
           className="absolute inset-0 w-full h-full object-cover"
           muted
           playsInline
           preload="none"
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
-        </motion.video>
-        <motion.div style={overlayStyle} className="absolute inset-0 bg-black" />
-        <motion.div style={textStyle} className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
+        </video>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
           <ScrollReveal>
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white">
               What is learned<br />can be unlearned.
             </h1>
           </ScrollReveal>
-        </motion.div>
+        </div>
       </section>
 
       {/* Intro */}
