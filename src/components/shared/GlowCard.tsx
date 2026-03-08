@@ -18,14 +18,16 @@ const GlowCard = ({ children, className = "" }: GlowCardProps) => {
     const rotateY = ((x - rect.width / 2) / rect.width) * 6;
 
     setStyle({
-      transform: `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`,
+      transform: `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02) translateY(-4px)`,
+      boxShadow: "0 12px 32px -8px hsl(var(--foreground) / 0.12)",
       backgroundImage: `radial-gradient(circle at ${x}px ${y}px, rgba(220, 38, 38, 0.08) 0%, transparent 60%)`,
     });
   };
 
   const handleMouseLeave = () => {
     setStyle({
-      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
+      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)",
+      boxShadow: "0 0px 0px 0px transparent",
       backgroundImage: "none",
     });
   };
