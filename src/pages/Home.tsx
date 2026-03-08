@@ -101,7 +101,7 @@ const Home = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-28 md:py-36 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <div>
