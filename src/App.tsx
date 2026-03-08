@@ -11,6 +11,7 @@ import Ink from "./pages/Ink";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SendIssue from "./pages/funnel/SendIssue";
 import FundingIntelligence from "./pages/programs/FundingIntelligence";
 import AIAdoption from "./pages/programs/AIAdoption";
 import ExecutionReadiness from "./pages/programs/ExecutionReadiness";
@@ -39,6 +40,7 @@ export default function App() {
             <Route path="/ink" element={<Ink />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/send-issue" element={<SendIssue />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
