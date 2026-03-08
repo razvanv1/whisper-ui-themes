@@ -10,9 +10,8 @@ import { Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain, Layers, W
 const Home = () => {
   return (
     <PageLayout>
-      {/* Hero with video background */}
-      <section className="relative min-h-[90vh] flex items-center border-b border-border overflow-hidden">
-        {/* Video background */}
+      {/* Hero — video + slogan only */}
+      <section className="relative h-screen flex items-end overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -22,26 +21,30 @@ const Home = () => {
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </video>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
+          <ScrollReveal>
+            <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white">
+              What is learned<br />can be unlearned.
+            </h1>
+          </ScrollReveal>
+        </div>
+      </section>
 
-        <div className="max-w-6xl mx-auto px-6 relative z-10 py-20 md:py-28">
+      {/* Intro — text moved from hero */}
+      <section className="py-20 md:py-28 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 mb-4">The Unlearning School</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">The Unlearning School</p>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-4 text-white">
-                What is learned can be unlearned
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-lg leading-relaxed md:text-xl mb-2 text-white/90 font-medium">
+              <p className="text-lg leading-relaxed md:text-xl mb-2 text-foreground font-medium">
                 When everything feels important, choosing well matters more than doing more.
               </p>
             </ScrollReveal>
-            <ScrollReveal delay={0.3}>
-              <p className="text-lg leading-relaxed md:text-xl mb-10 text-white/70">
+            <ScrollReveal delay={0.2}>
+              <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
                 The Unlearning School works with teams that are juggling too many ideas,
                 opportunities and demands at once. Instead of adding another layer of
                 activity, the work focuses on better choices, stronger programs and a
@@ -49,7 +52,7 @@ const Home = () => {
                 adaptability and resilience teams need as work keeps changing.
               </p>
             </ScrollReveal>
-            <ScrollReveal delay={0.4}>
+            <ScrollReveal delay={0.3}>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
                   href="https://meet.brevo.com/razvan-valceanu"
@@ -61,12 +64,12 @@ const Home = () => {
                 </a>
                 <Link
                   to="/programs"
-                  className="inline-flex items-center justify-center rounded-md border border-white/30 px-8 py-3 font-semibold text-white hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-card transition-colors"
                 >
                   Explore programs
                 </Link>
               </div>
-              <p className="text-sm mt-6 text-white/50">
+              <p className="text-sm mt-6 text-muted-foreground/70">
                 Use the first call to pressure-test the live issue, choose the best
                 starting point and avoid burning more time on the wrong next move.
               </p>
