@@ -22,39 +22,46 @@ const Home = () => {
     const video = heroVideoRef.current;
     if (!video) return;
 
-    const CUT_SECONDS_FROM_END = 10;
+    const CUT_SECONDS = 10;
     let cutPoint = 45;
 
     const updateCutPoint = () => {
-      const duration = video.duration;
-      if (Number.isFinite(duration) && duration > CUT_SECONDS_FROM_END + 1) {
-        cutPoint = duration - CUT_SECONDS_FROM_END;
-      }
-    };
-
-    const jumpBeforeLogo = () => {
-      if (video.currentTime >= cutPoint) {
-        video.currentTime = 0.05;
-        video.play().catch(() => {});
-      }
+      const d = video.duration;
+      if (Number.isFinite(d) && d > CUT_SECONDS + 1) cutPoint = d - CUT_SECONDS;
     };
 
     let rafId = 0;
     const tick = () => {
-      jumpBeforeLogo();
+      if (video.currentTime >= cutPoint) {
+        video.currentTime = 0.05;
+        video.play().catch(() => {});
+      }
       rafId = requestAnimationFrame(tick);
+    };
+
+    const startVideo = () => {
+      video.preload = "auto";
+      video.load();
+      video.play().catch(() => {});
     };
 
     video.addEventListener("loadedmetadata", updateCutPoint);
     video.addEventListener("durationchange", updateCutPoint);
-
     updateCutPoint();
     rafId = requestAnimationFrame(tick);
+
+    // Lazy: start video only after page is fully loaded
+    if (document.readyState === "complete") {
+      startVideo();
+    } else {
+      window.addEventListener("load", startVideo, { once: true });
+    }
 
     return () => {
       cancelAnimationFrame(rafId);
       video.removeEventListener("loadedmetadata", updateCutPoint);
       video.removeEventListener("durationchange", updateCutPoint);
+      window.removeEventListener("load", startVideo);
     };
   }, []);
 
