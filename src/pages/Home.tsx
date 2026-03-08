@@ -65,15 +65,6 @@ const Home = () => {
     };
   }, []);
 
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const videoY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 0.7]);
-
-  // Reduce forced reflow: use will-change on animated elements
-  const videoStyle = { y: videoY, willChange: "transform" as const };
-  const textStyle = { y: textY, willChange: "transform" as const };
-  const overlayStyle = { opacity: overlayOpacity, willChange: "opacity" as const };
 
   return (
     <PageLayout>
