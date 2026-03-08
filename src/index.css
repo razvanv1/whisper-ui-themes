@@ -36,6 +36,10 @@
   --accent-emerald: #059669;
   --accent-purple: #7c3aed;
   
+  /* Alternate section background (light grey, NO brown) */
+  --surface-elevated: #f8f8f8;
+  --accent-section: #f4f4f5;
+  
   --radius: 0.75rem;
 }
 
