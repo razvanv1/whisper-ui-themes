@@ -26,7 +26,8 @@ const GlowCard = ({ children, className = "" }: GlowCardProps) => {
 
   const handleMouseLeave = () => {
     setStyle({
-      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
+      transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1) translateY(0px)",
+      boxShadow: "0 0px 0px 0px transparent",
       backgroundImage: "none",
     });
   };
