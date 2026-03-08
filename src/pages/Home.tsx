@@ -14,17 +14,11 @@ import {
 } from "lucide-react";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
-const isMobile = () => typeof window !== "undefined" && window.innerWidth < 768;
-
 const Home = () => {
   const heroRef = useRef(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const [showVideo, setShowVideo] = useState(!isMobile());
 
   useEffect(() => {
-    // On mobile, skip the 12MB video entirely for faster LCP
-    if (!showVideo) return;
-
     const video = heroVideoRef.current;
     if (!video) return;
 
@@ -68,7 +62,7 @@ const Home = () => {
       video.removeEventListener("durationchange", updateCutPoint);
       window.removeEventListener("load", startVideo);
     };
-  }, [showVideo]);
+  }, []);
 
 
   return (
