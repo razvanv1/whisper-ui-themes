@@ -60,7 +60,7 @@ const Home = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 transition-colors"
                 >
-                  Book a free 30-minute working call
+                  Book a call
                 </a>
                 <Link
                   to="/programs"
