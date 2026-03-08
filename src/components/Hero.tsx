@@ -29,15 +29,12 @@ export function Hero() {
       video.muted = true
       video.defaultMuted = true
 
-      // Loop manually, cutting last 6 seconds to hide logo
-      const handleTimeUpdate = () => {
+      // Poll every 100ms to cut last 6 seconds (logo removal)
+      const intervalId = setInterval(() => {
         if (video.duration && video.currentTime >= video.duration - 6) {
           video.currentTime = 0
-          video.play().catch(() => {})
         }
-      }
-
-      video.addEventListener('timeupdate', handleTimeUpdate)
+      }, 100)
 
       // Force mute on play
       video.addEventListener('play', () => {
@@ -61,7 +58,7 @@ export function Hero() {
       }
 
       return () => {
-        video.removeEventListener('timeupdate', handleTimeUpdate)
+        clearInterval(intervalId)
       }
     }
   }, [])
