@@ -109,7 +109,7 @@ const Method = () => {
       </section>
 
       {/* Kurt Lewin — fixed contrast */}
-      <section className="py-20 md:py-28" style={{ background: 'var(--accent-section, var(--card))' }}>
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
