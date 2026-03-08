@@ -134,7 +134,7 @@ const Home = () => {
               Most teams do not need everything at once. They need the right starting point.
             </p>
           </ScrollReveal>
-          <div className="grid gap-8 md:grid-cols-3">
+          <StaggerReveal className="grid gap-8 md:grid-cols-3" staggerDelay={0.15}>
             {[
               {
                 title: "Funding intelligence and opportunity readiness",
@@ -154,14 +154,12 @@ const Home = () => {
                 bestFit: "Delivery teams and growing teams under pressure.",
                 link: "/programs/execution-readiness",
               },
-            ].map((p, i) => (
-              <ScrollReveal key={p.link} delay={i * 0.15}>
-                <GlowCard className="h-full rounded-2xl border border-border bg-card p-8">
-                  <ProgramCard {...p} />
-                </GlowCard>
-              </ScrollReveal>
+            ].map((p) => (
+              <GlowCard key={p.link} className="h-full rounded-2xl border border-border bg-card p-8">
+                <ProgramCard {...p} />
+              </GlowCard>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 
