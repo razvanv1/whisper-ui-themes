@@ -23,7 +23,7 @@ const CTASection = ({
   bullets,
 }: CTASectionProps) => {
   return (
-    <section className="py-24 md:py-32 bg-card border-t border-border relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-card border-t border-border relative overflow-hidden">
       {/* Subtle gradient accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-destructive/[0.03] rounded-full blur-3xl pointer-events-none" />
       

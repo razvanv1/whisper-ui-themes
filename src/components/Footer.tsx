@@ -26,7 +26,7 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
         {/* Newsletter band */}
         <div className="mb-16 rounded-2xl border border-background/10 bg-background/5 p-8 md:p-12">
           <div className="max-w-2xl">
@@ -76,9 +76,9 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h5 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
               Navigation
-            </h5>
+            </p>
             <nav className="flex flex-col gap-2" aria-label="Footer navigation links">
               {footerLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="block cursor-pointer text-sm text-background/75 transition-colors hover:text-red-400 hover:underline">
@@ -90,9 +90,9 @@ export function Footer() {
 
           {/* Programs */}
           <div>
-            <h5 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/40">
               Programs
-            </h5>
+            </p>
             <nav className="flex flex-col gap-2" aria-label="Footer program links">
               {programLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="block cursor-pointer text-sm text-background/75 transition-colors hover:text-red-400 hover:underline">
@@ -100,9 +100,9 @@ export function Footer() {
                 </Link>
               ))}
             </nav>
-            <h5 className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wider text-background/40">
+            <p className="mb-4 mt-8 text-sm font-semibold uppercase tracking-wider text-background/40">
               Legal
-            </h5>
+            </p>
             <nav className="flex flex-col gap-2">
               {legalLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="block cursor-pointer text-sm text-background/75 transition-colors hover:text-red-400 hover:underline">
@@ -114,14 +114,14 @@ export function Footer() {
         </div>
 
         {/* Massive brand text */}
-        <div className="mt-20 overflow-hidden text-center">
-          <h2
+        <div className="mt-16 overflow-hidden text-center">
+          <div
             className="font-bold leading-none tracking-tighter text-background/[0.06] select-none"
             style={{ fontSize: "clamp(3rem, 12vw, 10rem)" }}
             aria-hidden="true"
           >
             The Unlearning School
-          </h2>
+          </div>
           <p className="mt-4 text-lg font-bold tracking-wide text-red-400 md:text-2xl">
             What is learned can be unlearned.
           </p>

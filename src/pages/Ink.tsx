@@ -43,7 +43,7 @@ const Ink = () => {
     <PageLayout>
       <SEO title="INK — AI Operating Layer" description="INK is the AI-supported system behind The Unlearning School for opportunity scanning, follow-up, material preparation and workflow tasks." path="/ink" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="grid gap-12 items-center md:grid-cols-2">
@@ -99,7 +99,7 @@ const Ink = () => {
       </section>
 
       {/* The situation — visual cards */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">This is probably your situation</h2>
@@ -128,7 +128,7 @@ const Ink = () => {
       </section>
 
       {/* What INK does — before/after */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is built to do</h2>
@@ -169,7 +169,7 @@ const Ink = () => {
       </section>
 
       {/* What INK supports — icon grid */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">What INK supports today</h2>
@@ -191,7 +191,7 @@ const Ink = () => {
       </section>
 
       {/* What INK is / is not — dual columns */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is and what it is not</h2>
@@ -222,7 +222,7 @@ const Ink = () => {
       </section>
 
       {/* Where INK fits + How it connects — combined visual */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <ScrollReveal>

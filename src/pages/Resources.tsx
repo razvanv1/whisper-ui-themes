@@ -36,7 +36,7 @@ const Resources = () => {
     <PageLayout>
       <SEO title="Resources" description="Articles, podcast episodes, guides, frameworks and practical tools on funding, AI adoption, execution and the future of work." path="/resources" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -96,7 +96,7 @@ const Resources = () => {
       </section>
 
       {/* Browse by topic — visual chips */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Browse by topic</h2>
@@ -117,7 +117,7 @@ const Resources = () => {
       </section>
 
       {/* Featured formats — icon cards */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">Featured formats</h2>
@@ -139,7 +139,7 @@ const Resources = () => {
       </section>
 
       {/* Newsletter block — visual */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10 md:p-14">

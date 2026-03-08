@@ -31,7 +31,7 @@ const Contact = () => {
     <PageLayout>
       <SEO title="Contact" description="Book a free 30-minute working call or send a message about what is slowing the work down. Start with the live issue." path="/contact" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -69,7 +69,7 @@ const Contact = () => {
       </section>
 
       {/* What brings people — icon cards */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What usually brings people here</h2>
@@ -90,7 +90,7 @@ const Contact = () => {
       </section>
 
       {/* How it works — numbered steps */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">How it works</h2>
@@ -113,7 +113,7 @@ const Contact = () => {
       </section>
 
       {/* Working call CTA — visual block */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
@@ -144,7 +144,7 @@ const Contact = () => {
       </section>
 
       {/* Direct contact — visual cards */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Direct contact</h2>
@@ -192,7 +192,7 @@ const Contact = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">

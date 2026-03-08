@@ -68,7 +68,7 @@ const Programs = () => {
     <PageLayout>
       <SEO title="Programs" description="Five structured programs for funding intelligence, AI adoption, execution readiness, proposal support and academy design." path="/programs" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -124,7 +124,7 @@ const Programs = () => {
       </section>
 
       {/* Problem patterns — visual grid */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">The patterns that keep showing up</h2>
@@ -145,7 +145,7 @@ const Programs = () => {
       </section>
 
       {/* Program cards — redesigned with accent colors */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">The programs</h2>
@@ -206,7 +206,7 @@ const Programs = () => {
       </section>
 
       {/* How programs connect — visual */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <ScrollReveal>

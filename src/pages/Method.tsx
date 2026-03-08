@@ -13,7 +13,7 @@ const Method = () => {
     <PageLayout>
       <SEO title="The Method" description="The Unlearning School method starts by removing what no longer fits — clearing friction before adding new tools, initiatives or activity." path="/method" />
       {/* Hero */}
-      <section className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -55,7 +55,7 @@ const Method = () => {
       </section>
 
       {/* What this method solves — icon grid */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What this method is built to solve</h2>
@@ -83,7 +83,7 @@ const Method = () => {
       </section>
 
       {/* Real issue + First move — visual cards */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <ScrollReveal>
@@ -117,7 +117,7 @@ const Method = () => {
       </section>
 
       {/* Kurt Lewin — 3-phase visual */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
@@ -149,7 +149,7 @@ const Method = () => {
       </section>
 
       {/* Tools — numbered list with hover */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">The tools behind the method</h2>
@@ -179,7 +179,7 @@ const Method = () => {
       </section>
 
       {/* What changes + Where it shows up — visual cards */}
-      <section className="py-20 md:py-28 bg-card">
+      <section className="py-14 md:py-20 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <ScrollReveal>
@@ -228,7 +228,7 @@ const Method = () => {
       </section>
 
       {/* Where it comes from — founder */}
-      <section className="py-20 md:py-28 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
@@ -289,7 +289,7 @@ const Method = () => {
       />
 
       {/* What TUS is building */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What The Unlearning School is building</h2>
