@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
                   The data controller responsible for your personal data is:<br />
                   <strong className="text-foreground">The Unlearning School</strong><br />
                   Address: 1, Aleea Pasărea în Văzduh, București, Romania<br />
-                  Email: hello@dezvatare.ro<br />
+                  Email: hello@unlearning.ro<br />
                   Phone: +40 722 598 346
                 </p>
               </div>
@@ -107,7 +107,7 @@ const PrivacyPolicy = () => {
                   <li className="flex items-start gap-2">• <span>Withdraw consent at any time</span></li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                  To exercise any of these rights, please contact us at hello@dezvatare.ro.
+                  To exercise any of these rights, please contact us at hello@unlearning.ro.
                 </p>
               </div>
 
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   If you have any questions about this Privacy Policy or wish to exercise your
                   rights, please contact us at:<br />
-                  Email: hello@dezvatare.ro<br />
+                  Email: hello@unlearning.ro<br />
                   Phone: +40 722 598 346<br />
                   You also have the right to lodge a complaint with the Romanian National
                   Supervisory Authority for Personal Data Processing (ANSPDCP).

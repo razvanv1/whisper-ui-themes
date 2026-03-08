@@ -54,7 +54,7 @@ export function Footer() {
               execution drag and the future of work.
             </p>
             <div className="mt-6 space-y-1 text-sm text-background/60">
-              <p>hello@dezvatare.ro</p>
+              <p>hello@unlearning.ro</p>
               <p>+40 722 598 346</p>
               <p>1, Aleea Pasărea în Văzduh, București, RO</p>
             </div>
