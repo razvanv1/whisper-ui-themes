@@ -40,6 +40,7 @@ export default function App() {
             <Route path="/ink" element={<Ink />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/send-issue" element={<SendIssue />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
