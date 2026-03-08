@@ -85,15 +85,18 @@ const Home = () => {
             <ScrollReveal direction="right" delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { num: "5", label: "Programs", icon: Layers },
-                  { num: "AI", label: "Powered by INK", icon: Bot },
-                  { num: "EU", label: "Connected networks", icon: Target },
-                  { num: "1:1", label: "Working calls", icon: Zap },
+                  { num: "5", label: "Programs", icon: Layers, tip: "Funding, AI, Execution, Proposals, Academy" },
+                  { num: "AI", label: "Powered by INK", icon: Bot, tip: "AI-supported research, scanning & workflow" },
+                  { num: "EU", label: "Connected networks", icon: Target, tip: "European Commission, EEN, Pact for Skills" },
+                  { num: "1:1", label: "Working calls", icon: Zap, tip: "Free 30-min focused working sessions" },
                 ].map(stat => (
-                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center">
+                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center group relative">
                     <stat.icon className="h-5 w-5 mx-auto mb-2 text-destructive" />
                     <p className="text-2xl font-black text-foreground"><AnimatedCounter value={stat.num} /></p>
                     <p className="text-xs text-muted-foreground font-medium mt-1">{stat.label}</p>
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-3 py-1.5 text-xs text-background opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none scale-95 group-hover:scale-100 shadow-lg">
+                      {stat.tip}
+                    </span>
                   </GlowCard>
                 ))}
               </div>
