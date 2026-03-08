@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
-import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Programs", path: "/programs" },
