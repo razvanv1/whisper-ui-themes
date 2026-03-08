@@ -59,7 +59,7 @@ const CTASection = ({
           {secondaryLabel && (
             <Link
               to={secondaryLink || "/contact"}
-              className="inline-flex items-center justify-center rounded-md border border-background/30 px-8 py-3 font-semibold text-background hover:bg-background/10 gentle-animation"
+              className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-background transition-colors"
             >
               {secondaryLabel}
             </Link>
