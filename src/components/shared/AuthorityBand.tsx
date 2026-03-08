@@ -44,7 +44,7 @@ const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
                     <p className="text-xs text-muted-foreground leading-tight">{item.subtitle}</p>
                   )}
                 </div>
-                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-colors group-hover:text-red-500" />
+                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-colors group-hover:text-destructive" />
               </motion.a>
             ))}
           </div>
