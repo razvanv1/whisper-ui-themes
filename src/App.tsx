@@ -30,6 +30,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/programs" element={<Programs />} />
+            <Route path="/programs/funding-intelligence" element={<FundingIntelligence />} />
+            <Route path="/programs/ai-adoption" element={<AIAdoption />} />
+            <Route path="/programs/execution-readiness" element={<ExecutionReadiness />} />
+            <Route path="/programs/proposal-support" element={<ProposalSupport />} />
+            <Route path="/programs/academy-design" element={<AcademyDesign />} />
             <Route path="/method" element={<Method />} />
             <Route path="/ink" element={<Ink />} />
             <Route path="/resources" element={<Resources />} />
