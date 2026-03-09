@@ -128,21 +128,23 @@ export function Footer() {
         </div>
 
         {/* Massive brand text */}
-        <div className="mt-16 overflow-hidden text-center flex flex-col items-center">
+        <div className="mt-24 overflow-hidden text-center flex flex-col items-center gap-8">
           <img
             src={logo}
             alt="The Unlearning School"
-            className="w-full max-w-3xl h-auto invert brightness-200 select-none pointer-events-none"
+            className="w-full max-w-4xl h-auto invert brightness-200 select-none pointer-events-none"
             aria-hidden="true"
           />
-          <p className="mt-4 text-lg font-bold tracking-wide text-red-500 md:text-2xl">
-            What is learned can be unlearned.
-          </p>
-          <p className="mt-6 text-background/80 max-w-2xl mx-auto leading-relaxed md:text-lg">
-            The Unlearning School builds programs, systems and useful ways of
-            working for teams dealing with funding pressure, AI adoption,
-            execution drag and the future of work.
-          </p>
+          <div className="space-y-6">
+            <p className="text-xl font-bold tracking-wide text-red-500 md:text-3xl">
+              What is learned can be unlearned.
+            </p>
+            <p className="text-background/80 max-w-2xl mx-auto leading-relaxed md:text-lg">
+              The Unlearning School builds programs, systems and useful ways of
+              working for teams dealing with funding pressure, AI adoption,
+              execution drag and the future of work.
+            </p>
+          </div>
         </div>
 
         <div className="mt-8 border-t border-background/10 pt-8 text-center">
