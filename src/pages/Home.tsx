@@ -371,7 +371,7 @@ const Home = () => {
       </section>
 
       {/* INK teaser — visual */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
@@ -405,6 +405,7 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
 
