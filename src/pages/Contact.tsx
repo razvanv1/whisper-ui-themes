@@ -9,6 +9,7 @@ import {
   Phone, Mail, MapPin, Linkedin, MessageCircle, Calendar,
   ArrowRight, CheckCircle, Send
 } from "lucide-react";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const painPoints = [
