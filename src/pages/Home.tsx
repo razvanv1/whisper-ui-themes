@@ -192,10 +192,11 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-3/4" />
       </section>
 
       {/* Where most work starts */}
-      <section className="py-16 md:py-24 bg-background section-divider-dot">
+      <section className="py-16 md:py-24 bg-background section-divider-dot relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3 text-gradient">Where most work starts</h2>
