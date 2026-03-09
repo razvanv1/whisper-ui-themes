@@ -7,8 +7,10 @@ import { HelmetProvider } from "react-helmet-async";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
-import CookieConsent from "./components/CookieConsent";
 import Home from "./pages/Home";
+
+// Lazy load non-critical components
+const CookieConsent = lazy(() => import("./components/CookieConsent"));
 
 // Lazy load non-critical routes to reduce initial JS bundle
 const Programs = lazy(() => import("./pages/Programs"));
@@ -59,7 +61,9 @@ export default function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
-              <CookieConsent />
+              <Suspense fallback={null}>
+                <CookieConsent />
+              </Suspense>
             </BrowserRouter>
           </TooltipProvider>
         </LazyMotion>

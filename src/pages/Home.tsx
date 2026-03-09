@@ -86,11 +86,9 @@ const Home = () => {
         </video>
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 pb-16 md:pb-24 w-full">
-          <ScrollReveal>
-            <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white">
-              What is learned<br />can be unlearned.
-            </h1>
-          </ScrollReveal>
+          <h1 className="text-4xl font-black leading-tight tracking-tight md:text-6xl lg:text-7xl text-white animate-fade-in">
+            What is learned<br />can be unlearned.
+          </h1>
         </div>
       </section>
 
