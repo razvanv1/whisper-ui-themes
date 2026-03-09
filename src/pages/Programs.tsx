@@ -239,6 +239,7 @@ const Programs = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={4} className="hidden md:block left-1/4" />
       </section>
 
       <CTASection title="Start with the part that is already slowing the work down" />
