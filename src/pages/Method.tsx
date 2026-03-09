@@ -116,10 +116,11 @@ const Method = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-3/4" />
       </section>
 
       {/* Kurt Lewin — 3-phase visual */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
