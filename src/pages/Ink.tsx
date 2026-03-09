@@ -119,13 +119,33 @@ const Ink = () => {
               </ScrollReveal>
             ))}
           </div>
-          <ScrollReveal delay={0.5}>
-            <p className="mt-8 text-center text-muted-foreground italic">
-              The cost is not dramatic, it is cumulative and it compounds every week.
+        </div>
+        <ConnectingArrow variant={2} className="left-1/4" />
+      </section>
+
+      {/* What this is already costing */}
+      <section className="py-14 md:py-20 bg-card relative">
+        <div className="max-w-3xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What this is already costing</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+              Repeated manual work rarely looks dramatic at first. It just keeps draining time from decisions, delivery, and movement.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+              That cost shows up as slower follow-up, weaker continuity, scattered opportunity tracking, delayed materials, unfinished repurposing, and too much energy spent rebuilding what should already have structure behind it.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.3}>
+            <p className="text-lg leading-relaxed md:text-xl font-semibold text-foreground">
+              When that keeps happening, the issue is no longer productivity. The issue is operating drag.
             </p>
           </ScrollReveal>
         </div>
-        <ConnectingArrow variant={2} className="left-1/4" />
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
       {/* What INK does — before/after */}
