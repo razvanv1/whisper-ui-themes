@@ -6,37 +6,58 @@ import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
 import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import {
-  FileText, Mic, BookOpen, Wrench, ArrowRight,
-  DollarSign, Bot, Zap, GraduationCap, Globe
+  FileText, Mic, BookOpen, Wrench, ArrowRight, CheckCircle,
+  DollarSign, Zap, GraduationCap, Globe, Sparkles, Search,
+  Brain, Layers, Star, ClipboardList
 } from "lucide-react";
 
-const topics = [
-  { icon: DollarSign, name: "Funding intelligence", color: "bg-accent-emerald/10 text-accent-emerald" },
-  { icon: Bot, name: "AI at work", color: "bg-accent-blue/10 text-accent-blue" },
-  { icon: Zap, name: "Execution friction", color: "bg-destructive/10 text-destructive" },
-  { icon: GraduationCap, name: "Academy building", color: "bg-accent-purple/10 text-accent-purple" },
-  { icon: Globe, name: "Future of work", color: "bg-foreground/10 text-foreground" },
-];
-
-const formats = [
-  { icon: FileText, name: "Articles and working notes", desc: "Long-form analysis, practical frameworks and observations from the work.", color: "bg-accent-blue/10 text-accent-blue" },
-  { icon: Mic, name: "Unlearning in Romanian", desc: "The podcast. Conversations, reflections and useful signals around work, learning, AI and change.", color: "bg-destructive/10 text-destructive" },
-  { icon: BookOpen, name: "Studies and frameworks", desc: "Research-informed material for teams dealing with complexity.", color: "bg-accent-purple/10 text-accent-purple" },
-  { icon: Wrench, name: "Guides and practical tools", desc: "Templates, checklists and reusable resources.", color: "bg-accent-emerald/10 text-accent-emerald" },
-];
-
 const entryPaths = [
-  { name: "Funding intelligence", href: "/resources/funding-intelligence", icon: DollarSign },
-  { name: "AI at work", href: "/resources/ai-at-work", icon: Bot },
-  { name: "Execution friction", href: "/resources/execution-friction", icon: Zap },
-  { name: "Podcast, tools and working notes", href: "/resources/podcast-tools", icon: Mic },
+  { condition: "If funding is already creating noise", desc: "Read the pieces on funding intelligence, opportunity selection, vendor credits, public and private routes, and diversification of funding sources.", icon: DollarSign },
+  { condition: "If AI is already entering the work", desc: "Start with the pieces on AI at work, role-based use, habits, judgment, and what responsible adoption looks like inside real teams.", icon: Sparkles },
+  { condition: "If the team is busy but traction is weak", desc: "Go to execution friction, where the focus is on weak-fit initiatives, adoption drag, decision bottlenecks, and work that keeps moving without enough progress.", icon: Zap },
+  { condition: "If expertise could become something bigger", desc: "Use the academy and learning systems section for academy design, learning products, partner academies, customer education, and educational offers that can also support visibility and income.", icon: GraduationCap },
+];
+
+const contentTypes = [
+  { icon: FileText, name: "Articles and analysis", desc: "Sharp pieces on funding, AI, execution, and the future of work, written for people who need usable thinking rather than recycled summaries.", color: "bg-accent-blue/10 text-accent-blue" },
+  { icon: Mic, name: "Podcast episodes", desc: "Conversations and solo episodes that take messy themes and turn them into something easier to challenge, use, and apply.", color: "bg-destructive/10 text-destructive" },
+  { icon: BookOpen, name: "Guides and working notes", desc: "Practical material for teams that need a starting point, stronger framing, or a better way to move from idea to action.", color: "bg-accent-emerald/10 text-accent-emerald" },
+  { icon: Search, name: "Studies, case notes, and references", desc: "Selected research, examples, observations, and supporting material for situations where surface-level content is not enough.", color: "bg-accent-purple/10 text-accent-purple" },
+  { icon: Wrench, name: "Tools, templates, and checklists", desc: "Simple assets that can be used inside actual work, not only discussed.", color: "bg-foreground/10 text-foreground" },
+  { icon: Layers, name: "Frameworks and methods", desc: "Selected pieces that show how The Unlearning School thinks and works behind the scenes.", color: "bg-destructive/10 text-destructive" },
+];
+
+const topics = [
+  { icon: DollarSign, name: "Funding intelligence", desc: "Grant routes, cascade funding, vendor credits, MDF, public and private funding paths, opportunity filtering, readiness, and diversification of funding sources.", color: "bg-accent-emerald/10 text-accent-emerald" },
+  { icon: Sparkles, name: "AI at work", desc: "AI adoption in teams, role-based use, habits, responsible use, judgment, workflows, and educational or mission-driven use cases.", color: "bg-accent-blue/10 text-accent-blue" },
+  { icon: Zap, name: "Execution friction", desc: "Why teams stall, why traction drops, where adoption drags, how priorities compete, and where too much motion hides too little progress.", color: "bg-destructive/10 text-destructive" },
+  { icon: Globe, name: "Future of work", desc: "Adaptability, resilience, employability, digital skills, entrepreneurship, changing work patterns, and what remains relevant as work keeps shifting.", color: "bg-foreground/10 text-foreground" },
+  { icon: GraduationCap, name: "Academies and learning systems", desc: "Academy design, educational products, partner academies, customer academies, learning as a marketing and revenue channel, and content repurposing for learning programs.", color: "bg-accent-purple/10 text-accent-purple" },
+  { icon: Wrench, name: "Tools and frameworks", desc: "Practical frameworks, checklists, templates, short diagnostic tools, working models, and planning assets that can be used inside real teams.", color: "bg-foreground/10 text-foreground" },
+  { icon: Mic, name: "Podcast and insights", desc: "Unlearning in Romanian, reflections, commentary, cross-topic conversations, and pieces that connect the dots between funding, AI, execution, and change.", color: "bg-destructive/10 text-destructive" },
+];
+
+const featuredFormats = [
+  { icon: Star, name: "Featured article", desc: "A sharper take on one live issue, written for teams that need useful thinking, not content for the sake of content." },
+  { icon: Mic, name: "Latest podcast episode", desc: "A recent conversation or solo episode that turns a messy topic into something easier to use in real work." },
+  { icon: BookOpen, name: "Key guide", desc: "A practical guide built for teams that need structure, not inspiration." },
+  { icon: ClipboardList, name: "Featured framework or tool", desc: "A working model, checklist, or template that can be used inside actual projects, programs, or decisions." },
+];
+
+const newsletterBullets = [
+  "Selected articles and notes",
+  "Practical insights from the podcast",
+  "Funding and opportunity observations",
+  "Working frameworks and useful tools",
+  "Updates worth reading, not inbox filler",
 ];
 
 const Resources = () => {
   return (
     <PageLayout>
       <SEO title="Resources" description="Articles, podcast episodes, guides, frameworks and practical tools on funding, AI adoption, execution and the future of work." path="/resources" />
-      {/* Hero */}
+
+      {/* 1. Hero */}
       <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
@@ -48,13 +69,15 @@ const Resources = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <h1 className="text-3xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl mb-6">
-                Useful material for teams working through AI, funding, execution and change
+                Useful material for teams working through AI, funding, execution, and change
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
-                Everything published here comes from real work with real teams, not
-                from content calendars or keyword lists.
+              <p className="text-lg leading-relaxed md:text-xl mb-6 text-muted-foreground">
+                Articles, podcast episodes, studies, working notes, frameworks, and practical tools for teams dealing with opportunity overload, uneven AI adoption, execution drag, academy building, and the future of work.
+              </p>
+              <p className="text-sm text-muted-foreground/80 mb-10">
+                Use the newsletter if the issue matters but a call feels too early. Use the call if the issue is already active inside the team.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
@@ -74,23 +97,24 @@ const Resources = () => {
         <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
-      {/* Entry paths — visual cards */}
-      <section className="py-16 md:py-20 bg-background relative">
+      {/* 2. Entry block */}
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-xl font-bold mb-8">Start here</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Start here</h2>
           </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {entryPaths.map((path, i) => (
-              <ScrollReveal key={path.name} delay={i * 0.1}>
-                <Link to={path.href}>
-                  <GlowCard className="rounded-2xl border border-border bg-card p-6 text-center h-full group">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary mx-auto mb-4 group-hover:bg-destructive/10 transition-colors">
-                      <path.icon className="h-5 w-5 text-muted-foreground group-hover:text-destructive transition-colors" />
-                    </div>
-                    <p className="text-sm font-semibold group-hover:text-destructive transition-colors">{path.name}</p>
-                  </GlowCard>
-                </Link>
+          <div className="space-y-4">
+            {entryPaths.map((s, i) => (
+              <ScrollReveal key={s.condition} delay={i * 0.08}>
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 rounded-2xl border border-border/50 bg-card p-6 transition-all hover:border-destructive/30 hover:shadow-lg group">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-destructive/10 group-hover:bg-destructive/20 transition-colors">
+                    <s.icon className="h-5 w-5 text-destructive" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-1">{s.condition}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  </div>
+                </div>
               </ScrollReveal>
             ))}
           </div>
@@ -98,21 +122,22 @@ const Resources = () => {
         <ConnectingArrow variant={2} className="left-1/4" />
       </section>
 
-      {/* Browse by topic — visual chips */}
+      {/* 3. Content types block */}
       <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Browse by topic</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">What you will find here</h2>
           </ScrollReveal>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {topics.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 0.08}>
-                <div className="flex items-center gap-3 rounded-2xl border border-border bg-background p-5 transition-all hover:shadow-md hover:border-foreground/20">
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${t.color.split(' ')[0]}`}>
-                    <t.icon className={`h-5 w-5 ${t.color.split(' ')[1]}`} />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {contentTypes.map((f, i) => (
+              <ScrollReveal key={f.name} delay={i * 0.08}>
+                <GlowCard className="rounded-2xl border border-border bg-background p-8 h-full group">
+                  <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${f.color.split(' ')[0]} mb-5 group-hover:scale-110 transition-transform`}>
+                    <f.icon className={`h-7 w-7 ${f.color.split(' ')[1]}`} />
                   </div>
-                  <span className="text-sm font-semibold">{t.name}</span>
-                </div>
+                  <h3 className="text-lg font-bold mb-3">{f.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+                </GlowCard>
               </ScrollReveal>
             ))}
           </div>
@@ -120,21 +145,21 @@ const Resources = () => {
         <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
-      {/* Featured formats — icon cards */}
+      {/* 4. Topic block */}
       <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">Featured formats</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">Browse by topic</h2>
           </ScrollReveal>
-          <div className="grid gap-6 md:grid-cols-2">
-            {formats.map((f, i) => (
-              <ScrollReveal key={f.name} delay={i * 0.1}>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {topics.map((t, i) => (
+              <ScrollReveal key={t.name} delay={i * 0.08}>
                 <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full group">
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-2xl ${f.color.split(' ')[0]} mb-5 group-hover:scale-110 transition-transform`}>
-                    <f.icon className={`h-7 w-7 ${f.color.split(' ')[1]}`} />
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${t.color.split(' ')[0]} mb-4 group-hover:scale-110 transition-transform`}>
+                    <t.icon className={`h-6 w-6 ${t.color.split(' ')[1]}`} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{f.name}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-destructive transition-colors">{t.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{t.desc}</p>
                 </GlowCard>
               </ScrollReveal>
             ))}
@@ -143,41 +168,82 @@ const Resources = () => {
         <ConnectingArrow variant={4} className="left-3/4" />
       </section>
 
-      {/* Newsletter block — visual */}
+      {/* 5. Featured formats block */}
+      <section className="py-14 md:py-20 bg-card relative">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">Featured formats</h2>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            {featuredFormats.map((f, i) => (
+              <ScrollReveal key={f.name} delay={i * 0.1}>
+                <GlowCard className="rounded-2xl border border-border bg-background p-8 h-full group">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-destructive/10 mb-5 group-hover:bg-destructive/20 transition-colors">
+                    <f.icon className="h-7 w-7 text-destructive" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{f.name}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{f.desc}</p>
+                </GlowCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
+      </section>
+
+      {/* 6. Newsletter block */}
       <section className="py-14 md:py-20 bg-secondary relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10 md:p-14">
-              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl mb-4">The Unlearning Pill</h2>
-              <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+              <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl mb-4 text-center">The Unlearning Pill</h2>
+              <p className="text-muted-foreground mb-8 max-w-lg mx-auto text-center">
                 Selected updates on funding intelligence, AI at work, execution
-                friction, academy building and the future of work. Only material
-                shaped around the problems teams actually face.
+                friction, academy building, and the future of work. Useful when you want signal, not more noise.
               </p>
-              <Link to="/newsletter"
-                className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                Join The Unlearning Pill
-              </Link>
+              <div className="mb-8">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">What you get</h3>
+                <ul className="space-y-2">
+                  {newsletterBullets.map(b => (
+                    <li key={b} className="flex items-center gap-3 text-sm text-foreground/80">
+                      <CheckCircle className="h-4 w-4 shrink-0 text-accent-emerald" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="text-center">
+                <Link to="/newsletter"
+                  className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
+                  Join the newsletter
+                </Link>
+              </div>
             </div>
           </ScrollReveal>
         </div>
-        <ConnectingArrow variant={1} className="hidden md:block left-1/4" />
+        <ConnectingArrow variant={2} className="hidden md:block left-1/2" />
       </section>
 
-      {/* Why these exist — accent block */}
-      <section className="py-16 md:py-20 bg-background relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      {/* 7. Why this page exists */}
+      <section className="py-14 md:py-20 bg-background relative">
+        <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <p className="text-lg leading-relaxed md:text-xl italic text-muted-foreground">
-              "The best work happens when teams can think clearly about the
-              problems they face. These resources are designed to support that
-              thinking: not to replace it, not to oversimplify it, but to make the
-              patterns more visible and the decisions more informed."
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Why these resources exist</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+              Some resources support funding and opportunity selection. Others support AI adoption, stronger execution, academy building, or program design. Some are useful on their own. Others are there to extend the conversation after a program, workshop, podcast episode, or working call.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg leading-relaxed md:text-xl font-semibold text-foreground">
+              The point is not to publish more. The point is to make useful material easier to find, easier to use, and easier to connect back to work that already matters.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
+      {/* 8. Conversion CTA */}
       <CTASection
         title="Start with a free 30-minute working call"
         copy="A focused first conversation to understand the live issue, the pressure around it and the best place to begin."
