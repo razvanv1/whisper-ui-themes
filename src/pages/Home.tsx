@@ -348,7 +348,7 @@ const Home = () => {
       />
 
       {/* Method teaser */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background relative">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
@@ -367,6 +367,7 @@ const Home = () => {
             </Link>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={2} className="left-1/4" />
       </section>
 
       {/* INK teaser — visual */}
