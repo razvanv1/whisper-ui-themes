@@ -146,6 +146,7 @@ const Ink = () => {
           </ScrollReveal>
         </div>
         <ConnectingArrow variant={3} className="left-1/2" />
+      </section>
 
       {/* What INK does — before/after */}
       <section className="py-14 md:py-20 bg-card relative">
