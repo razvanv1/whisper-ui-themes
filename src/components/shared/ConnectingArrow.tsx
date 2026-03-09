@@ -55,9 +55,9 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
         <m.path 
           d={path} 
           stroke="currentColor" 
-          strokeWidth="3" 
+          strokeWidth="5" 
           strokeLinecap="round"
-          strokeDasharray="6 6"
+          strokeDasharray="8 8"
           fill="none"
           initial={{ pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
@@ -67,7 +67,7 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
         <m.path
           d={head}
           stroke="currentColor" 
-          strokeWidth="3" 
+          strokeWidth="5" 
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
