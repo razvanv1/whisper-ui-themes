@@ -165,7 +165,7 @@ const Resources = () => {
             <p className="text-lg leading-relaxed md:text-xl italic text-muted-foreground">
               "The best work happens when teams can think clearly about the
               problems they face. These resources are designed to support that
-              thinking — not to replace it, not to oversimplify it, but to make the
+              thinking: not to replace it, not to oversimplify it, but to make the
               patterns more visible and the decisions more informed."
             </p>
           </ScrollReveal>

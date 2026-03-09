@@ -121,7 +121,7 @@ const Ink = () => {
           </div>
           <ScrollReveal delay={0.5}>
             <p className="mt-8 text-center text-muted-foreground italic">
-              The cost is not dramatic — it is cumulative and it compounds every week.
+              The cost is not dramatic, it is cumulative and it compounds every week.
             </p>
           </ScrollReveal>
         </div>

@@ -186,7 +186,7 @@ const Method = () => {
               <GlowCard className="rounded-2xl border border-accent-emerald/20 bg-accent-emerald/5 p-8 h-full">
                 <h2 className="text-xl font-bold mb-4">What changes when this method is applied well</h2>
                 <ul className="space-y-3">
-                  {["Faster decisions — fewer initiatives competing for attention", "AI becomes shared practice, not scattered experiment", "Funding paths narrowed to genuine fit", "Proposals sharper earlier in the process", "Expertise turning into structured, deliverable assets"].map(t => (
+                  {["Faster decisions: fewer initiatives competing for attention", "AI becomes shared practice, not scattered experiment", "Funding paths narrowed to genuine fit", "Proposals sharper earlier in the process", "Expertise turning into structured, deliverable assets"].map(t => (
                     <li key={t} className="flex items-start gap-3 text-sm text-muted-foreground">
                       <ArrowRight className="h-4 w-4 shrink-0 mt-0.5 text-accent-emerald" />
                       {t}
