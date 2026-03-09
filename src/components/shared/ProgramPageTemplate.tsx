@@ -214,7 +214,16 @@ const ProgramPageTemplate = ({
         </ScrollReveal>
       </Section>
 
-      <CTASection title="Start with the issue that is already slowing the work down" />
+      <CTASection
+        title="Start with a free 30-minute working call"
+        copy="A focused first conversation to understand the live issue, the pressure around it and the best place to begin."
+        bullets={[
+          "Pressure-testing the bottleneck",
+          "Identifying the most relevant starting point",
+          "Deciding whether the next step is a program, a pilot, a narrower follow-up or a direct move into the work",
+        ]}
+        supportLine="If a call feels too early, send a short description of what is slowing the work down."
+      />
     </PageLayout>
   );
 };
