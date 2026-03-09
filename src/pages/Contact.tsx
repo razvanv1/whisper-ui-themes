@@ -9,6 +9,7 @@ import {
   Phone, Mail, MapPin, Linkedin, MessageCircle, Calendar,
   ArrowRight, CheckCircle, Send
 } from "lucide-react";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const painPoints = [
@@ -69,7 +70,7 @@ const Contact = () => {
       </section>
 
       {/* What brings people — icon cards */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What usually brings people here</h2>
@@ -87,10 +88,11 @@ const Contact = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       {/* How it works — numbered steps */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">How it works</h2>
@@ -110,10 +112,11 @@ const Contact = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-1/2" />
       </section>
 
       {/* Working call CTA — visual block */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
@@ -141,10 +144,11 @@ const Contact = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-3/4" />
       </section>
 
       {/* Direct contact — visual cards */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Direct contact</h2>
@@ -189,10 +193,11 @@ const Contact = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
       {/* Newsletter */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
@@ -209,6 +214,7 @@ const Contact = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       <CTASection title="Start with the issue, not with a generic introduction" />

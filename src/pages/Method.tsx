@@ -296,7 +296,7 @@ const Method = () => {
       />
 
       {/* What TUS is building */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">What The Unlearning School is building</h2>
@@ -310,6 +310,7 @@ const Method = () => {
             </p>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={3} className="left-1/4" />
       </section>
 
       <CTASection

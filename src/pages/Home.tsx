@@ -348,7 +348,7 @@ const Home = () => {
       />
 
       {/* Method teaser */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background relative">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
@@ -367,10 +367,11 @@ const Home = () => {
             </Link>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={2} className="left-1/4" />
       </section>
 
       {/* INK teaser — visual */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
@@ -404,11 +405,12 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
 
       {/* Resources teaser */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2 items-center">
@@ -441,6 +443,7 @@ const Home = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-3/4" />
       </section>
 
       {/* Final CTA */}
