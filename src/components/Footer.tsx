@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         {/* Massive brand text */}
-        <div className="mt-16 overflow-hidden text-center">
+        <div className="mt-16 overflow-hidden text-center flex flex-col items-center">
           <div
             className="font-bold leading-none tracking-tighter text-background/[0.06] select-none"
             style={{ fontSize: "clamp(3rem, 12vw, 10rem)" }}
@@ -117,8 +117,13 @@ export function Footer() {
           >
             The Unlearning School
           </div>
-          <p className="mt-4 text-lg font-bold tracking-wide text-red-400 md:text-2xl">
+          <p className="mt-4 text-lg font-bold tracking-wide text-red-600 md:text-2xl">
             What is learned can be unlearned.
+          </p>
+          <p className="mt-6 text-background/80 max-w-2xl mx-auto leading-relaxed md:text-lg">
+            The Unlearning School builds programs, systems and useful ways of
+            working for teams dealing with funding pressure, AI adoption,
+            execution drag and the future of work.
           </p>
         </div>
 
