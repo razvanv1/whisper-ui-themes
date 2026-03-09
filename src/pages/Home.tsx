@@ -155,10 +155,11 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/2" />
       </section>
 
       {/* Too much motion — visual treatment */}
-      <section className="py-16 md:py-24 bg-card section-divider">
+      <section className="py-16 md:py-24 bg-card section-divider relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
