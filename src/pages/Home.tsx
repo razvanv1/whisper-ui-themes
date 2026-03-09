@@ -231,10 +231,11 @@ const Home = () => {
             ))}
           </StaggerReveal>
         </div>
+        <ConnectingArrow variant={3} className="left-1/4" />
       </section>
 
       {/* Not every team — centered accent block */}
-      <section className="py-12 md:py-16 bg-card section-divider">
+      <section className="py-12 md:py-16 bg-card section-divider relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
