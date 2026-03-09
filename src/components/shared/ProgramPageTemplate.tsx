@@ -4,6 +4,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import CTASection from "@/components/shared/CTASection";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { CheckCircle } from "lucide-react";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 
 const allPrograms = [
   { label: "Funding intelligence", slug: "funding-intelligence" },
@@ -32,16 +33,29 @@ interface ProgramPageProps {
 const Section = ({
   children,
   warm = false,
+  arrowVariant,
+  arrowPosition = "center",
 }: {
   children: React.ReactNode;
   warm?: boolean;
-}) => (
-  <section
-    className={`py-14 md:py-20 ${warm ? "bg-card" : "bg-background"}`}
-  >
-    <div className="max-w-3xl mx-auto px-6">{children}</div>
-  </section>
-);
+  arrowVariant?: 1 | 2 | 3 | 4;
+  arrowPosition?: "left" | "center" | "right";
+}) => {
+  const posClass = 
+    arrowPosition === "left" ? "left-1/4" : 
+    arrowPosition === "right" ? "left-3/4" : "left-1/2";
+
+  return (
+    <section
+      className={`py-14 md:py-20 relative ${warm ? "bg-card" : "bg-background"}`}
+    >
+      <div className="max-w-3xl mx-auto px-6 relative z-10">{children}</div>
+      {arrowVariant && (
+        <ConnectingArrow variant={arrowVariant} className={`hidden md:block ${posClass}`} />
+      )}
+    </section>
+  );
+};
 
 const ProgramPageTemplate = ({
   eyebrow,
