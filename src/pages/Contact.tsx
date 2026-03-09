@@ -116,7 +116,7 @@ const Contact = () => {
       </section>
 
       {/* Working call CTA — visual block */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
@@ -144,6 +144,7 @@ const Contact = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-3/4" />
       </section>
 
       {/* Direct contact — visual cards */}
