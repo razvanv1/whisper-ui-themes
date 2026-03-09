@@ -206,10 +206,11 @@ const Programs = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
       {/* How programs connect — visual */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <ScrollReveal>
