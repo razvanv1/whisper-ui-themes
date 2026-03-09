@@ -222,7 +222,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </m.nav>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
