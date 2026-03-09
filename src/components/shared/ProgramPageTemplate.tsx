@@ -49,7 +49,7 @@ const Section = ({
     <section
       className={`py-14 md:py-20 relative ${warm ? "bg-card" : "bg-background"}`}
     >
-      <div className="max-w-3xl mx-auto px-6 relative z-10">{children}</div>
+      <div className="max-w-3xl mx-auto px-6 relative z-10 touch-manipulation">{children}</div>
       {arrowVariant && (
         <ConnectingArrow variant={arrowVariant} className={`hidden md:block ${posClass}`} />
       )}
