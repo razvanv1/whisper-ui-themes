@@ -114,7 +114,7 @@ export function Footer() {
           <img
             src={logo}
             alt="The Unlearning School"
-            className="w-full max-w-3xl h-auto brightness-[10] opacity-10 select-none pointer-events-none"
+            className="w-full max-w-3xl h-auto invert brightness-200 select-none pointer-events-none"
             aria-hidden="true"
           />
           <p className="mt-4 text-lg font-bold tracking-wide text-red-500 md:text-2xl">
