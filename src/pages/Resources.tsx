@@ -4,6 +4,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import {
   FileText, Mic, BookOpen, Wrench, ArrowRight,
   DollarSign, Bot, Zap, GraduationCap, Globe
