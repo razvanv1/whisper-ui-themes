@@ -61,7 +61,9 @@ export default function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
-              <CookieConsent />
+              <Suspense fallback={null}>
+                <CookieConsent />
+              </Suspense>
             </BrowserRouter>
           </TooltipProvider>
         </LazyMotion>
