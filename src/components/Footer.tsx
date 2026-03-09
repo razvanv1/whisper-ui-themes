@@ -117,7 +117,7 @@ export function Footer() {
           >
             The Unlearning School
           </div>
-          <p className="mt-4 text-lg font-bold tracking-wide text-red-600 md:text-2xl">
+          <p className="mt-4 text-lg font-bold tracking-wide text-red-500 md:text-2xl">
             What is learned can be unlearned.
           </p>
           <p className="mt-6 text-background/80 max-w-2xl mx-auto leading-relaxed md:text-lg">
