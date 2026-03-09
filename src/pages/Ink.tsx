@@ -192,10 +192,11 @@ const Ink = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
       {/* What INK is / is not — dual columns */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is and what it is not</h2>
