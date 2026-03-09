@@ -215,10 +215,11 @@ const Method = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Quote */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10">
