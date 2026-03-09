@@ -111,13 +111,12 @@ export function Footer() {
 
         {/* Massive brand text */}
         <div className="mt-16 overflow-hidden text-center flex flex-col items-center">
-          <div
-            className="font-bold leading-none tracking-tighter text-background/[0.06] select-none"
-            style={{ fontSize: "clamp(3rem, 12vw, 10rem)" }}
+          <img
+            src={logo}
+            alt="The Unlearning School"
+            className="w-full max-w-3xl h-auto brightness-[10] opacity-10 select-none pointer-events-none"
             aria-hidden="true"
-          >
-            The Unlearning School
-          </div>
+          />
           <p className="mt-4 text-lg font-bold tracking-wide text-red-500 md:text-2xl">
             What is learned can be unlearned.
           </p>
