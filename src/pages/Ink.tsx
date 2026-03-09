@@ -385,5 +385,3 @@ const Ink = () => {
 };
 
 export default Ink;
-
-export default Ink;
