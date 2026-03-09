@@ -189,49 +189,27 @@ const Ink = () => {
         <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
-      {/* What INK does — before/after */}
+      {/* 5. Results block */}
       <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is built to do</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What changes when INK is applied well</h2>
           </ScrollReveal>
-          <div className="grid gap-8 md:grid-cols-2">
-            <ScrollReveal direction="left">
-              <div className="rounded-2xl border-2 border-destructive/20 bg-destructive/5 p-8">
-                <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-destructive">
-                  <Minus className="h-5 w-5" /> Without INK
-                </h3>
-                <ul className="space-y-4">
-                  {["Manual scanning eats calendar slots", "Follow-ups depend on memory", "Materials stuck in draft", "Knowledge stays in one context", "Repeatable tasks slow everything"].map(t => (
-                    <li key={t} className="flex items-start gap-3 text-muted-foreground">
-                      <XCircle className="h-4 w-4 shrink-0 mt-1 text-destructive/60" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right">
-              <div className="rounded-2xl border-2 border-accent-emerald/20 bg-accent-emerald/5 p-8">
-                <h3 className="text-lg font-bold mb-6 flex items-center gap-2 text-accent-emerald">
-                  <Zap className="h-5 w-5" /> With INK
-                </h3>
-                <ul className="space-y-4">
-                  {["Scanning runs in the background", "Follow-up happens on time, automatically", "Materials move from draft to done faster", "Content gets repurposed systematically", "Team focuses on judgment work"].map(t => (
-                    <li key={t} className="flex items-start gap-3 text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 shrink-0 mt-1 text-accent-emerald" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((r, i) => (
+              <ScrollReveal key={r} delay={i * 0.08}>
+                <div className="flex items-start gap-3 rounded-2xl border border-border/50 bg-background p-6">
+                  <CheckCircle className="h-5 w-5 shrink-0 mt-0.5 text-accent-emerald" />
+                  <p className="text-foreground/90">{r}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
         <ConnectingArrow variant={3} className="left-3/4" />
       </section>
 
-      {/* What INK supports — icon grid */}
+      {/* 6. Use cases block */}
       <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
@@ -254,88 +232,141 @@ const Ink = () => {
         <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
-      {/* What INK is / is not — dual columns */}
-      <section className="py-14 md:py-20 bg-secondary relative">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* 7. Outputs block */}
+      <section className="py-14 md:py-20 bg-card relative">
+        <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12 text-center">What INK is and what it is not</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">What can come out of the work</h2>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-8">Depending on the use case, the work may lead to:</p>
           </ScrollReveal>
-          <div className="grid gap-8 md:grid-cols-2">
-            <ScrollReveal direction="left">
-              <div className="space-y-4">
-                {inkIs.map((item) => (
-                  <div key={item.text} className="flex items-center gap-4 rounded-xl bg-card p-5 border border-border">
-                    <item.icon className="h-5 w-5 shrink-0 text-accent-emerald" />
-                    <span className="font-medium">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right">
-              <div className="space-y-4">
-                {inkIsNot.map((item) => (
-                  <div key={item.text} className="flex items-center gap-4 rounded-xl bg-card p-5 border border-border">
-                    <item.icon className="h-5 w-5 shrink-0 text-destructive/60" />
-                    <span className="font-medium text-muted-foreground">{item.text}</span>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
+          <div className="space-y-3">
+            {outputs.map((o, i) => (
+              <ScrollReveal key={o} delay={i * 0.06}>
+                <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-background p-4">
+                  <ArrowRight className="h-4 w-4 shrink-0 text-destructive" />
+                  <span className="text-foreground/90">{o}</span>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
         <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
-      {/* Where INK fits + How it connects — combined visual */}
+      {/* 8. Best fit block */}
       <section className="py-14 md:py-20 bg-background relative">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-12 md:grid-cols-2">
-            <ScrollReveal>
-              <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-blue/10 mb-5">
-                  <Layers className="h-6 w-6 text-accent-blue" />
+        <div className="max-w-3xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">Where INK fits best</h2>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-8">
+              INK makes the most sense where repeated work is already costing too much time, but the team is still too small or too overloaded to solve it by adding more people.
+            </p>
+            <h3 className="text-lg font-bold mb-4">Strong fit includes</h3>
+          </ScrollReveal>
+          <div className="space-y-3">
+            {bestFit.map((b, i) => (
+              <ScrollReveal key={b} delay={i * 0.06}>
+                <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-card p-4">
+                  <CheckCircle className="h-4 w-4 shrink-0 text-accent-emerald" />
+                  <span className="text-foreground/90">{b}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Where INK fits best</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Teams with high operational load, repeatable tasks across multiple
-                  channels and limited bandwidth for the manual work that keeps the
-                  rest of the system moving. INK is most useful when the bottleneck is
-                  not strategy but execution capacity.
-                </p>
-              </GlowCard>
-            </ScrollReveal>
-            <ScrollReveal delay={0.15}>
-              <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-purple/10 mb-5">
-                  <Workflow className="h-6 w-6 text-accent-purple" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">How INK connects to the work</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  INK is not a standalone product. When a team starts with a program
-                  (funding, AI, execution, proposals or academy design) INK supports
-                  the parts of that work that benefit from structure, consistency and
-                  automation.
-                </p>
-              </GlowCard>
-            </ScrollReveal>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
-        <ConnectingArrow variant={2} className="hidden md:block left-3/4" />
+        <ConnectingArrow variant={2} className="left-3/4" />
       </section>
 
-      {/* Why this works — accent quote */}
-      <section className="py-16 md:py-20 bg-card relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
+      {/* 9. Program connection block */}
+      <section className="py-14 md:py-20 bg-secondary relative">
+        <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
-            <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10">
-              <p className="text-lg leading-relaxed md:text-xl italic text-foreground/80">
-                "The biggest productivity loss in most teams is not in the strategic layer.
-                It is in the execution layer: the scanning, filtering, following up,
-                preparing and tracking that nobody owns systematically."
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">How INK connects to the rest of the work</h2>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {programConnections.map((p, i) => (
+              <ScrollReveal key={p.title} delay={i * 0.08}>
+                <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full group">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[hsl(210,60%,50%)]/10 mb-5 group-hover:bg-[hsl(210,60%,50%)]/20 transition-colors">
+                    <Workflow className="h-6 w-6 text-[hsl(210,60%,50%)]" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:text-[hsl(210,60%,50%)] transition-colors">{p.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+                </GlowCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+        <ConnectingArrow variant={3} className="left-1/4" />
+      </section>
+
+      {/* 10. Clarity block — What INK is not */}
+      <section className="py-14 md:py-20 bg-card relative">
+        <div className="max-w-3xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-8">What INK is not</h2>
+          </ScrollReveal>
+          <div className="space-y-3 mb-10">
+            {inkIsNot.map((item, i) => (
+              <ScrollReveal key={item} delay={i * 0.06}>
+                <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-background p-4">
+                  <XCircle className="h-4 w-4 shrink-0 text-destructive/60" />
+                  <span className="text-muted-foreground">{item}</span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={0.4}>
+            <div className="rounded-2xl border border-[hsl(210,60%,50%)]/20 bg-[hsl(210,60%,50%)]/5 p-8">
+              <p className="text-lg leading-relaxed text-foreground/90">
+                INK is an operating layer built to reduce repeated work, support better structure, and make movement easier where manual effort keeps becoming the bottleneck.
               </p>
-              <p className="mt-4 text-sm font-bold text-destructive">INK makes that layer work.</p>
             </div>
           </ScrollReveal>
+        </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
+      </section>
+
+      {/* 11. Why it works block */}
+      <section className="py-14 md:py-20 bg-background relative">
+        <div className="max-w-3xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">Why this approach works</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-6">
+              The point is not to automate everything. The point is to reduce the kind of manual drag that keeps slowing real work down.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
+              That means identifying the repeated load, deciding what deserves structure, and building support around the workflows that already matter — instead of inventing technology with no operational role.
+            </p>
+          </ScrollReveal>
+        </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
+      </section>
+
+      {/* 12. Pilots block */}
+      <section className="py-14 md:py-20 bg-card relative">
+        <div className="max-w-3xl mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4">Pilots and use cases</h2>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground mb-8">
+              INK can support focused pilots where repeated work is already visible and already expensive.
+            </p>
+            <h3 className="text-lg font-bold mb-4">Current directions</h3>
+          </ScrollReveal>
+          <div className="space-y-3">
+            {pilots.map((p, i) => (
+              <ScrollReveal key={p} delay={i * 0.06}>
+                <div className="flex items-center gap-3 rounded-xl border border-border/50 bg-background p-4">
+                  <Zap className="h-4 w-4 shrink-0 text-[hsl(210,60%,50%)]" />
+                  <span className="text-foreground/90">{p}</span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -352,5 +383,7 @@ const Ink = () => {
     </PageLayout>
   );
 };
+
+export default Ink;
 
 export default Ink;
