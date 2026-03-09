@@ -150,7 +150,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black z-[1] pointer-events-none video-loading-overlay" />
 
       {/* Full-Width Navbar */}
-      <motion.nav
+      <m.nav
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -165,7 +165,7 @@ export function Hero() {
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center cursor-pointer"
               onClick={() => {
@@ -173,7 +173,7 @@ export function Hero() {
               }}
             >
               <span className="font-bagel text-white text-xl tracking-wider">MOJJU</span>
-            </motion.div>
+            </m.div>
 
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-8">
