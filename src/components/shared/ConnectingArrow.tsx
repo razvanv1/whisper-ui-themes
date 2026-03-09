@@ -50,7 +50,7 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
   return (
     <div className={`absolute -bottom-16 w-24 h-28 z-20 text-red-500/40 pointer-events-none -translate-x-1/2 ${className}`}>
       <svg viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full overflow-visible">
-        <motion.path 
+        <m.path 
           d={path} 
           stroke="currentColor" 
           strokeWidth="3" 
@@ -62,7 +62,7 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
-        <motion.path
+        <m.path
           d={head}
           stroke="currentColor" 
           strokeWidth="3" 

@@ -27,7 +27,7 @@ const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
         <ScrollReveal delay={0.15}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {items.map((item, index) => (
-              <motion.a
+              <m.a
                 key={item.name}
                 href={item.url || "#"}
                 target={item.url ? "_blank" : undefined}
@@ -45,7 +45,7 @@ const AuthorityBand = ({ title, copy, items, note }: AuthorityBandProps) => {
                   )}
                 </div>
                 <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground/40 transition-colors group-hover:text-destructive" />
-              </motion.a>
+              </m.a>
             ))}
           </div>
           <p className="text-sm mt-6 text-muted-foreground italic text-center">{note}</p>
