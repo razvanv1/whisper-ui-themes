@@ -10,8 +10,13 @@ const CookieConsent = () => {
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
     if (!consent) {
-      const timer = setTimeout(() => setVisible(true), 1500);
-      return () => clearTimeout(timer);
+      // Delay cookie banner to avoid impacting LCP and page load metrics
+      const show = () => setTimeout(() => setVisible(true), 4000);
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(show);
+      } else {
+        show();
+      }
     }
   }, []);
 
