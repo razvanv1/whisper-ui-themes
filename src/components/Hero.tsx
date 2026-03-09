@@ -153,8 +153,6 @@ export function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Loading overlay - hides black flash while video buffers */}
-      <div className="absolute inset-0 bg-black z-[1] pointer-events-none video-loading-overlay" />
 
       {/* Full-Width Navbar */}
       <m.nav
