@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import ScrollProgress from "../shared/ScrollProgress";
