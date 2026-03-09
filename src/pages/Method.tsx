@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import { TrendingDown, Brain, Search, Layers, FileX, PackageOpen, ArrowRight, Snowflake, RefreshCw, Lock } from "lucide-react";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
