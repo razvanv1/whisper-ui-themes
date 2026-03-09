@@ -278,10 +278,11 @@ const Home = () => {
             ))}
           </StaggerReveal>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Why clients come — cards grid */}
-      <section className="py-16 md:py-24 bg-card section-divider">
+      <section className="py-16 md:py-24 bg-card section-divider relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-gradient">Why clients come to TUS</h2>
