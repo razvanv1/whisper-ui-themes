@@ -45,10 +45,10 @@ const Navbar = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`relative rounded-lg px-3.5 py-2 text-[0.8125rem] font-medium tracking-wide transition-all duration-200 hover:text-foreground hover:bg-muted/60 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-[1.5px] after:rounded-full after:bg-destructive after:origin-left after:transition-transform after:duration-300 ${
-                location.pathname === item.path
-                  ? "text-foreground after:scale-x-100"
-                  : "text-muted-foreground after:scale-x-0 hover:after:scale-x-100"
+              className={`relative rounded-lg px-3.5 py-2 text-[0.8125rem] font-medium tracking-wide transition-all duration-200 hover:text-foreground hover:bg-muted/60 after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-[1.5px] after:rounded-full after:origin-left after:transition-transform after:duration-300 ${
+                item.label === "INK"
+                  ? `text-[hsl(210,60%,50%)] font-bold after:bg-[hsl(210,60%,50%)] ${location.pathname === item.path ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}`
+                  : `after:bg-destructive ${location.pathname === item.path ? "text-foreground after:scale-x-100" : "text-muted-foreground after:scale-x-0 hover:after:scale-x-100"}`
               }`}
             >
               {item.label}
@@ -98,9 +98,11 @@ const Navbar = () => {
                 to={item.path}
                 onClick={() => setMobileOpen(false)}
                 className={`rounded-md px-3 py-3 text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                  item.label === "INK"
+                    ? "text-[hsl(210,60%,50%)] font-bold"
+                    : location.pathname === item.path
+                      ? "text-primary"
+                      : "text-muted-foreground"
                 }`}
               >
                 {item.label}

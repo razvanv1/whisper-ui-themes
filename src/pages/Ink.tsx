@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import octopusInk from "@/assets/octopus-ink.png";
 import SEO from "@/components/shared/SEO";
 import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
@@ -81,18 +82,8 @@ const Ink = () => {
               </ScrollReveal>
             </div>
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { num: "6", label: "Workflow areas", color: "bg-destructive/10 text-destructive" },
-                  { num: "∞", label: "Manual hours saved", color: "bg-accent-blue/10 text-accent-blue" },
-                  { num: "24/7", label: "Background scanning", color: "bg-accent-emerald/10 text-accent-emerald" },
-                  { num: "0", label: "Judgment replaced", color: "bg-accent-purple/10 text-accent-purple" },
-                ].map((stat) => (
-                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center">
-                    <p className={`text-3xl font-black mb-1 ${stat.color.split(' ')[1]}`}>{stat.num}</p>
-                    <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
-                  </GlowCard>
-                ))}
+              <div className="flex items-center justify-center">
+                <img src={octopusInk} alt="Octopus releasing ink" className="w-full max-w-md h-auto drop-shadow-2xl" />
               </div>
             </ScrollReveal>
           </div>
