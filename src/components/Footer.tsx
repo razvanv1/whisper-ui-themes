@@ -48,12 +48,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand + description */}
           <div className="md:col-span-2">
-            <p className="text-background/70 max-w-md leading-relaxed">
-              The Unlearning School builds programs, systems and useful ways of
-              working for teams dealing with funding pressure, AI adoption,
-              execution drag and the future of work.
-            </p>
-            <div className="mt-6 space-y-1 text-sm text-background/60">
+            <div className="space-y-1 text-sm text-background/60">
               <p>hello@unlearning.ro</p>
               <p>+40 722 598 346</p>
               <p>1, Aleea Pasărea în Văzduh, București, RO</p>
