@@ -197,7 +197,7 @@ const Contact = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
@@ -214,6 +214,7 @@ const Contact = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       <CTASection title="Start with the issue, not with a generic introduction" />

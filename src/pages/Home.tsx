@@ -410,7 +410,7 @@ const Home = () => {
 
 
       {/* Resources teaser */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2 items-center">
@@ -443,6 +443,7 @@ const Home = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-3/4" />
       </section>
 
       {/* Final CTA */}
