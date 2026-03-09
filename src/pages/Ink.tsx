@@ -9,7 +9,7 @@ import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import {
   Search, Filter, Bell, FileText, RefreshCw, GraduationCap,
   Clock, AlertTriangle, TrendingDown, Zap, ArrowRight,
-  CheckCircle, XCircle, Minus, Bot, Workflow, Layers
+  CheckCircle, XCircle, Minus, Sparkles, Workflow, Layers
 } from "lucide-react";
 
 const supports = [
