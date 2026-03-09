@@ -4,6 +4,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import CTASection from "@/components/shared/CTASection";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { CheckCircle } from "lucide-react";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 
 const allPrograms = [
   { label: "Funding intelligence", slug: "funding-intelligence" },
@@ -32,16 +33,29 @@ interface ProgramPageProps {
 const Section = ({
   children,
   warm = false,
+  arrowVariant,
+  arrowPosition = "center",
 }: {
   children: React.ReactNode;
   warm?: boolean;
-}) => (
-  <section
-    className={`py-14 md:py-20 ${warm ? "bg-card" : "bg-background"}`}
-  >
-    <div className="max-w-3xl mx-auto px-6">{children}</div>
-  </section>
-);
+  arrowVariant?: 1 | 2 | 3 | 4;
+  arrowPosition?: "left" | "center" | "right";
+}) => {
+  const posClass = 
+    arrowPosition === "left" ? "left-1/4" : 
+    arrowPosition === "right" ? "left-3/4" : "left-1/2";
+
+  return (
+    <section
+      className={`py-14 md:py-20 relative ${warm ? "bg-card" : "bg-background"}`}
+    >
+      <div className="max-w-3xl mx-auto px-6 relative z-10">{children}</div>
+      {arrowVariant && (
+        <ConnectingArrow variant={arrowVariant} className={`hidden md:block ${posClass}`} />
+      )}
+    </section>
+  );
+};
 
 const ProgramPageTemplate = ({
   eyebrow,
@@ -123,35 +137,35 @@ const ProgramPageTemplate = ({
         </div>
       </section>
 
-      <Section>
+      <Section arrowVariant={1} arrowPosition="right">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">You probably recognize this</h2>
           <p className="text-lg text-muted-foreground">{recognitionCopy}</p>
         </ScrollReveal>
       </Section>
 
-      <Section warm>
+      <Section warm arrowVariant={2} arrowPosition="left">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What this is already costing</h2>
           <p className="text-lg text-muted-foreground">{costCopy}</p>
         </ScrollReveal>
       </Section>
 
-      <Section>
+      <Section arrowVariant={3} arrowPosition="center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What this program is built to do</h2>
           <p className="text-lg text-muted-foreground">{builtToDo}</p>
         </ScrollReveal>
       </Section>
 
-      <Section warm>
+      <Section warm arrowVariant={4} arrowPosition="right">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What changes after the work</h2>
           <p className="text-lg text-muted-foreground">{whatChanges}</p>
         </ScrollReveal>
       </Section>
 
-      <Section>
+      <Section arrowVariant={1} arrowPosition="left">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-8">What the work can include</h2>
           <ul className="space-y-4">
@@ -165,35 +179,35 @@ const ProgramPageTemplate = ({
         </ScrollReveal>
       </Section>
 
-      <Section warm>
+      <Section warm arrowVariant={2} arrowPosition="center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What comes out of the work</h2>
           <p className="text-lg text-muted-foreground">{comesOut}</p>
         </ScrollReveal>
       </Section>
 
-      <Section>
+      <Section arrowVariant={3} arrowPosition="right">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">Best fit</h2>
           <p className="text-lg text-muted-foreground">{bestFit}</p>
         </ScrollReveal>
       </Section>
 
-      <Section warm>
+      <Section warm arrowVariant={4} arrowPosition="left">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What this is not</h2>
           <p className="text-lg text-muted-foreground">{notThis}</p>
         </ScrollReveal>
       </Section>
 
-      <Section>
+      <Section arrowVariant={1} arrowPosition="center">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">How the work usually starts</h2>
           <p className="text-lg text-muted-foreground">{howStarts}</p>
         </ScrollReveal>
       </Section>
 
-      <Section warm>
+      <Section warm arrowVariant={2} arrowPosition="right">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-black mb-6">What this can lead to next</h2>
           <p className="text-lg text-muted-foreground">{leadsTo}</p>
