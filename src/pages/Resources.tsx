@@ -71,10 +71,11 @@ const Resources = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Entry paths — visual cards */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-xl font-bold mb-8">Start here</h2>
