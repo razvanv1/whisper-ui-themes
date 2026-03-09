@@ -237,7 +237,7 @@ export function Hero() {
       )}
 
       {/* Mobile Menu Panel */}
-      <motion.div
+      <m.div
         initial={{ x: '100%' }}
         animate={{ x: isMobileMenuOpen ? '0%' : '100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
