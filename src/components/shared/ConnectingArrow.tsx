@@ -49,7 +49,7 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
 
   return (
     <div
-      className={`absolute bottom-4 w-24 h-28 z-40 text-red-500/40 pointer-events-none -translate-x-1/2 ${className}`}
+      className={`absolute bottom-4 w-24 h-28 z-40 text-[hsl(210,60%,50%)]/50 pointer-events-none -translate-x-1/2 ${className}`}
     >
       <svg viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full overflow-visible">
         <m.path 
