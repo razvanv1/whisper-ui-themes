@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 import { ExternalLink } from "lucide-react";
 
