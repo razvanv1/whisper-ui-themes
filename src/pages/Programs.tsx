@@ -108,7 +108,7 @@ const Programs = () => {
       </section>
 
       {/* Quick nav pills */}
-      <section className="py-12 md:py-16 bg-background">
+      <section className="py-12 md:py-16 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-xl font-bold mb-6">Jump to a program</h2>
@@ -122,10 +122,11 @@ const Programs = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       {/* Problem patterns — visual grid */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">The patterns that keep showing up</h2>
