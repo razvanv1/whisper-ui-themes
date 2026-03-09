@@ -26,6 +26,13 @@ const costs = [
   { icon: Clock, text: "Follow-ups slip because they depend on someone remembering" },
   { icon: FileText, text: "Materials stay in draft longer than they should" },
   { icon: TrendingDown, text: "Knowledge that could be repurposed never leaves the original context" },
+  { icon: RefreshCw, text: "The same research keeps getting redone in slightly different forms" },
+  { icon: Clock, text: "Follow-up is important, but too easy to delay or lose" },
+  { icon: FileText, text: "Material preparation eats more time than it should" },
+  { icon: Search, text: "Information is scattered across notes, tabs, chats, docs, and memory" },
+  { icon: Layers, text: "Content exists, but turning it into reusable assets takes too much effort" },
+  { icon: GraduationCap, text: "Academy ideas, workflows, or internal processes depend too much on manual coordination" },
+  { icon: AlertTriangle, text: "The team is small, the context is heavy, and repeated work keeps eating attention" },
 ];
 
 const inkIsNot = [
