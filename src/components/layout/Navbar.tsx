@@ -98,9 +98,11 @@ const Navbar = () => {
                 to={item.path}
                 onClick={() => setMobileOpen(false)}
                 className={`rounded-md px-3 py-3 text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                  item.label === "INK"
+                    ? "text-[hsl(210,60%,50%)] font-bold"
+                    : location.pathname === item.path
+                      ? "text-primary"
+                      : "text-muted-foreground"
                 }`}
               >
                 {item.label}
