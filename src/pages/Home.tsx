@@ -68,7 +68,7 @@ const Home = () => {
   return (
     <PageLayout>
       <SEO
-        title="The Unlearning School — Programs for funding, AI adoption & execution"
+        title="The Unlearning School - Programs for funding, AI adoption & execution"
         description="The Unlearning School builds programs, systems and useful ways of working for teams dealing with funding pressure, AI adoption, execution drag and the future of work."
         path="/"
       />

@@ -66,10 +66,10 @@ const PrivacyPolicy = () => {
                 <h2 className="text-2xl font-bold mb-4">5. Legal Basis for Processing</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">We process your personal data based on:</p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Consent</strong> — for newsletter subscriptions and non-essential cookies</span></li>
-                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Legitimate interest</strong> — for website analytics and service improvement</span></li>
-                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Contractual necessity</strong> — for providing services you have requested</span></li>
-                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Legal obligation</strong> — for compliance with applicable laws</span></li>
+                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Consent:</strong> for newsletter subscriptions and non-essential cookies</span></li>
+                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Legitimate interest:</strong> for website analytics and service improvement</span></li>
+                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Contractual necessity:</strong> for providing services you have requested</span></li>
+                  <li className="flex items-start gap-2">• <span><strong className="text-foreground">Legal obligation:</strong> for compliance with applicable laws</span></li>
                 </ul>
               </div>
 
