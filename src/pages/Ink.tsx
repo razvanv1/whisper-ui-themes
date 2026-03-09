@@ -13,12 +13,12 @@ import {
 } from "lucide-react";
 
 const supports = [
-  { icon: Search, area: "Opportunity scanning", desc: "Monitoring funding sources, vendor credits, partnerships and relevant calls across multiple channels." },
-  { icon: Filter, area: "Filtering and prioritization", desc: "Scoring and ranking opportunities based on fit, effort and strategic alignment." },
-  { icon: Bell, area: "Follow-up support", desc: "Tracking open threads, pending actions and follow-up cadences without relying on memory." },
-  { icon: FileText, area: "Material preparation", desc: "Drafting, structuring and refining documents, proposals, briefs and internal communications." },
-  { icon: RefreshCw, area: "Content repurposing", desc: "Turning working notes, call summaries and internal material into publishable or shareable formats." },
-  { icon: GraduationCap, area: "Academy and workflow support", desc: "Supporting curriculum structuring, session planning and repeatable delivery tasks." },
+  { icon: Search, area: "Opportunity scanning", desc: "Tracking funding routes, calls, vendor credits, ecosystem programs, and new opportunity paths that need filtering before they deserve attention." },
+  { icon: Filter, area: "Filtering and prioritization", desc: "Reducing noise across options, inputs, and moving pieces so the next step becomes easier to choose." },
+  { icon: Bell, area: "Follow-up support", desc: "Supporting outreach, relationship tracking, next-step logic, and repeated work behind pipeline movement." },
+  { icon: FileText, area: "Material preparation", desc: "Helping shape briefs, offer structures, summaries, working documents, and reusable assets without rebuilding everything from zero each time." },
+  { icon: RefreshCw, area: "Content repurposing", desc: "Turning conversations, notes, podcasts, and longer material into useful assets that can move across formats." },
+  { icon: GraduationCap, area: "Academy and workflow support", desc: "Supporting curriculum structure, learning assets, content packaging, activation flows, and repeatable workflows behind academies, programs, and educational offers." },
 ];
 
 const costs = [
@@ -35,16 +35,57 @@ const costs = [
   { icon: AlertTriangle, text: "The team is small, the context is heavy, and repeated work keeps eating attention" },
 ];
 
-const inkIsNot = [
-  { icon: XCircle, text: "A product you can buy off the shelf" },
-  { icon: XCircle, text: "A chatbot or replacement for thinking" },
-  { icon: XCircle, text: "A standalone tool disconnected from strategy" },
+const results = [
+  "Repeated work becomes easier to structure",
+  "Scanning and filtering stop relying only on manual effort",
+  "Follow-up becomes easier to support consistently",
+  "Content and materials become easier to reuse",
+  "Academy and program workflows become lighter to operate",
+  "Small teams get more continuity without adding more internal drag",
 ];
 
-const inkIs = [
-  { icon: CheckCircle, text: "An operating layer for repeatable work" },
-  { icon: CheckCircle, text: "Connected to every TUS program" },
-  { icon: CheckCircle, text: "Built to free capacity for judgment work" },
+const outputs = [
+  "A better workflow structure",
+  "A lighter follow-up process",
+  "Cleaner opportunity tracking",
+  "Reusable content and material systems",
+  "Academy support flows",
+  "Stronger internal coordination around repeated tasks",
+  "A pilot path for a more useful operating layer",
+];
+
+const bestFit = [
+  "Accelerators and incubators",
+  "Startup support teams",
+  "Lean internal teams",
+  "Vendor-linked ecosystems",
+  "Organizations building academies or learning systems",
+  "Teams testing AI-supported workflows",
+  "Organizations with repeated research, coordination, and follow-up work",
+];
+
+const programConnections = [
+  { title: "Funding intelligence and opportunity readiness", desc: "INK supports scanning, filtering, tracking, and organizing opportunities before they turn into wasted motion." },
+  { title: "Proposal support", desc: "INK supports preparation, structure, reuse of material, and working inputs needed for concept work, draft shaping, and partner-facing documents." },
+  { title: "Academy design and activation", desc: "INK supports curriculum structure, content repurposing, learning assets, messaging support, and repeated tasks behind academy building." },
+  { title: "Resources and content systems", desc: "INK supports the transformation of ideas, notes, audio, and working material into reusable articles, guides, tools, frameworks, and newsletter assets." },
+  { title: "Internal execution workflows", desc: "INK reduces part of the repeated work that slows small teams down between idea, decision, and delivery." },
+];
+
+const inkIsNot = [
+  "Not a magic AI product",
+  "Not a replacement for judgment",
+  "Not a promise of full automation",
+  "Not a generic chatbot layer",
+  "Not a finished platform pretending to do everything",
+];
+
+const pilots = [
+  "Funding and opportunity monitoring",
+  "Outreach and follow-up support",
+  "Academy content and structure support",
+  "Content repurposing workflows",
+  "Internal execution support for lean teams",
 ];
 
 const Ink = () => {
