@@ -92,6 +92,7 @@ export function Hero() {
       video.removeEventListener('durationchange', updateCutPoint)
       video.removeEventListener('timeupdate', jumpToStartBeforeLogo)
       video.removeEventListener('play', handlePlay)
+      video.removeEventListener('canplay', hideOverlay)
     }
   }, [])
 
