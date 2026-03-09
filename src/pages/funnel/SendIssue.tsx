@@ -12,7 +12,7 @@ const SendIssue = () => (
           Describe what is slowing the work down
         </h1>
         <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
-          The response will be shaped around the issue and the strongest next move — not a generic reply.
+          The response will be shaped around the issue and the strongest next move, not a generic reply.
         </p>
       </div>
     </section>
