@@ -41,7 +41,7 @@ const inkIs = [
 const Ink = () => {
   return (
     <PageLayout>
-      <SEO title="INK — AI Operating Layer" description="INK is the AI-supported system behind The Unlearning School for opportunity scanning, follow-up, material preparation and workflow tasks." path="/ink" />
+      <SEO title="INK - AI Operating Layer" description="INK is the AI-supported system behind The Unlearning School for opportunity scanning, follow-up, material preparation and workflow tasks." path="/ink" />
       {/* Hero */}
       <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -121,7 +121,7 @@ const Ink = () => {
           </div>
           <ScrollReveal delay={0.5}>
             <p className="mt-8 text-center text-muted-foreground italic">
-              The cost is not dramatic — it is cumulative and it compounds every week.
+              The cost is not dramatic, it is cumulative and it compounds every week.
             </p>
           </ScrollReveal>
         </div>

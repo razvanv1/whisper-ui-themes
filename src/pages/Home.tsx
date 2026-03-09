@@ -68,7 +68,7 @@ const Home = () => {
   return (
     <PageLayout>
       <SEO
-        title="The Unlearning School — Programs for funding, AI adoption & execution"
+        title="The Unlearning School - Programs for funding, AI adoption & execution"
         description="The Unlearning School builds programs, systems and useful ways of working for teams dealing with funding pressure, AI adoption, execution drag and the future of work."
         path="/"
       />
@@ -440,7 +440,7 @@ const Home = () => {
       {/* Final CTA */}
       <CTASection
         title="Let's remove the friction"
-        copy="Tell us about the challenge slowing down your team—whether it's execution drag, AI adoption, or funding strategy. We'll start with the live issue and map out the strongest next move."
+        copy="We are here to help. Tell us about the challenge slowing down your team, whether it's execution drag, AI adoption, or funding strategy. We'll start with the live issue and map out the strongest next move."
       />
     </PageLayout>
   );

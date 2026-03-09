@@ -21,9 +21,9 @@ const painPoints = [
 ];
 
 const steps = [
-  { num: "01", title: "Book or write", desc: "Pick the format that fits — a live call or a short message about what is slowing the work down." },
+  { num: "01", title: "Book or write", desc: "Pick the format that fits: a live call or a short message about what is slowing the work down." },
   { num: "02", title: "Pressure-test the issue", desc: "The first conversation is focused on understanding the real bottleneck, not delivering a pitch." },
-  { num: "03", title: "Get a shaped response", desc: "The response is built around your specific situation — not a generic template or sales sequence." },
+  { num: "03", title: "Get a shaped response", desc: "The response is built around your specific situation, not a generic template or sales sequence." },
 ];
 
 const Contact = () => {

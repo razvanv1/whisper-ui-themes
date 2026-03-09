@@ -11,7 +11,7 @@ import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 const Method = () => {
   return (
     <PageLayout>
-      <SEO title="The Method" description="The Unlearning School method starts by removing what no longer fits — clearing friction before adding new tools, initiatives or activity." path="/method" />
+      <SEO title="The Method" description="The Unlearning School method starts by removing what no longer fits, clearing friction before adding new tools, initiatives or activity." path="/method" />
       {/* Hero */}
       <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2" />
@@ -186,7 +186,7 @@ const Method = () => {
               <GlowCard className="rounded-2xl border border-accent-emerald/20 bg-accent-emerald/5 p-8 h-full">
                 <h2 className="text-xl font-bold mb-4">What changes when this method is applied well</h2>
                 <ul className="space-y-3">
-                  {["Faster decisions — fewer initiatives competing for attention", "AI becomes shared practice, not scattered experiment", "Funding paths narrowed to genuine fit", "Proposals sharper earlier in the process", "Expertise turning into structured, deliverable assets"].map(t => (
+                  {["Faster decisions: fewer initiatives competing for attention", "AI becomes shared practice, not scattered experiment", "Funding paths narrowed to genuine fit", "Proposals sharper earlier in the process", "Expertise turning into structured, deliverable assets"].map(t => (
                     <li key={t} className="flex items-start gap-3 text-sm text-muted-foreground">
                       <ArrowRight className="h-4 w-4 shrink-0 mt-0.5 text-accent-emerald" />
                       {t}

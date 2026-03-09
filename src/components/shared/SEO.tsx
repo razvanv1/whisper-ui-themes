@@ -12,7 +12,7 @@ const OG_IMAGE =
   "https://storage.googleapis.com/gpt-engineer-file-uploads/IdBYduUEeXhnKxF1hWuwXOkQoAk1/social-images/social-1773006625171-IMG_6462.webp";
 
 export default function SEO({ title, description, path = "/" }: SEOProps) {
-  const fullTitle = path === "/" ? title : `${title} — ${BRAND}`;
+  const fullTitle = path === "/" ? title : `${title} - ${BRAND}`;
   const url = `${SITE}${path}`;
 
   return (
