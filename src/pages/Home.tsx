@@ -81,6 +81,7 @@ const Home = () => {
           muted
           playsInline
           preload="none"
+          poster="/hero-poster.jpg"
         >
           <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
         </video>
