@@ -224,10 +224,11 @@ const Ink = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       {/* Where INK fits + How it connects — combined visual */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <ScrollReveal>
