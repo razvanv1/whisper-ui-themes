@@ -70,7 +70,7 @@ const Contact = () => {
       </section>
 
       {/* What brings people — icon cards */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What usually brings people here</h2>
@@ -88,6 +88,7 @@ const Contact = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       {/* How it works — numbered steps */}
