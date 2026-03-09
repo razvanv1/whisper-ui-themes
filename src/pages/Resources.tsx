@@ -4,6 +4,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import {
   FileText, Mic, BookOpen, Wrench, ArrowRight,
   DollarSign, Bot, Zap, GraduationCap, Globe
@@ -70,10 +71,11 @@ const Resources = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Entry paths — visual cards */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-xl font-bold mb-8">Start here</h2>
@@ -93,10 +95,11 @@ const Resources = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-1/4" />
       </section>
 
       {/* Browse by topic — visual chips */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Browse by topic</h2>
@@ -114,10 +117,11 @@ const Resources = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
       {/* Featured formats — icon cards */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-12">Featured formats</h2>
@@ -136,10 +140,11 @@ const Resources = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={4} className="left-3/4" />
       </section>
 
       {/* Newsletter block — visual */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10 md:p-14">
@@ -156,10 +161,11 @@ const Resources = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={1} className="hidden md:block left-1/4" />
       </section>
 
       {/* Why these exist — accent block */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="text-lg leading-relaxed md:text-xl italic text-muted-foreground">
