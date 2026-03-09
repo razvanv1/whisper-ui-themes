@@ -250,10 +250,11 @@ const Home = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
       {/* What this work prevents — icon grid */}
-      <section className="py-16 md:py-24 bg-background section-divider-dot">
+      <section className="py-16 md:py-24 bg-background section-divider-dot relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10 text-gradient-subtle">
