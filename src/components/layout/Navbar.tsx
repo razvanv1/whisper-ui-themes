@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 // Preload logo for faster LCP
@@ -70,17 +70,17 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <motion.span
+          <m.span
             animate={mobileOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: -4 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="absolute w-5 h-[2px] bg-foreground rounded-full"
           />
-          <motion.span
+          <m.span
             animate={mobileOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.2 }}
             className="absolute w-5 h-[2px] bg-foreground rounded-full"
           />
-          <motion.span
+          <m.span
             animate={mobileOpen ? { rotate: -45, y: 0 } : { rotate: 0, y: 4 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="absolute w-5 h-[2px] bg-foreground rounded-full"

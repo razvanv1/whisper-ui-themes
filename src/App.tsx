@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
@@ -32,34 +33,36 @@ export default function App() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <Suspense fallback={<div className="min-h-screen bg-background" />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/programs" element={<Programs />} />
-                <Route path="/programs/funding-intelligence" element={<FundingIntelligence />} />
-                <Route path="/programs/ai-adoption" element={<AIAdoption />} />
-                <Route path="/programs/execution-readiness" element={<ExecutionReadiness />} />
-                <Route path="/programs/proposal-support" element={<ProposalSupport />} />
-                <Route path="/programs/academy-design" element={<AcademyDesign />} />
-                <Route path="/method" element={<Method />} />
-                <Route path="/ink" element={<Ink />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/send-issue" element={<SendIssue />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/cookie-policy" element={<CookiePolicy />} />
-                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-            <CookieConsent />
-          </BrowserRouter>
-        </TooltipProvider>
+        <LazyMotion features={domAnimation} strict>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Suspense fallback={<div className="min-h-screen bg-background" />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/programs" element={<Programs />} />
+                  <Route path="/programs/funding-intelligence" element={<FundingIntelligence />} />
+                  <Route path="/programs/ai-adoption" element={<AIAdoption />} />
+                  <Route path="/programs/execution-readiness" element={<ExecutionReadiness />} />
+                  <Route path="/programs/proposal-support" element={<ProposalSupport />} />
+                  <Route path="/programs/academy-design" element={<AcademyDesign />} />
+                  <Route path="/method" element={<Method />} />
+                  <Route path="/ink" element={<Ink />} />
+                  <Route path="/resources" element={<Resources />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/send-issue" element={<SendIssue />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/cookie-policy" element={<CookiePolicy />} />
+                  <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+              <CookieConsent />
+            </BrowserRouter>
+          </TooltipProvider>
+        </LazyMotion>
       </QueryClientProvider>
     </HelmetProvider>
   );

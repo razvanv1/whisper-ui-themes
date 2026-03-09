@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import ScrollProgress from "../shared/ScrollProgress";
@@ -16,7 +16,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
     <div className="flex min-h-screen flex-col">
       <ScrollProgress />
       <Navbar />
-      <motion.main
+      <m.main
         key={location.pathname}
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
         className="flex-1 pt-16 md:pt-20"
       >
         {children}
-      </motion.main>
+      </m.main>
       <Footer />
     </div>
   );

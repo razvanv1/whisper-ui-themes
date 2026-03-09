@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ReactNode, Children } from "react";
 
 interface ScrollRevealProps {
@@ -26,7 +26,7 @@ const ScrollReveal = ({
   const offset = directionOffsets[direction];
 
   return (
-    <motion.div
+    <m.div
       className={className}
       initial={{ opacity: 0, ...offset }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -34,7 +34,7 @@ const ScrollReveal = ({
       transition={{ duration, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 };
 
@@ -75,7 +75,7 @@ export const StaggerReveal = ({
   };
 
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -86,9 +86,9 @@ export const StaggerReveal = ({
       }}
     >
       {Children.map(children, (child) => (
-        <motion.div variants={itemVariants}>{child}</motion.div>
+        <m.div variants={itemVariants}>{child}</m.div>
       ))}
-    </motion.div>
+    </m.div>
   );
 };
 

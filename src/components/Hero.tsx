@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Volume2, VolumeX, Menu, X } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 
@@ -150,7 +150,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black z-[1] pointer-events-none video-loading-overlay" />
 
       {/* Full-Width Navbar */}
-      <motion.nav
+      <m.nav
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -165,7 +165,7 @@ export function Hero() {
         >
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <motion.div
+            <m.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center cursor-pointer"
               onClick={() => {
@@ -173,7 +173,7 @@ export function Hero() {
               }}
             >
               <span className="font-bagel text-white text-xl tracking-wider">MOJJU</span>
-            </motion.div>
+            </m.div>
 
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -222,11 +222,11 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </m.nav>
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -237,7 +237,7 @@ export function Hero() {
       )}
 
       {/* Mobile Menu Panel */}
-      <motion.div
+      <m.div
         initial={{ x: '100%' }}
         animate={{ x: isMobileMenuOpen ? '0%' : '100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
@@ -296,7 +296,7 @@ export function Hero() {
             </div>
 
             {/* Mobile CTA Button */}
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -307,15 +307,15 @@ export function Hero() {
               className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
             >
               Book a Call
-            </motion.button>
+            </m.button>
           </div>
         </div>
-      </motion.div>
+      </m.div>
 
 
 
       {/* Big Studio Title - Lower Left */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
@@ -328,7 +328,7 @@ export function Hero() {
             <span className="block">WITHOUT LIMITS</span>
           </h1>
         </div>
-      </motion.div>
+      </m.div>
 
 
     </div>
