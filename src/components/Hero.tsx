@@ -66,18 +66,24 @@ export function Hero() {
     updateCutPoint()
     rafId = requestAnimationFrame(tick)
 
+    const hideOverlay = () => {
+      const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
+      if (overlay) {
+        overlay.style.transition = 'opacity 0.5s ease-out'
+        overlay.style.opacity = '0'
+        setTimeout(() => { overlay.style.display = 'none' }, 500)
+      }
+    }
+
+    // Hide overlay when video has enough data to play
+    video.addEventListener('canplay', hideOverlay)
+
     const playPromise = video.play()
     if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          const overlay = document.querySelector('.video-loading-overlay') as HTMLElement
-          if (overlay) {
-            overlay.style.transition = 'opacity 0.5s ease-out'
-            overlay.style.opacity = '0'
-            setTimeout(() => { overlay.style.display = 'none' }, 500)
-          }
-        })
-        .catch(error => console.error('Video autoplay failed:', error))
+      playPromise.then(hideOverlay).catch(error => {
+        console.error('Video autoplay failed:', error)
+        hideOverlay() // Still hide overlay so video frame is visible
+      })
     }
 
     return () => {
@@ -86,6 +92,7 @@ export function Hero() {
       video.removeEventListener('durationchange', updateCutPoint)
       video.removeEventListener('timeupdate', jumpToStartBeforeLogo)
       video.removeEventListener('play', handlePlay)
+      video.removeEventListener('canplay', hideOverlay)
     }
   }, [])
 
