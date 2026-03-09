@@ -51,8 +51,8 @@ const Ink = () => {
           <div className="grid gap-12 items-center md:grid-cols-2">
             <div>
               <ScrollReveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-destructive mb-6">
-                  <Bot className="h-3.5 w-3.5" /> INK
+                <span className="inline-flex items-center gap-2 rounded-full border border-[hsl(210,60%,50%)]/20 bg-[hsl(210,60%,50%)]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[hsl(210,60%,50%)] mb-6">
+                  <Sparkles className="h-3.5 w-3.5" /> INK
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
