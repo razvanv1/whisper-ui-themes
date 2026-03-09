@@ -261,10 +261,11 @@ const Ink = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={2} className="hidden md:block left-3/4" />
       </section>
 
       {/* Why this works — accent quote */}
-      <section className="py-16 md:py-20 bg-card">
+      <section className="py-16 md:py-20 bg-card relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10">

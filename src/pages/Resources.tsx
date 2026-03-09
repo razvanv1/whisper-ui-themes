@@ -161,10 +161,11 @@ const Resources = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={1} className="hidden md:block left-1/4" />
       </section>
 
       {/* Why these exist — accent block */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="text-lg leading-relaxed md:text-xl italic text-muted-foreground">
