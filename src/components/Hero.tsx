@@ -226,7 +226,7 @@ export function Hero() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
