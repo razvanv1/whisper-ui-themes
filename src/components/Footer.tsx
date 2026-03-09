@@ -141,8 +141,8 @@ export function Footer() {
             </p>
             <p className="text-background/80 max-w-2xl mx-auto leading-relaxed md:text-lg">
               The Unlearning School builds programs, systems and useful ways of
-              working for teams dealing with funding pressure, AI adoption,
-              execution drag and the future of work.
+              working for teams dealing with projects funding pressure, AI adoption,
+              digital change and the future of work.
             </p>
           </div>
         </div>
