@@ -148,7 +148,7 @@ const Contact = () => {
       </section>
 
       {/* Direct contact — visual cards */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">Direct contact</h2>
@@ -193,6 +193,7 @@ const Contact = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
       {/* Newsletter */}
