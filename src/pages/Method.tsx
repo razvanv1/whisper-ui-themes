@@ -56,7 +56,7 @@ const Method = () => {
       </section>
 
       {/* What this method solves — icon grid */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What this method is built to solve</h2>
