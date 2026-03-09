@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { m } from "framer-motion";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 
 // Preload logo for faster LCP
 const logoPreload = new Image();
