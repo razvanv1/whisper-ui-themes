@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import GlowCard from "@/components/shared/GlowCard";
 import CTASection from "@/components/shared/CTASection";
 import AuthorityBand from "@/components/shared/AuthorityBand";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import { TrendingDown, Brain, Search, Layers, FileX, PackageOpen, ArrowRight, Snowflake, RefreshCw, Lock } from "lucide-react";
 import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
@@ -55,7 +56,7 @@ const Method = () => {
       </section>
 
       {/* What this method solves — icon grid */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">What this method is built to solve</h2>
@@ -80,10 +81,11 @@ const Method = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/4" />
       </section>
 
       {/* Real issue + First move — visual cards */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <ScrollReveal>
@@ -114,10 +116,11 @@ const Method = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-3/4" />
       </section>
 
       {/* Kurt Lewin — 3-phase visual */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-foreground">How unlearning works</h2>
@@ -146,10 +149,11 @@ const Method = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
       {/* Tools — numbered list with hover */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10">The tools behind the method</h2>
@@ -176,10 +180,11 @@ const Method = () => {
             ))}
           </div>
         </div>
+        <ConnectingArrow variant={4} className="left-1/4" />
       </section>
 
       {/* What changes + Where it shows up — visual cards */}
-      <section className="py-14 md:py-20 bg-card">
+      <section className="py-14 md:py-20 bg-card relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <ScrollReveal>
@@ -210,10 +215,11 @@ const Method = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Quote */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-destructive/20 bg-destructive/5 p-10">
@@ -225,10 +231,11 @@ const Method = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={2} className="left-1/2" />
       </section>
 
       {/* Where it comes from — founder */}
-      <section className="py-14 md:py-20 bg-secondary">
+      <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">

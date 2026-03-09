@@ -8,6 +8,7 @@ import AuthorityBand from "@/components/shared/AuthorityBand";
 import GlowCard from "@/components/shared/GlowCard";
 import ProgramCard from "@/components/shared/ProgramCard";
 import AnimatedCounter from "@/components/shared/AnimatedCounter";
+import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
 import {
   Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain,
   Layers, Workflow, ArrowRight, Bot, Sparkles
@@ -94,7 +95,7 @@ const Home = () => {
       </section>
 
       {/* Intro */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <div>
@@ -154,10 +155,11 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={1} className="left-1/2" />
       </section>
 
       {/* Too much motion — visual treatment */}
-      <section className="py-16 md:py-24 bg-card section-divider">
+      <section className="py-16 md:py-24 bg-card section-divider relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <ScrollReveal direction="left">
@@ -190,10 +192,11 @@ const Home = () => {
             </ScrollReveal>
           </div>
         </div>
+        <ConnectingArrow variant={2} className="left-3/4" />
       </section>
 
       {/* Where most work starts */}
-      <section className="py-16 md:py-24 bg-background section-divider-dot">
+      <section className="py-16 md:py-24 bg-background section-divider-dot relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-3 text-gradient">Where most work starts</h2>
@@ -228,10 +231,11 @@ const Home = () => {
             ))}
           </StaggerReveal>
         </div>
+        <ConnectingArrow variant={3} className="left-1/4" />
       </section>
 
       {/* Not every team — centered accent block */}
-      <section className="py-12 md:py-16 bg-card section-divider">
+      <section className="py-12 md:py-16 bg-card section-divider relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-secondary p-10">
@@ -246,10 +250,11 @@ const Home = () => {
             </div>
           </ScrollReveal>
         </div>
+        <ConnectingArrow variant={4} className="left-1/2" />
       </section>
 
       {/* What this work prevents — icon grid */}
-      <section className="py-16 md:py-24 bg-background section-divider-dot">
+      <section className="py-16 md:py-24 bg-background section-divider-dot relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-10 text-gradient-subtle">
@@ -273,10 +278,11 @@ const Home = () => {
             ))}
           </StaggerReveal>
         </div>
+        <ConnectingArrow variant={1} className="left-3/4" />
       </section>
 
       {/* Why clients come — cards grid */}
-      <section className="py-16 md:py-24 bg-card section-divider">
+      <section className="py-16 md:py-24 bg-card section-divider relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-4 text-gradient">Why clients come to TUS</h2>
