@@ -59,17 +59,13 @@ const NotFound = () => {
               </ScrollReveal>
             </div>
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="flex items-center justify-center">
-                <div className="relative">
-                  <img 
-                    src={octopusInk} 
-                    alt="INK mascot - octopus" 
-                    className="w-full max-w-sm h-auto drop-shadow-2xl opacity-80 grayscale-[30%]" 
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-8xl md:text-9xl font-black text-foreground/10">404</span>
-                  </div>
-                </div>
+              <div className="flex flex-col items-center justify-center gap-2">
+                <span className="text-8xl md:text-9xl font-black text-foreground/15 leading-none">404</span>
+                <img
+                  src={octopusInk}
+                  alt="INK mascot - octopus"
+                  className="w-full max-w-xs h-auto drop-shadow-2xl"
+                />
               </div>
             </ScrollReveal>
           </div>
