@@ -315,7 +315,7 @@ export function Hero() {
 
 
       {/* Big Studio Title - Lower Left */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5 }}
@@ -328,7 +328,7 @@ export function Hero() {
             <span className="block">WITHOUT LIMITS</span>
           </h1>
         </div>
-      </motion.div>
+      </m.div>
 
 
     </div>

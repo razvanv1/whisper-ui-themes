@@ -75,7 +75,7 @@ export const StaggerReveal = ({
   };
 
   return (
-    <motion.div
+    <m.div
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -86,9 +86,9 @@ export const StaggerReveal = ({
       }}
     >
       {Children.map(children, (child) => (
-        <motion.div variants={itemVariants}>{child}</motion.div>
+        <m.div variants={itemVariants}>{child}</m.div>
       ))}
-    </motion.div>
+    </m.div>
   );
 };
 
