@@ -226,7 +226,7 @@ const Resources = () => {
             </div>
           </ScrollReveal>
         </div>
-        <ConnectingArrow variant={2} className="hidden md:block left-1/2" />
+        <ConnectingArrow variant={2} className="left-1/2" />
       </section>
 
       {/* 8. INK CTA */}

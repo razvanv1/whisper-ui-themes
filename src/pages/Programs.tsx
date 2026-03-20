@@ -291,7 +291,7 @@ const Programs = () => {
             </ScrollReveal>
           </div>
         </div>
-        <ConnectingArrow variant={4} className="hidden md:block left-1/4" />
+        <ConnectingArrow variant={4} className="left-1/4" />
       </section>
 
       {/* 11. Final CTA */}

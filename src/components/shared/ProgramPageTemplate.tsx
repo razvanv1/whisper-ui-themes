@@ -52,7 +52,7 @@ const Section = ({
     >
       <div className="max-w-3xl mx-auto px-6 relative z-10 touch-manipulation">{children}</div>
       {arrowVariant && (
-        <ConnectingArrow variant={arrowVariant} className={`hidden md:block ${posClass}`} />
+        <ConnectingArrow variant={arrowVariant} className={posClass} />
       )}
     </section>
   );
