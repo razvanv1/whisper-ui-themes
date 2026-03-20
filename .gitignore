@@ -29,3 +29,4 @@ issues.json
 *.report.html
 .npm-cache/
 whisper-ui-themes-production.zip
+*.zip
