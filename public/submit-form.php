@@ -24,8 +24,13 @@ if (!$data) {
     exit();
 }
 
-// Config - RECOMMENDED: Use environment variables for API keys
-$apiKey = getenv('BREVO_API_KEY') ?: "YOUR_API_KEY_HERE"; // Replace with actual key if not using env vars
+// Config - FOR SECURITY: Create a file called auth-config.php on cPanel (same folder as this file)
+// and paste your NEW Brevo API key inside it.
+if (file_exists(__DIR__ . "/auth-config.php")) {
+    $apiKey = trim(file_get_contents(__DIR__ . "/auth-config.php"));
+} else {
+    $apiKey = getenv('BREVO_API_KEY') ?: "YOUR_API_KEY_HERE";
+}
 $toEmail = "hello@unlearning.ro"; // Replace with actual destination
 
 // Determine Form Type

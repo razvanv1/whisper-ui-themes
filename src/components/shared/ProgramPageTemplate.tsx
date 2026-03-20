@@ -29,6 +29,7 @@ interface ProgramPageProps {
   howStarts: string;
   leadsTo: string;
   showInkCTA?: boolean;
+  arrowVariant?: 1 | 2 | 3 | 4;
 }
 
 const Section = ({
@@ -73,6 +74,7 @@ const ProgramPageTemplate = ({
   howStarts,
   leadsTo,
   showInkCTA = false,
+  arrowVariant = 1,
 }: ProgramPageProps) => {
   const location = useLocation();
 
