@@ -16,13 +16,15 @@ const FundingIntelligence = () => (
       "Vendor credit and partnership evaluation",
       "Application strategy and timeline planning",
       "Proposal logic sharpening",
-      "Follow-up and pipeline tracking support via INK",
+      "Full application building and tracking via INK (AI-supported)",
+      "Automated monitoring for new matching calls",
     ]}
-    comesOut="A clear, prioritized funding strategy with a narrower set of well-matched opportunities. Stronger readiness for the routes that matter and a pipeline the team can manage without constant manual scanning."
+    comesOut="A clear, prioritized funding strategy and a fully set up INK workspace for ongoing monitoring and application building. Faster readiness for the routes that matter."
     bestFit="NGOs, universities, startups, accelerators and teams exploring new growth or funding routes."
-    notThis="This is not a grant-writing service or a database of funding sources. It is a working process that helps the team make better funding decisions and execute on them with less waste."
-    howStarts="With a free 30-minute working call focused on the current funding landscape and the bottlenecks holding back progress."
-    leadsTo="For some teams, the work naturally extends into proposal support, execution readiness or INK-supported follow-up workflows. For others, funding intelligence becomes an ongoing practice on its own."
+    notThis="This is not a grant-writing service. It is a working process that uses the INK platform to make better funding decisions and execute on them with less waste."
+    howStarts="With a free 30-minute working call or a 14-day free trial of the INK Agentic Platform."
+    leadsTo="For most teams, the work naturally extends into ongoing use of the INK platform for proposal support, monitoring, and execution readiness. The program includes the full setup of your INK environment."
+    showInkCTA={true}
   />
 );
 

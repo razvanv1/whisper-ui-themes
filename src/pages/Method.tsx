@@ -163,7 +163,7 @@ const Method = () => {
         <ConnectingArrow variant={3} className="left-1/2" />
       </section>
 
-      {/* 5. How unlearning works — 3-phase */}
+      {/* 5. How unlearning works (3-phase) */}
       <section className="py-14 md:py-20 bg-secondary relative">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
@@ -175,7 +175,7 @@ const Method = () => {
           <div className="grid gap-6 md:grid-cols-3">
             {[
               { icon: Snowflake, phase: "Unfreeze", desc: "The first step is to make visible what no longer fits the current context. That may mean habits, assumptions, routines, tools, or decision patterns that once worked well but now slow the work down.", color: "bg-accent-blue/10 text-accent-blue" },
-              { icon: RefreshCw, phase: "Change", desc: "Once the old pattern is visible, the next step is to test a better one. This is where teams try new ways of deciding, working, learning, prioritizing, or using AI — without pretending that awareness alone changes behavior.", color: "bg-destructive/10 text-destructive" },
+              { icon: RefreshCw, phase: "Change", desc: "Once the old pattern is visible, the next step is to test a better one. This is where teams try new ways of deciding, working, learning, prioritizing, or using AI, without pretending that awareness alone changes behavior.", color: "bg-destructive/10 text-destructive" },
               { icon: Lock, phase: "Refreeze", desc: "What works needs to become stable enough to hold under pressure. The final step is to turn better choices into repeatable practice, so the team does not slide back into the same pattern the moment speed, stress, or ambiguity return.", color: "bg-accent-emerald/10 text-accent-emerald" },
             ].map((p, i) => (
               <ScrollReveal key={p.phase} delay={i * 0.15}>
@@ -324,7 +324,7 @@ const Method = () => {
         </div>
       </section>
 
-      {/* 11. Authority — European */}
+      {/* 11. Authority: European */}
       <AuthorityBand
         title="Connected to major European organizations, learning networks, and innovation initiatives"
         copy="The work is informed by participation in selected memberships, networks, and initiatives connected to education, skills, innovation, entrepreneurship, and the future of work."
@@ -338,7 +338,7 @@ const Method = () => {
         note="Selected memberships, networks and initiatives relevant to our work."
       />
 
-      {/* 12. Authority — Startup */}
+      {/* 12. Authority: Startup */}
       <AuthorityBand
         title="Connected to startup and technology ecosystems"
         copy="The work is also shaped through selected startup and builder ecosystems that keep the company close to practical AI workflows, current product thinking, and fast-moving technology communities."

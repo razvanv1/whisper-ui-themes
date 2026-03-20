@@ -55,13 +55,13 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
         <m.path 
           d={path} 
           stroke="currentColor" 
-          strokeWidth="5" 
+          strokeWidth="3" 
           strokeLinecap="round"
-          strokeDasharray="8 8"
+          strokeDasharray="1 10"
           fill="none"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
+          initial={{ pathLength: 0, opacity: 0 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <m.path
@@ -73,8 +73,8 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
           fill="currentColor"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ delay: 1.5, duration: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ delay: 0.8, duration: 0.3 }}
         />
       </svg>
     </div>

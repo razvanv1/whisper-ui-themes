@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temp files
+report*.json
+issues.json
+*.report.html
+.npm-cache/
+whisper-ui-themes-production.zip

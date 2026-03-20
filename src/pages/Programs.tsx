@@ -128,14 +128,14 @@ const Programs = () => {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div className="flex flex-col gap-4 sm:flex-row mt-4">
                 <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                  Book a call
+                  className="btn-brand-primary inline-flex items-center justify-center gap-2 group">
+                  Book a call <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <Link to="/send-issue"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
-                  Send a message
+                  className="inline-flex items-center justify-center rounded-xl border border-border px-8 py-3 font-semibold hover:bg-card transition-all btn-animate">
+                  Send a Message →
                 </Link>
               </div>
             </ScrollReveal>
@@ -193,7 +193,7 @@ const Programs = () => {
       </section>
 
       {/* 4-8. Program cards */}
-      <section className="py-14 md:py-20 bg-background relative">
+      <section id="programs-list" className="py-14 md:py-20 bg-background relative">
         <div className="max-w-6xl mx-auto px-6">
           <div className="space-y-8">
             {programs.map((p, idx) => (
@@ -241,14 +241,14 @@ const Programs = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <div className="mt-8 flex flex-col gap-4 sm:flex-row font-sans">
                     <Link to={`/programs/${p.slug}`}
-                      className="inline-flex items-center justify-center gap-2 rounded-md bg-destructive px-6 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                      Explore this program <ArrowRight className="h-4 w-4" />
+                      className="btn-brand-primary inline-flex items-center justify-center gap-2 group">
+                      Explore this program <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                     <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 font-semibold hover:bg-accent transition-colors">
-                      Book a working call
+                      className="inline-flex items-center justify-center rounded-xl border border-border px-6 py-3 font-semibold hover:bg-accent transition-all btn-animate">
+                      Book a call →
                     </a>
                   </div>
                 </GlowCard>
@@ -285,7 +285,7 @@ const Programs = () => {
                 </p>
                 <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-destructive font-semibold hover:underline">
-                  Book the first call <ArrowRight className="h-4 w-4" />
+                  Book a call →
                 </a>
               </GlowCard>
             </ScrollReveal>

@@ -15,9 +15,9 @@ interface CTASectionProps {
 const CTASection = ({
   title,
   copy,
-  primaryLabel = "Book a call",
+  primaryLabel = "Book a call →",
   primaryLink = "https://meet.brevo.com/razvan-valceanu",
-  secondaryLabel = "Send a message",
+  secondaryLabel = "Send a Message →",
   secondaryLink = "/send-issue",
   supportLine,
   bullets,
@@ -46,14 +46,14 @@ const CTASection = ({
               href={primaryLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="ripple-btn inline-flex items-center justify-center rounded-xl bg-destructive px-8 py-3.5 font-semibold text-white hover:bg-destructive/90 transition-all duration-200 hover:shadow-lg hover:shadow-destructive/20 hover:-translate-y-px active:translate-y-0"
+              className="btn-brand-primary inline-flex items-center justify-center gap-2 group"
             >
               {primaryLabel}
             </a>
           ) : (
             <Link
               to={primaryLink || "/"}
-              className="ripple-btn inline-flex items-center justify-center rounded-xl bg-destructive px-8 py-3.5 font-semibold text-white hover:bg-destructive/90 transition-all duration-200 hover:shadow-lg hover:shadow-destructive/20 hover:-translate-y-px active:translate-y-0"
+              className="btn-brand-primary inline-flex items-center justify-center gap-2 group"
             >
               {primaryLabel}
             </Link>
@@ -61,7 +61,7 @@ const CTASection = ({
           {secondaryLabel && (
             <Link
               to={secondaryLink || "/contact"}
-              className="inline-flex items-center justify-center rounded-xl border border-border px-8 py-3.5 font-semibold text-foreground hover:bg-muted/60 hover:border-foreground/20 transition-all duration-200 hover:-translate-y-px active:translate-y-0"
+              className="inline-flex items-center justify-center rounded-xl border border-border px-8 py-3.5 font-semibold text-foreground hover:bg-muted/60 hover:border-foreground/20 transition-all duration-300 btn-animate"
             >
               {secondaryLabel}
             </Link>

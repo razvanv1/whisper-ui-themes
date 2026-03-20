@@ -58,7 +58,11 @@ const Navbar = () => {
             href="https://meet.brevo.com/razvan-valceanu"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-3 inline-flex items-center justify-center rounded-lg bg-destructive px-5 py-2 text-[0.8125rem] font-semibold tracking-wide text-white hover:bg-destructive/90 transition-all duration-200 hover:shadow-lg hover:shadow-destructive/20 hover:-translate-y-px active:translate-y-0"
+            className={`ml-3 inline-flex items-center justify-center rounded-lg px-5 py-2 text-[0.8125rem] font-semibold tracking-wide text-white transition-all duration-200 hover:shadow-lg hover:-translate-y-px active:translate-y-0 ${
+              location.pathname === '/ink'
+                ? "bg-[hsl(210,60%,50%)] hover:bg-[hsl(210,60%,60%)] hover:shadow-[hsl(210,60%,50%)]/20"
+                : "bg-destructive hover:bg-destructive/90 hover:shadow-destructive/20"
+            }`}
           >
             Book a call
           </a>
@@ -113,7 +117,11 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 inline-flex items-center justify-center rounded-md bg-destructive px-4 py-2 text-sm font-medium text-white hover:bg-destructive/90 transition-colors"
+              className={`mt-4 inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white transition-colors ${
+                location.pathname === '/ink'
+                  ? "bg-[hsl(210,60%,50%)] hover:bg-[hsl(210,60%,60%)]"
+                  : "bg-destructive hover:bg-destructive/90"
+              }`}
             >
               Book a call
             </a>

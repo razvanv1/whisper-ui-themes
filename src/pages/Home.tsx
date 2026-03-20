@@ -9,11 +9,12 @@ import GlowCard from "@/components/shared/GlowCard";
 import ProgramCard from "@/components/shared/ProgramCard";
 import AnimatedCounter from "@/components/shared/AnimatedCounter";
 import { ConnectingArrow } from "@/components/shared/ConnectingArrow";
+import razvanPhoto from "@/assets/razvan-valceanu.jpg";
+import ScanTool from "@/components/shared/ScanTool";
 import {
   Target, Zap, TrendingDown, FileX, PackageOpen, Search, Brain,
-  Layers, Workflow, ArrowRight, Sparkles
+  Layers, Workflow, ArrowRight, Sparkles, Check, Globe, Shield, MessageSquare, CheckCircle
 } from "lucide-react";
-import razvanPhoto from "@/assets/razvan-valceanu.jpg";
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -67,13 +68,13 @@ const Home = () => {
 
   return (
     <PageLayout>
-      <SEO
-        title="The Unlearning School - Programs for funding, AI adoption & execution"
-        description="The Unlearning School builds programs, systems and useful ways of working for teams dealing with funding pressure, AI adoption, execution drag and the future of work."
-        path="/"
+      <SEO 
+        title="The Unlearning School | AI Adoption, Funding Intelligence & Execution Readiness" 
+        description="The Unlearning School helps teams solve execution friction through AI adoption, funding intelligence, and readiness programs. Move beyond scanning into active execution with the INK Agentic Platform." 
+        path="/" 
       />
 
-      {/* Hero — video + slogan only */}
+      {/* Hero: video + slogan only */}
       <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
         <video
           ref={heroVideoRef}
@@ -93,69 +94,264 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 1. Intro */}
-      <section className="py-16 md:py-24 bg-background relative">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-12 items-center md:grid-cols-2">
+      {/* 1. THE UNLEARNING SCHOOL INTEGRATED SHOWCASE */}
+      <section className="py-24 relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(192,58,30,0.03),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.02),transparent_40%)]">
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <ScrollReveal>
-                <span className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-destructive mb-6">
-                  <Sparkles className="h-3.5 w-3.5" /> The Unlearning School
-                </span>
+                <div className="inline-flex items-center gap-2 rounded-full border border-destructive/20 bg-destructive/5 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-destructive mb-8 text-nowrap">
+                  <Sparkles className="h-4 w-4 animate-pulse" /> The Unlearning School
+                </div>
               </ScrollReveal>
+              
               <ScrollReveal delay={0.1}>
-                <p className="text-lg leading-relaxed md:text-xl mb-2 text-foreground font-medium">
-                  When everything feels important, choosing well matters more than doing more.
-                </p>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
+                  When everything feels important, <br/>
+                  <em className="text-destructive font-serif italic font-medium">choosing well</em> matters more than doing more.
+                </h2>
               </ScrollReveal>
+
               <ScrollReveal delay={0.2}>
-                <p className="text-lg leading-relaxed md:text-xl mb-10 text-muted-foreground">
-                  The Unlearning School works with teams that are juggling too many ideas,
-                  opportunities, and demands at once. Instead of adding another layer of
-                  activity, the work focuses on better choices, stronger programs, and a
-                  more useful way to bring AI into everyday work, while building the
-                  adaptability and resilience teams need as work keeps changing.
+                <p className="text-xl md:text-2xl mb-12 text-slate-500 font-sans leading-relaxed border-l-4 border-destructive/10 pl-8 italic">
+                  The Unlearning School works with teams that are juggling too many ideas, opportunities, and demands at once. Instead of adding another layer of activity, we focus on better choices, stronger programs, and a more useful way to bring AI into everyday work.
                 </p>
               </ScrollReveal>
+
               <ScrollReveal delay={0.3}>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
-                    className="ripple-btn inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                    Book a call
+                <div className="flex flex-col gap-6 sm:flex-row items-center">
+                  <a href="https://meet.brevo.com/razvan-valceanu" 
+                    target="_blank" rel="noopener noreferrer"
+                    className="btn-brand-primary px-10 py-5 text-lg shadow-[0_20px_40px_rgba(192,58,30,0.15)] w-full sm:w-auto text-center">
+                    Book a call →
                   </a>
-                  <Link to="/programs"
-                    className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-card transition-colors">
-                    Explore programs
+                  <Link to="/programs#programs-list"
+                    className="px-10 py-5 rounded-2xl border-2 border-slate-100 font-bold text-slate-600 hover:bg-slate-50 hover:border-slate-200 transition-all btn-animate bg-white/50 w-full sm:w-auto text-center">
+                    Explore Programs
                   </Link>
                 </div>
-                <p className="text-sm mt-6 text-muted-foreground/70">
-                  Use the first call to pressure-test the live issue, choose the best
-                  starting point, and avoid burning more time on the wrong next move.
-                </p>
+                <div className="mt-8 flex items-start gap-3 p-4 bg-slate-50/50 rounded-2xl border border-slate-100 max-w-lg">
+                  <Zap className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
+                  <p className="text-sm text-slate-500 leading-relaxed font-sans">
+                    <span className="font-bold text-slate-700">Immediate impact:</span> Use the first call to pressure-test the live issue, choose the best starting point, and avoid burning more time on the wrong next move.
+                  </p>
+                </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal direction="right" delay={0.2}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { num: "5", label: "Programs", icon: Layers, tip: "Funding, AI, Execution, Proposals, Academy" },
-                  { num: "AI", label: "Powered by INK", icon: Sparkles, tip: "AI-supported research, scanning & workflow" },
-                  { num: "EU", label: "Connected networks", icon: Target, tip: "European Commission, EEN, Pact for Skills" },
-                  { num: "1:1", label: "Working calls", icon: Zap, tip: "Free 30-min focused working sessions" },
-                ].map(stat => (
-                  <GlowCard key={stat.label} className="rounded-2xl border border-border bg-card p-6 text-center group relative">
-                    <stat.icon className="h-5 w-5 mx-auto mb-2 text-destructive" />
-                    <p className="text-2xl font-black text-foreground"><AnimatedCounter value={stat.num} /></p>
-                    <p className="text-xs text-muted-foreground font-medium mt-1">{stat.label}</p>
-                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-foreground px-3 py-1.5 text-xs text-background opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none scale-95 group-hover:scale-100 shadow-lg">
-                      {stat.tip}
-                    </span>
-                  </GlowCard>
-                ))}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+              {/* Visual mesh behind cards */}
+              <div className="absolute inset-0 bg-destructive/5 blur-[120px] rounded-full scale-110 pointer-events-none" />
+              
+              <ScrollReveal direction="right" delay={0.2} className="sm:translate-y-12">
+                <div className="group relative bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="h-14 w-14 bg-red-50 rounded-2xl flex items-center justify-center text-destructive mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                      <Layers className="h-7 w-7" />
+                    </div>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2">5</h4>
+                    <p className="font-bold text-slate-400 uppercase tracking-widest text-[10px] mb-4">Core Programs</p>
+                  </div>
+                  <p className="text-xs text-slate-500 font-sans leading-relaxed bg-slate-50 rounded-xl p-4 border border-slate-100 group-hover:border-red-100 transition-colors">
+                    Funding, AI, Execution, Proposals, Academy Building.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="right" delay={0.3}>
+                <div className="group relative bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="h-14 w-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                      <Sparkles className="h-7 w-7" />
+                    </div>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2">AI</h4>
+                    <p className="font-bold text-slate-400 uppercase tracking-widest text-[10px] mb-4">Powered by INK</p>
+                  </div>
+                  <p className="text-xs text-slate-500 font-sans leading-relaxed bg-blue-50/50 rounded-xl p-4 border border-blue-100/50 group-hover:border-blue-200 transition-colors">
+                    AI-supported research, scanning & bespoke funding execution workflows.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="right" delay={0.4} className="sm:translate-y-12">
+                <div className="group relative bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="h-14 w-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                      <Target className="h-7 w-7" />
+                    </div>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2">EU</h4>
+                    <p className="font-bold text-slate-400 uppercase tracking-widest text-[10px] mb-4">Connected Networks</p>
+                  </div>
+                  <p className="text-xs text-slate-500 font-sans leading-relaxed bg-emerald-50/50 rounded-xl p-4 border border-emerald-100/50 group-hover:border-emerald-200 transition-colors">
+                    European Commission, EEN, Pact for Skills & Strategic Partnerships.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="right" delay={0.5}>
+                <div className="group relative bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="h-14 w-14 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                      <Zap className="h-7 w-7" />
+                    </div>
+                    <h4 className="text-3xl font-black text-slate-900 mb-2">1:1</h4>
+                    <p className="font-bold text-slate-400 uppercase tracking-widest text-[10px] mb-4">Working Calls</p>
+                  </div>
+                  <p className="text-xs text-slate-500 font-sans leading-relaxed bg-amber-50/50 rounded-xl p-4 border border-amber-100/50 group-hover:border-amber-200 transition-colors">
+                    Free 30-min focused sessions to pressure-test any live organizational issue.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+
+          <div className="mb-20"></div>
+        </div>
+      </section>
+
+      {/* NEW INK SHOWCASE - PROMINENT POSITION */}
+      <section id="ink-showcase" className="py-24 bg-white relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-50 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2" />
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <ScrollReveal>
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-600 mb-6 font-sans">
+                <Zap className="h-3.5 w-3.5" /> Agentic AI Operating Layer
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.05] tracking-tight text-slate-900">
+                Find more funding. <br/><span className="text-blue-600">Submit better apps.</span>
+              </h2>
+              <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
+                INK is the agentic platform that handles the manual overhead between spotting an opportunity and submitting a finished application.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-8 mb-12">
+                <div className="flex gap-4">
+                  <div className="h-12 w-12 shrink-0 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 shadow-sm">
+                    <Search className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 border-b border-blue-100 pb-1 mb-2 inline-block">Scout Agent</h4>
+                    <p className="text-sm text-slate-500 font-sans leading-snug">Monitors 944+ EU calls 24/7</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="h-12 w-12 shrink-0 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-600 shadow-sm">
+                    <Workflow className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 border-b border-slate-100 pb-1 mb-2 inline-block">Coordinator Agent</h4>
+                    <p className="text-sm text-slate-500 font-sans leading-snug">Tracks deadlines & partners</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-5">
+                <Link to="/ink" className="btn-ink-primary inline-flex items-center gap-2 group shadow-xl shadow-blue-500/10">
+                  View INK Platform <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link to="/ink#ink-scan" className="px-8 py-4 rounded-xl border border-blue-100 font-bold text-blue-600 hover:bg-blue-50/50 transition-all btn-animate">
+                   Live Opportunity Scan →
+                </Link>
+              </div>
+              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex items-center gap-3 px-5 py-3 bg-blue-50/50 border border-blue-100 rounded-xl w-fit">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+                  <span className="text-sm font-bold text-blue-700 italic underline decoration-blue-200 decoration-2">Limited: 14-Day Free Trial</span>
+                </div>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Enroll while available</span>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2} className="relative">
+              <div className="bg-white border border-slate-100 rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-blue-200 transition-all text-center md:text-left">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2" />
+                <div className="relative z-10">
+                  <div className="text-xs font-black uppercase tracking-[0.2em] mb-4 text-blue-600">Free Funding Scan</div>
+                  <h3 className="text-3xl font-black mb-6 tracking-tight text-slate-900 leading-tight">Spot your perfect grant<br className="hidden md:block" /> in under 60 seconds.</h3>
+                  <p className="text-slate-500 text-lg mb-8 max-w-md">The INK engine monitors 944+ active EU and national funding calls. Scan your profile against all of them instantly.</p>
+                  <Link to="/ink#ink-scan" className="inline-flex items-center gap-2 text-blue-600 font-black uppercase tracking-widest text-sm hover:underline group">
+                    Live Opportunity Scan <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               </div>
             </ScrollReveal>
           </div>
+
+          {/* Pricing Row */}
+          <div className="mt-24 pt-24 border-t border-slate-100">
+            <ScrollReveal>
+              <h3 className="text-3xl font-black mb-12 text-center tracking-tight text-slate-900">Simple Pricing. Agentic Execution.</h3>
+            </ScrollReveal>
+            <div className="grid md:grid-cols-3 gap-8 items-stretch">
+              {[
+                {
+                  tier: "Starter",
+                  price: "€49",
+                  desc: "For small teams starting up",
+                  features: ["1 active workflow", "Bi-weekly scanning", "Standard AI assistance"]
+                },
+                {
+                  tier: "Pro",
+                  price: "€149",
+                  desc: "For active funding streams",
+                  features: ["Up to 5 active workflows", "Continuous EU scanning", "Advanced AI context", "Knowledge reuse"],
+                  featured: true
+                },
+                {
+                  tier: "Enterprise",
+                  price: "Custom",
+                  desc: "For large organizations",
+                  features: ["Unlimited workflows", "Fine-tuned local models", "API & White-label", "Dedicated support"]
+                }
+              ].map((plan, i) => (
+                <ScrollReveal key={plan.tier} delay={0.1 * i}>
+                  <div className={`h-full p-8 rounded-[2.5rem] border relative transition-all duration-500 flex flex-col bg-slate-50/50 ${
+                    plan.featured 
+                      ? 'border-blue-500 shadow-[0_20px_50px_rgba(59,130,246,0.12)] scale-[1.03] z-10' 
+                      : 'border-slate-100 text-slate-900 shadow-sm'
+                  }`}>
+                    {plan.featured && (
+                      <div className="bg-blue-600 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap shadow-xl text-white flex items-center gap-1.5">
+                        <Zap className="h-3 w-3" /> Most Popular
+                      </div>
+                    )}
+                    <h4 className="text-xl font-bold mb-1 text-slate-900">{plan.tier}</h4>
+                    <div className="flex items-baseline gap-1 mb-4 text-slate-900">
+                      <span className="text-4xl font-black">{plan.price}</span>
+                      {plan.price !== "Custom" && <span className="text-xs text-slate-400">/ month</span>}
+                    </div>
+                    <p className="text-sm mb-8 font-sans leading-relaxed text-slate-500">{plan.desc}</p>
+                    <ul className="space-y-4 mb-10 flex-grow">
+                      {plan.features.map(f => (
+                        <li key={f} className="flex gap-3 items-start text-sm">
+                          <Check className={`h-5 w-5 shrink-0 ${plan.featured ? 'text-blue-600' : 'text-emerald-500'}`} />
+                          <span className="text-slate-700 font-medium">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link 
+                      to={plan.tier === "Enterprise" ? "/contact" : "/ink#ink-final-cta"} 
+                      className={`w-full py-4 rounded-xl font-black text-center flex justify-center transition-all btn-animate ${
+                        plan.featured 
+                          ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20' 
+                          : 'bg-white border border-slate-100 text-slate-600 hover:bg-slate-50'
+                      }`}
+                    >
+                      {plan.tier === "Enterprise" ? "Contact Us →" : "Start 14-Day Free Trial →"}
+                    </Link>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
         </div>
-        <ConnectingArrow variant={1} className="left-1/2" />
+        <ConnectingArrow variant={2} className="left-3/4 bottom-0" />
       </section>
 
       {/* 2. Tension block */}
@@ -184,10 +380,10 @@ const Home = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.4}>
-            <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md bg-foreground px-8 py-3 font-semibold text-background hover:bg-foreground/90 transition-colors">
-              Book a call
-            </a>
+            <Link to="/contact"
+              className="btn-brand-primary inline-flex items-center justify-center gap-2 group">
+              Book a call <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </ScrollReveal>
         </div>
         <ConnectingArrow variant={2} className="left-3/4" />
@@ -365,7 +561,7 @@ const Home = () => {
               of effort under pressure.
             </p>
             <Link to="/method"
-              className="inline-flex items-center gap-2 justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+              className="inline-flex items-center gap-2 justify-center rounded-xl border border-border px-8 py-3 font-semibold hover:bg-card transition-all btn-animate">
               See the method <ArrowRight className="h-4 w-4" />
             </Link>
           </ScrollReveal>
@@ -373,45 +569,7 @@ const Home = () => {
         <ConnectingArrow variant={2} className="left-1/4" />
       </section>
 
-      {/* 11. INK teaser */}
-      <section className="py-16 md:py-24 bg-card relative">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid gap-12 items-center md:grid-cols-2">
-            <ScrollReveal direction="left">
-              <div className="grid grid-cols-2 gap-4">
-                {["Scanning", "Filtering", "Follow-up", "Materials"].map((t) => (
-                  <div key={t} className="rounded-2xl border border-border bg-background p-6 text-center">
-                    <Sparkles className="h-5 w-5 mx-auto mb-2 text-[hsl(210,60%,50%)]" />
-                    <p className="text-sm font-semibold">{t}</p>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right">
-              <div>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[hsl(210,60%,50%)]/20 bg-[hsl(210,60%,50%)]/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[hsl(210,60%,50%)] mb-6">
-                  <Sparkles className="h-3.5 w-3.5" /> INK
-                </span>
-                <h2 className="text-2xl font-bold leading-tight tracking-tight md:text-3xl lg:text-4xl mb-6">
-                  INK is the operating layer behind part of the work
-                </h2>
-                <p className="text-lg leading-relaxed md:text-xl mb-8 text-muted-foreground">
-                  INK is the AI-supported system used inside The Unlearning School for
-                  opportunity scanning, follow-up support, material preparation, content
-                  repurposing, and repeatable workflow tasks. It connects thinking with
-                  execution and supports the parts of the work that are easiest to slow
-                  down when everything depends on manual effort.
-                </p>
-                <Link to="/ink"
-                  className="inline-flex items-center gap-2 justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                  See INK <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-        <ConnectingArrow variant={3} className="left-1/2" />
-      </section>
+
 
       {/* 12. Founder block */}
       <section className="py-16 md:py-24 bg-secondary relative">
@@ -437,7 +595,7 @@ const Home = () => {
                 His work also extends into selected AI and startup ecosystems, including his role as a Lovable Ambassador, which keeps the company close to current builder communities, practical AI workflows, and emerging product thinking.
               </p>
               <a href="https://www.linkedin.com/in/razvanvalceanu/" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-destructive/10 px-5 py-3 text-destructive font-semibold transition-all hover:bg-destructive/20">
+                className="inline-flex items-center gap-2 rounded-xl bg-destructive/10 px-6 py-3 text-destructive font-bold transition-all hover:bg-destructive/20 btn-animate">
                 Răzvan Vâlceanu on LinkedIn <ArrowRight className="h-4 w-4" />
               </a>
             </ScrollReveal>
@@ -468,11 +626,11 @@ const Home = () => {
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row">
                   <Link to="/resources"
-                    className="inline-flex items-center gap-2 justify-center rounded-md bg-foreground px-8 py-3 font-semibold text-background hover:bg-foreground/90 transition-colors">
+                    className="inline-flex items-center gap-2 justify-center rounded-xl bg-foreground px-8 py-3 font-bold text-background hover:bg-foreground/90 transition-all btn-animate">
                     Visit the resource library <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link to="/newsletter"
-                    className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
+                    className="inline-flex items-center justify-center rounded-xl border border-border px-8 py-3 font-semibold hover:bg-card transition-all btn-animate">
                     Join The Unlearning Pill
                   </Link>
                 </div>

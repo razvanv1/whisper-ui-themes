@@ -1,9 +1,7 @@
 /* Fonts loaded via index.html to avoid render-blocking @import */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@custom-variant dark (&:is(.dark *));
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --font-size: 16px;
@@ -31,7 +29,7 @@
   --font-weight-normal: 400;
   --ring: #a1a1aa;
   
-  /* Accent colors — tech-forward palette */
+  /* Accent colors, tech-forward palette */
   --accent-blue: #2563eb;
   --accent-emerald: #059669;
   --accent-purple: #7c3aed;
@@ -47,53 +45,31 @@
   
   --radius: 0.75rem;
   --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  /* Ink Branding Specifics */
+  --ink: #001233;
+  --ink2: #001e57;
+  --ink3: #4d5c75;
+  --ink-accent: #335cff;
+  --brand: #c03a1e;
 }
 
-/* Dark theme removed — site is light only */
+/* Dark theme removed. Site is light only */
 
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-input-background: var(--input-background);
-  --color-switch-background: var(--switch-background);
-  --color-ring: var(--ring);
-  
-  /* Simplified accent colors */
-  --color-accent-blue: var(--accent-blue);
-  --color-accent-emerald: var(--accent-emerald);
-  --color-accent-purple: var(--accent-purple);
-  
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
+/* Theme variables are handled via tailwind.config.ts */
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--border);
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
     font-family: var(--font-body);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     width: 100%;
@@ -117,6 +93,10 @@
   /* Font utility classes */
   .font-bagel {
     font-family: 'Bagel Fat One', cursive;
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
   }
   
   /* Simplified utility classes */
@@ -387,29 +367,29 @@
 }
 
 /**
- * Refined typography system — tighter, bolder, more confident
+ * Refined typography system: tighter, bolder, more confident
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       font-weight: 900;
       line-height: 1.05;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.05em;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.25rem;
       font-weight: 800;
       line-height: 1.1;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
       line-height: 1.2;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.03em;
     }
 
     h4 {
@@ -420,23 +400,26 @@
     }
 
     p {
-      font-size: 1.0625rem;
+      font-size: 1.125rem;
       font-weight: var(--font-weight-normal);
-      line-height: 1.7;
-      letter-spacing: 0.005em;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+      color: var(--muted-foreground);
     }
 
     label {
-      font-size: 0.9375rem;
-      font-weight: 500;
+      font-size: 0.875rem;
+      font-weight: 600;
       line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     button {
       font-size: 0.9375rem;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.5;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.025em;
     }
 
     input {
@@ -708,4 +691,91 @@ html {
   right: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent);
+}
+
+/* Modern Animated Buttons */
+.btn-animate {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-animate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-animate:hover::before {
+  opacity: 1;
+}
+
+.btn-animate:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button Glow Effect */
+.btn-glow {
+  position: relative;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.btn-glow:hover::after {
+  opacity: 0.6;
+}
+
+/* Specific INK / Brand Buttons */
+.btn-brand-primary {
+  background-color: var(--brand);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(192, 58, 30, 0.4);
+}
+
+.btn-brand-primary:hover {
+  background-color: #d14b2e;
+}
+
+.btn-ink-primary {
+  background-color: var(--ink);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(0, 30, 87, 0.4);
+}
+
+.btn-ink-primary:hover {
+  background-color: var(--ink2);
+}
+
+.ink-accent-text {
+  color: var(--ink-accent);
+  font-style: italic;
 }

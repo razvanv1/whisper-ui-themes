@@ -28,6 +28,7 @@ interface ProgramPageProps {
   notThis: string;
   howStarts: string;
   leadsTo: string;
+  showInkCTA?: boolean;
 }
 
 const Section = ({
@@ -71,6 +72,7 @@ const ProgramPageTemplate = ({
   notThis,
   howStarts,
   leadsTo,
+  showInkCTA = false,
 }: ProgramPageProps) => {
   const location = useLocation();
 
@@ -123,19 +125,44 @@ const ProgramPageTemplate = ({
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md bg-red-600 px-8 py-3 font-semibold text-white hover:bg-red-700 gentle-animation"
                 >
-                  Book a call
+                  Book a call →
                 </a>
                 <Link
                   to="/contact"
                   className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold text-foreground hover:bg-accent gentle-animation"
                 >
-                  Send a message
+                  Send a Message →
                 </Link>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {showInkCTA && (
+        <section className="py-20 bg-blue-600 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
+          <div className="max-w-4xl mx-auto px-6 relative z-10 text-center text-white">
+            <ScrollReveal>
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-8 border border-white/10">
+                <span className="w-2 rounded-full h-2 bg-amber-400 animate-pulse" /> Limited Release · Trial Offer
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 tracking-tight">Included in the program: <br className="hidden md:block"/>Move from strategy to <br className="hidden md:block"/>execution with INK</h2>
+              <p className="text-xl text-blue-100/90 mb-12 max-w-2xl mx-auto leading-relaxed">Most funding initiatives stall in the "scanning" phase. INK is built to automate the tracking and drafting load so your team focuses only on decisions.</p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Link to="/ink#ink-final-cta" className="px-10 py-5 bg-white text-blue-600 font-black rounded-2xl shadow-2xl hover:bg-blue-50 transition-all btn-animate">
+                  Start 14-Day Free Trial →
+                </Link>
+                <div className="text-blue-100 flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+                  <span className="text-lg font-bold">Limited Release Opportunity</span>
+                  <span className="text-sm opacity-60">Activate while it's completely free · No card required</span>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
 
       <Section arrowVariant={1} arrowPosition="right">
         <ScrollReveal>

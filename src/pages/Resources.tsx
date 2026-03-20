@@ -28,6 +28,7 @@ const contentTypes = [
 ];
 
 const topics = [
+  {icon: Sparkles, name: "INK Agentic Platform", desc: "Scan 944+ active EU calls and manage your funding execution path. Free 14-day trial.", color: "bg-destructive/10 text-destructive" },
   { icon: DollarSign, name: "Funding intelligence", desc: "Grant routes, cascade funding, vendor credits, MDF, public and private funding paths, opportunity filtering, readiness, and diversification of funding sources.", color: "bg-accent-emerald/10 text-accent-emerald" },
   { icon: Sparkles, name: "AI at work", desc: "AI adoption in teams, role-based use, habits, responsible use, judgment, workflows, and educational or mission-driven use cases.", color: "bg-accent-blue/10 text-accent-blue" },
   { icon: Zap, name: "Execution friction", desc: "Why teams stall, why traction drops, where adoption drags, how priorities compete, and where too much motion hides too little progress.", color: "bg-destructive/10 text-destructive" },
@@ -55,7 +56,11 @@ const newsletterBullets = [
 const Resources = () => {
   return (
     <PageLayout>
-      <SEO title="Resources" description="Articles, podcast episodes, guides, frameworks and practical tools on funding, AI adoption, execution and the future of work." path="/resources" />
+      <SEO 
+        title="Resources | Guides, Frameworks & Practical Tools for High-Performance Teams" 
+        description="Access articles, podcast episodes, guides, and frameworks for teams navigating AI adoption, funding intelligence, and execution friction. Useful thinking for teams that need to unlearn and move fast." 
+        path="/resources" 
+      />
 
       {/* 1. Hero */}
       <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
@@ -84,11 +89,11 @@ const Resources = () => {
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link to="/newsletter"
                   className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                  Join The Unlearning Pill
+                  Join The Unlearning Pill →
                 </Link>
                 <a href="https://meet.brevo.com/razvan-valceanu" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 font-semibold hover:bg-card transition-colors">
-                  Book a call
+                  Book a call →
                 </a>
               </div>
             </ScrollReveal>
@@ -215,7 +220,7 @@ const Resources = () => {
               <div className="text-center">
                 <Link to="/newsletter"
                   className="inline-flex items-center justify-center rounded-md bg-destructive px-8 py-3 font-semibold text-white hover:bg-destructive/90 transition-colors">
-                  Join the newsletter
+                  Join The Unlearning Pill →
                 </Link>
               </div>
             </div>
@@ -224,7 +229,31 @@ const Resources = () => {
         <ConnectingArrow variant={2} className="hidden md:block left-1/2" />
       </section>
 
-      {/* 7. Why this page exists */}
+      {/* 8. INK CTA */}
+      <section className="py-20 bg-slate-50 border-y border-border relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/5 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
+        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
+          <ScrollReveal>
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-8 border border-amber-200">
+              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" /> Limited Time Opportunity
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black mb-8 tracking-tight text-slate-900 leading-tight">Stop scanning. <br/>Start matching for free.</h2>
+            <p className="text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">The INK platform is our most advanced resource. Activate your 14-day trial now while it's still available for free for new teams.</p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link to="/ink#ink-final-cta" className="px-10 py-5 bg-blue-600 text-white font-black rounded-2xl shadow-2xl hover:bg-blue-500 transition-all btn-animate shadow-blue-500/20">
+                Start 14-Day Free Trial →
+              </Link>
+              <div className="text-blue-600 flex flex-col items-center sm:items-start text-center sm:text-left gap-1">
+                <span className="text-lg font-bold">Try full access now</span>
+                <span className="text-sm text-slate-400 italic">Limited release · Offer expires soon</span>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 9. Why this page exists */}
       <section className="py-14 md:py-20 bg-background relative">
         <div className="max-w-3xl mx-auto px-6">
           <ScrollReveal>

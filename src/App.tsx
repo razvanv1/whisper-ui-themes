@@ -28,6 +28,8 @@ const AcademyDesign = lazy(() => import("./pages/programs/AcademyDesign"));
 const PrivacyPolicy = lazy(() => import("./pages/legal/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/legal/CookiePolicy"));
 const TermsAndConditions = lazy(() => import("./pages/legal/TermsAndConditions"));
+const Newsletter = lazy(() => import("./pages/Newsletter"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 const queryClient = new QueryClient();
 
@@ -44,6 +46,7 @@ export default function App() {
               <Suspense fallback={<div className="min-h-screen bg-background" />}>
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/ink" element={<Ink />} />
                   <Route path="/programs" element={<Programs />} />
                   <Route path="/programs/funding-intelligence" element={<FundingIntelligence />} />
                   <Route path="/programs/ai-adoption" element={<AIAdoption />} />
@@ -51,13 +54,15 @@ export default function App() {
                   <Route path="/programs/proposal-support" element={<ProposalSupport />} />
                   <Route path="/programs/academy-design" element={<AcademyDesign />} />
                   <Route path="/method" element={<Method />} />
-                  <Route path="/ink" element={<Ink />} />
                   <Route path="/resources" element={<Resources />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/send-issue" element={<SendIssue />} />
                   <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                   <Route path="/cookie-policy" element={<CookiePolicy />} />
                   <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                  <Route path="/newsletter" element={<Newsletter />} />
+                  <Route path="/thank-you" element={<ThankYou />} />
+                  <Route path="/thank-you-message" element={<ThankYou />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
