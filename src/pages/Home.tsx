@@ -142,6 +142,8 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+              <ConnectingArrow variant={2} className="left-0 top-0 hidden sm:block -translate-y-20" />
+              <ConnectingArrow variant={1} className="left-1/2 top-1/2 sm:hidden z-50" />
               {/* Visual mesh behind cards */}
               <div className="absolute inset-0 bg-destructive/5 blur-[120px] rounded-full scale-110 pointer-events-none" />
               

@@ -49,19 +49,19 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
 
   return (
     <div
-      className={`absolute bottom-4 w-24 h-28 z-40 text-[hsl(210,60%,50%)]/50 pointer-events-none -translate-x-1/2 ${className}`}
+      className={`absolute bottom-4 w-24 h-28 z-40 text-[hsl(210,60%,50%)] pointer-events-none -translate-x-1/2 ${className}`}
     >
       <svg viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full overflow-visible">
         <m.path 
           d={path} 
           stroke="currentColor" 
-          strokeWidth="4" 
+          strokeWidth="6" 
           strokeLinecap="round"
           strokeDasharray="none"
           fill="none"
-          initial={{ pathLength: 0, opacity: 0.2 }}
+          initial={{ pathLength: 0, opacity: 1 }}
           whileInView={{ pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.05 }}
+          viewport={{ once: true, amount: 0.01 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <m.path
@@ -73,8 +73,8 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
           fill="currentColor"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ delay: 0.5, duration: 0.3 }}
+          viewport={{ once: true, amount: 0.01 }}
+          transition={{ delay: 0.3, duration: 0.3 }}
         />
       </svg>
     </div>
