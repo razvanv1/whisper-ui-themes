@@ -30,3 +30,5 @@ issues.json
 .npm-cache/
 whisper-ui-themes-production.zip
 *.zip
+public/auth-config.php
+dist/auth-config.php
