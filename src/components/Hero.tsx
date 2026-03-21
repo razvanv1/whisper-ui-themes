@@ -147,7 +147,9 @@ export function Hero() {
         muted
         playsInline
         preload="auto"
-        poster=""
+        poster="/hero-poster.jpg"
+        //@ts-ignore - React 18 doesn't officially support fetchpriority on video yet but browsers do
+        fetchpriority="high"
       >
         <source src="/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.

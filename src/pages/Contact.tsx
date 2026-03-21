@@ -263,7 +263,7 @@ const Contact = () => {
             <ScrollReveal direction="left" className="md:col-span-2">
               <div className="relative max-w-[260px]">
                 <div className="overflow-x-clip rounded-2xl border-2 border-border/50 shadow-xl">
-                  <img src={razvanPhoto} alt="Răzvan Vâlceanu" loading="lazy" className="w-full aspect-[3/4] object-cover object-top" />
+                  <img src={razvanPhoto} alt="Răzvan Vâlceanu" loading="lazy" width="600" height="800" className="w-full aspect-[3/4] object-cover object-top" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 rounded-xl bg-destructive px-5 py-3 shadow-lg">
                   <p className="text-sm font-bold text-white">Founder</p>
