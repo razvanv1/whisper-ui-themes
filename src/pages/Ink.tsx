@@ -132,7 +132,7 @@ const Ink = () => {
               <img src={realMascot} alt="INK Mascot" width="500" height="500" fetchPriority="high" style={{ maxWidth: '100%', height: 'auto', maxHeight: '500px' }} />
             </div>
           </div>
-          <ConnectingArrow variant={1} className="left-1/2" />
+          <ConnectingArrow variant={1} className="left-1/2 hidden sm:block" />
         </section>
 
         {/* STATS BAR */}
@@ -152,7 +152,7 @@ const Ink = () => {
 
         {/* SCAN TOOL */}
         <ScanTool />
-        <ConnectingArrow variant={2} className="left-1/4" />
+        <ConnectingArrow variant={2} className="left-1/4 hidden sm:block" />
 
         {/* HOW IT WORKS */}
         <section id="ink-how" className="ink-section relative">
