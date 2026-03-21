@@ -75,7 +75,7 @@ const Home = () => {
       />
 
       {/* Hero: video + slogan only */}
-      <section ref={heroRef} className="relative h-screen flex items-end overflow-hidden -mt-16 md:-mt-20">
+      <section ref={heroRef} className="relative h-screen flex items-end overflow-x-clip -mt-16 md:-mt-20">
         <video
           ref={heroVideoRef}
           className="absolute inset-0 w-full h-full object-cover"
@@ -95,7 +95,7 @@ const Home = () => {
       </section>
 
       {/* 1. THE UNLEARNING SCHOOL INTEGRATED SHOWCASE */}
-      <section className="py-24 relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(192,58,30,0.03),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.02),transparent_40%)]">
+      <section className="py-24 relative overflow-x-clip bg-[radial-gradient(circle_at_top_right,rgba(192,58,30,0.03),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.02),transparent_40%)]">
         <div className="absolute inset-0 bg-white/40 backdrop-blur-[100px] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -214,7 +214,7 @@ const Home = () => {
       </section>
 
       {/* NEW INK SHOWCASE - PROMINENT POSITION */}
-      <section id="ink-showcase" className="py-24 bg-white relative overflow-hidden">
+      <section id="ink-showcase" className="py-24 bg-white relative overflow-x-clip">
         {/* Subtle background glow */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-50 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2" />
@@ -271,7 +271,7 @@ const Home = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} className="relative">
-              <div className="bg-white border border-slate-100 rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-blue-200 transition-all text-center md:text-left">
+              <div className="bg-white border border-slate-100 rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-x-clip group hover:border-blue-200 transition-all text-center md:text-left">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/5 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2" />
                 <div className="relative z-10">
                   <div className="text-xs font-black uppercase tracking-[0.2em] mb-4 text-blue-600">Free Funding Scan</div>
@@ -579,7 +579,7 @@ const Home = () => {
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
               <div className="relative max-w-[260px]">
-                <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
+                <div className="overflow-x-clip rounded-2xl border-2 border-border/50 shadow-xl">
                   <img src={razvanPhoto} alt="Răzvan Vâlceanu, fondator The Unlearning School" loading="lazy"
                     className="w-full aspect-[3/4] object-cover object-top" />
                 </div>

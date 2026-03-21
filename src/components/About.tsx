@@ -54,7 +54,7 @@ export function About() {
   }, [])
 
   return (
-    <section id="about" className="relative py-20 bg-background overflow-hidden">
+    <section id="about" className="relative py-20 bg-background overflow-x-clip">
       
       {/* Cinematic Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
@@ -93,11 +93,11 @@ export function About() {
         <div className="relative max-w-7xl mx-auto">
           
           {/* Film Strip Background */}
-          <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-hidden"
+          <div className="relative bg-gradient-to-r from-gray-950 via-gray-900 to-gray-950 rounded-xl overflow-x-clip"
                style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.05)' }}>
             
             {/* Film Perforations - Top - Now animated */}
-            <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-6 bg-black z-20 overflow-x-clip">
               <div className={`flex items-center justify-between px-12 h-full ${
                 animationStarted ? 'perforations-scroll-animation' : ''
               }`} style={{ width: '200%' }}>
@@ -115,7 +115,7 @@ export function About() {
             </div>
             
             {/* Film Perforations - Bottom - Now animated */}
-            <div className="absolute bottom-0 left-0 right-0 h-6 bg-black z-20 overflow-hidden">
+            <div className="absolute bottom-0 left-0 right-0 h-6 bg-black z-20 overflow-x-clip">
               <div className={`flex items-center justify-between px-12 h-full ${
                 animationStarted ? 'perforations-scroll-animation' : ''
               }`} style={{ width: '200%' }}>
@@ -133,7 +133,7 @@ export function About() {
             </div>
 
             {/* Film Frames Container - Scrolling Animation */}
-            <div className="relative py-6 px-8 overflow-hidden h-64 max-w-full">
+            <div className="relative py-6 px-8 overflow-x-clip h-64 max-w-full">
               <div className={`flex transition-transform duration-1000 ease-in-out ${
                 animationStarted ? 'film-scroll-animation' : ''
               }`} style={{ width: 'max-content', gap: '32px' }}>
@@ -305,7 +305,7 @@ export function About() {
           
           {/* Gallery Image */}
           <div className="relative max-w-6xl mx-auto">
-            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-4 overflow-hidden">
+            <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-4 overflow-x-clip">
               
               {/* Film grain overlay for authenticity */}
               <div className="absolute inset-0 opacity-[0.03] pointer-events-none"

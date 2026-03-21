@@ -16,7 +16,7 @@ const NotFound = () => {
   return (
     <PageLayout>
       <SEO title="Page Not Found" description="The page you are looking for does not exist." path="/404" />
-      <section className="py-20 md:py-32 bg-secondary relative overflow-hidden min-h-[80vh] flex items-center">
+      <section className="py-20 md:py-32 bg-secondary relative overflow-x-clip min-h-[80vh] flex items-center">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[hsl(210,60%,50%)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         

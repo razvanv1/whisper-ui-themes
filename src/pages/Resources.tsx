@@ -63,7 +63,7 @@ const Resources = () => {
       />
 
       {/* 1. Hero */}
-      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-x-clip">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-accent-purple/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -230,7 +230,7 @@ const Resources = () => {
       </section>
 
       {/* 8. INK CTA */}
-      <section className="py-20 bg-slate-50 border-y border-border relative overflow-hidden">
+      <section className="py-20 bg-slate-50 border-y border-border relative overflow-x-clip">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/5 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <ScrollReveal>

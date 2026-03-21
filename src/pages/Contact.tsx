@@ -41,7 +41,7 @@ const Contact = () => {
       <SEO title="Contact" description="Book a free 30-minute working call or send a message about what is slowing the work down. Start with the live issue." path="/contact" />
 
       {/* 1. Hero */}
-      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-x-clip">
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -262,7 +262,7 @@ const Contact = () => {
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
               <div className="relative max-w-[260px]">
-                <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
+                <div className="overflow-x-clip rounded-2xl border-2 border-border/50 shadow-xl">
                   <img src={razvanPhoto} alt="Răzvan Vâlceanu" loading="lazy" className="w-full aspect-[3/4] object-cover object-top" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 rounded-xl bg-destructive px-5 py-3 shadow-lg">

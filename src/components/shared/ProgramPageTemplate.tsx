@@ -142,7 +142,7 @@ const ProgramPageTemplate = ({
       </section>
 
       {showInkCTA && (
-        <section className="py-20 bg-blue-600 relative overflow-hidden">
+        <section className="py-20 bg-blue-600 relative overflow-x-clip">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-3xl rounded-full translate-x-1/2 -translate-y-1/2" />
           <div className="max-w-4xl mx-auto px-6 relative z-10 text-center text-white">
             <ScrollReveal>

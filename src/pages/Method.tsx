@@ -53,7 +53,7 @@ const Method = () => {
       <SEO title="The Method" description="The Unlearning School method starts by removing what no longer fits, clearing friction before adding new tools, initiatives or activity." path="/method" />
 
       {/* 1. Hero */}
-      <section className="py-14 md:py-20 bg-secondary relative overflow-hidden">
+      <section className="py-14 md:py-20 bg-secondary relative overflow-x-clip">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-destructive/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2" />
         <div className="max-w-6xl mx-auto px-6 relative">
           <div className="max-w-3xl">
@@ -179,7 +179,7 @@ const Method = () => {
               { icon: Lock, phase: "Refreeze", desc: "What works needs to become stable enough to hold under pressure. The final step is to turn better choices into repeatable practice, so the team does not slide back into the same pattern the moment speed, stress, or ambiguity return.", color: "bg-accent-emerald/10 text-accent-emerald" },
             ].map((p, i) => (
               <ScrollReveal key={p.phase} delay={i * 0.15}>
-                <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full relative overflow-hidden">
+                <GlowCard className="rounded-2xl border border-border bg-card p-8 h-full relative overflow-x-clip">
                   <span className="absolute top-4 right-4 text-7xl font-black text-foreground/5">{i + 1}</span>
                   <div className="relative">
                     <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${p.color.split(' ')[0]} mb-5`}>
@@ -295,7 +295,7 @@ const Method = () => {
           <div className="grid gap-12 items-center md:grid-cols-5">
             <ScrollReveal direction="left" className="md:col-span-2">
               <div className="relative max-w-[260px]">
-                <div className="overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl">
+                <div className="overflow-x-clip rounded-2xl border-2 border-border/50 shadow-xl">
                   <img src={razvanPhoto} alt="Răzvan Vâlceanu, fondator The Unlearning School" loading="eager"
                     className="w-full aspect-[3/4] object-cover object-top" />
                 </div>
