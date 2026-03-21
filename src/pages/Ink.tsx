@@ -129,9 +129,7 @@ const Ink = () => {
             </div>
 
             <div className="ink-hero-image-container relative" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <ConnectingArrow variant={4} className="left-1/4 top-0 -translate-y-12 sm:hidden z-50 text-blue-500" />
               <img src={realMascot} alt="INK Mascot" width="500" height="500" fetchPriority="high" style={{ maxWidth: '100%', height: 'auto', maxHeight: '500px' }} />
-              <ConnectingArrow variant={2} className="right-1/4 bottom-0 translate-y-12 -scale-x-100 sm:hidden z-50 text-blue-500" />
             </div>
           </div>
           <ConnectingArrow variant={1} className="left-1/2" />

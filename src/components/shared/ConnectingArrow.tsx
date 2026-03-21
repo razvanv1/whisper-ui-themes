@@ -60,7 +60,8 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
           strokeDasharray="none"
           fill="none"
           initial={{ pathLength: 0, opacity: 1 }}
-          animate={{ pathLength: 1, opacity: 1 }}
+          whileInView={{ pathLength: 1, opacity: 1 }}
+          viewport={{ once: true, margin: "200px" }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <m.path
@@ -71,7 +72,8 @@ export const ConnectingArrow = ({ className = "", variant = 1 }: ConnectingArrow
           strokeLinejoin="round"
           fill="currentColor"
           initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "200px" }}
           transition={{ delay: 0.3, duration: 0.3 }}
         />
       </svg>
